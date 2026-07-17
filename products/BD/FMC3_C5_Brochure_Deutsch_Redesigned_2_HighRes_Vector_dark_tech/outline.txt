@@ -1,0 +1,66 @@
+# Outline
+
+密度倾向: balanced
+密度曲线: mid_low -> medium -> high -> high -> high -> medium
+
+### 第 1 页: C5 Produktauftakt
+页目标: Den C5, seine Kernaufgabe und drei Leistungswerte positionieren
+页面类型映射: cover
+密度下限: mid_low
+密度目标: mid_low
+密度上限: high
+节奏动作: 铺垫
+信息姿态: 结论页
+锚点类型: 图片
+
+### 第 2 页: Vier Reinigungssysteme
+页目标: Mechanik, Navigation, autonomen Betrieb und Wartung vollständig erklären
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 解释页
+锚点类型: 表格
+
+### 第 3 页: Technische Daten
+页目标: Produktparameter, Abmessungen, Einsatzszenarien und Bodenbeläge verdichten
+页面类型映射: content
+密度下限: mid_low
+密度目标: high
+密度上限: high
+节奏动作: 推进
+信息姿态: 证据页
+锚点类型: 图片
+
+### 第 4 页: Wirtschaftlichkeit
+页目标: ROI-Basis, Vergleich und Ergebnis transparent belegen
+页面类型映射: content
+密度下限: mid_low
+密度目标: high
+密度上限: high
+节奏动作: 爆发
+信息姿态: 证据页
+锚点类型: KPI
+
+### 第 5 页: FMC3 und Kernteam
+页目标: Unternehmen, Fakten und fünf Teamprofile als Vertrauensnachweis zeigen
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 证据页
+锚点类型: 图片
+
+### 第 6 页: Service und Live-Demo
+页目标: Projektablauf und Serviceversprechen in einen persönlichen CTA überführen
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 收束
+信息姿态: 结论页
+锚点类型: 图表
+
+自审通过: Sechs Originalseiten sind in derselben Reihenfolge und ohne Inhaltskürzung abgebildet.

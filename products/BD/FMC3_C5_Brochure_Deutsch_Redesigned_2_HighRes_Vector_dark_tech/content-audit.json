@@ -1,0 +1,270 @@
+{
+  "ok": true,
+  "source": "/home/haoanw/workspace/skill_agent/ppt-agent-skill/products/BD/FMC3_C5_Brochure_Deutsch_Redesigned_2_HighRes_Vector.docx",
+  "source_xml_segment_count": 242,
+  "missing_source_segments": [],
+  "missing_page_segments": {},
+  "media_checks": {
+    "image1.jpeg": {
+      "source_sha256": "8f0bf76b7decd329379ae6345ad61c42ed25628d14fc0acd0c816c37cb093234",
+      "output_sha256": "8f0bf76b7decd329379ae6345ad61c42ed25628d14fc0acd0c816c37cb093234",
+      "byte_identical": true
+    },
+    "image10.png": {
+      "source_sha256": "8adb41c2a93be6c0cb920c374ca3609feb7193667eba15494f4d0cbca4845d86",
+      "output_sha256": "8adb41c2a93be6c0cb920c374ca3609feb7193667eba15494f4d0cbca4845d86",
+      "byte_identical": true
+    },
+    "image11.png": {
+      "source_sha256": "2e676042fd38c46e604386f02620819c637f30a8f4e9150eea9d4a9495d76e95",
+      "output_sha256": "2e676042fd38c46e604386f02620819c637f30a8f4e9150eea9d4a9495d76e95",
+      "byte_identical": true
+    },
+    "image12.png": {
+      "source_sha256": "5c1d3f3844a172c261d7e854c5ac13ee5d84cc1f715d058e84e4f049ab0880b2",
+      "output_sha256": "5c1d3f3844a172c261d7e854c5ac13ee5d84cc1f715d058e84e4f049ab0880b2",
+      "byte_identical": true
+    },
+    "image13.jpeg": {
+      "source_sha256": "2a45ed65ac54e7043b6614e23ad12ad9e593fae6122b170fb64b2b614470d689",
+      "output_sha256": "2a45ed65ac54e7043b6614e23ad12ad9e593fae6122b170fb64b2b614470d689",
+      "byte_identical": true
+    },
+    "image14.png": {
+      "source_sha256": "dae8bd8c6d93740fa76efb54547e2c6bed1aafeea7d9c27ec862436078e93a7e",
+      "output_sha256": "dae8bd8c6d93740fa76efb54547e2c6bed1aafeea7d9c27ec862436078e93a7e",
+      "byte_identical": true
+    },
+    "image15.png": {
+      "source_sha256": "3bb22b867275be8ffb37f64ac129e28cb42548d07fcb585f1c253a3c545cb593",
+      "output_sha256": "3bb22b867275be8ffb37f64ac129e28cb42548d07fcb585f1c253a3c545cb593",
+      "byte_identical": true
+    },
+    "image16.png": {
+      "source_sha256": "b1805f0ad9bfb3e016452bd6da439f9f21933c64bdb8dfe253174f1523de5f3b",
+      "output_sha256": "b1805f0ad9bfb3e016452bd6da439f9f21933c64bdb8dfe253174f1523de5f3b",
+      "byte_identical": true
+    },
+    "image17.png": {
+      "source_sha256": "e300749de7f5fc40aa37fa3369621371b4f5108539928a948cc0887a6591f8c3",
+      "output_sha256": "e300749de7f5fc40aa37fa3369621371b4f5108539928a948cc0887a6591f8c3",
+      "byte_identical": true
+    },
+    "image18.png": {
+      "source_sha256": "2fd11ffc3b0f111666d9c55ffbe5f8211de46b7aa4cb03aa926fde9feef77c26",
+      "output_sha256": "2fd11ffc3b0f111666d9c55ffbe5f8211de46b7aa4cb03aa926fde9feef77c26",
+      "byte_identical": true
+    },
+    "image19.png": {
+      "source_sha256": "ae8fb66ef0ef0299c1a5cb950ae47c3b5a67f2f8d11ac91d1ae385746dd5fe1b",
+      "output_sha256": "ae8fb66ef0ef0299c1a5cb950ae47c3b5a67f2f8d11ac91d1ae385746dd5fe1b",
+      "byte_identical": true
+    },
+    "image2.png": {
+      "source_sha256": "476d3fed7da4725306a92cf445138edec1e4363cd2ee9b2c60acfc7900977cfb",
+      "output_sha256": "476d3fed7da4725306a92cf445138edec1e4363cd2ee9b2c60acfc7900977cfb",
+      "byte_identical": true
+    },
+    "image20.png": {
+      "source_sha256": "c9cc217f4a88f77a6c5fbc26edfa5421e1ffd3d62e38404faf56663bb6d2cce7",
+      "output_sha256": "c9cc217f4a88f77a6c5fbc26edfa5421e1ffd3d62e38404faf56663bb6d2cce7",
+      "byte_identical": true
+    },
+    "image21.png": {
+      "source_sha256": "45aab1833f75a61c769bd2bd7c8981dd355c4890fd5491c661d6a212830ca576",
+      "output_sha256": "45aab1833f75a61c769bd2bd7c8981dd355c4890fd5491c661d6a212830ca576",
+      "byte_identical": true
+    },
+    "image22.png": {
+      "source_sha256": "81acc7cb0326bdd155b8d0a813e759b65040ca096ab5a29b5fca73e4944a3b33",
+      "output_sha256": "81acc7cb0326bdd155b8d0a813e759b65040ca096ab5a29b5fca73e4944a3b33",
+      "byte_identical": true
+    },
+    "image23.png": {
+      "source_sha256": "031d50f5f060e65cc4a965d1b037d19b9777393796f8abf06f841886e8796acc",
+      "output_sha256": "031d50f5f060e65cc4a965d1b037d19b9777393796f8abf06f841886e8796acc",
+      "byte_identical": true
+    },
+    "image24.png": {
+      "source_sha256": "266c5d713b8bb79c32fbd3a2b78d28f98bf3cd29c1b83ed498462b1c7c26785e",
+      "output_sha256": "266c5d713b8bb79c32fbd3a2b78d28f98bf3cd29c1b83ed498462b1c7c26785e",
+      "byte_identical": true
+    },
+    "image25.png": {
+      "source_sha256": "ce0f2f02457586769ebc0073389302b03513df82afbdd1de956d457ead5ce97d",
+      "output_sha256": "ce0f2f02457586769ebc0073389302b03513df82afbdd1de956d457ead5ce97d",
+      "byte_identical": true
+    },
+    "image26.png": {
+      "source_sha256": "a04ab2f4edff3f8e3b2437fcb377b6d3eee02178066174afb76fa98d40516ef9",
+      "output_sha256": "a04ab2f4edff3f8e3b2437fcb377b6d3eee02178066174afb76fa98d40516ef9",
+      "byte_identical": true
+    },
+    "image27.png": {
+      "source_sha256": "de3acde8e4cb01745654f8f0412540cd285c05fd3e91481414d9ed99876b0733",
+      "output_sha256": "de3acde8e4cb01745654f8f0412540cd285c05fd3e91481414d9ed99876b0733",
+      "byte_identical": true
+    },
+    "image28.png": {
+      "source_sha256": "be43bd1275bebfdc5496f96052d579866e7de9f7bcdddf292ca71757a743cb6c",
+      "output_sha256": "be43bd1275bebfdc5496f96052d579866e7de9f7bcdddf292ca71757a743cb6c",
+      "byte_identical": true
+    },
+    "image29.png": {
+      "source_sha256": "837c30fddd9466568a5da24261b29607c4bb870d41da5571983a00005e481fc4",
+      "output_sha256": "837c30fddd9466568a5da24261b29607c4bb870d41da5571983a00005e481fc4",
+      "byte_identical": true
+    },
+    "image3.png": {
+      "source_sha256": "9bff364dbb745f0592820e637f43e51e66327bf4d14d1ad1f29c293150767273",
+      "output_sha256": "9bff364dbb745f0592820e637f43e51e66327bf4d14d1ad1f29c293150767273",
+      "byte_identical": true
+    },
+    "image30.png": {
+      "source_sha256": "765e6558762858a94e67545d3acc4f2fc78b0fca921bafc11ecce01f7b370778",
+      "output_sha256": "765e6558762858a94e67545d3acc4f2fc78b0fca921bafc11ecce01f7b370778",
+      "byte_identical": true
+    },
+    "image31.png": {
+      "source_sha256": "8c0aafbd06e871ab855cfddec841605bcab688b7dfceff1a2710ca84578e4e70",
+      "output_sha256": "8c0aafbd06e871ab855cfddec841605bcab688b7dfceff1a2710ca84578e4e70",
+      "byte_identical": true
+    },
+    "image32.png": {
+      "source_sha256": "4275abaf0a01463715fd20e4d65d8b14b944fdeab0eed6066b3869ecd8b5db3c",
+      "output_sha256": "4275abaf0a01463715fd20e4d65d8b14b944fdeab0eed6066b3869ecd8b5db3c",
+      "byte_identical": true
+    },
+    "image33.png": {
+      "source_sha256": "b94a3efb934799407d675997b95cbccf1f84dc23a2164e14d32f0210a5c864f5",
+      "output_sha256": "b94a3efb934799407d675997b95cbccf1f84dc23a2164e14d32f0210a5c864f5",
+      "byte_identical": true
+    },
+    "image34.png": {
+      "source_sha256": "9f8975be68c53758abdfbe59fa0167024f7b1860fc087c364812d36377453d42",
+      "output_sha256": "9f8975be68c53758abdfbe59fa0167024f7b1860fc087c364812d36377453d42",
+      "byte_identical": true
+    },
+    "image35.png": {
+      "source_sha256": "d0e6ebd2234d73f9bb4fa6b3a2e5b4e48bb6a6fb83c9e13778d08f8f928fc54a",
+      "output_sha256": "d0e6ebd2234d73f9bb4fa6b3a2e5b4e48bb6a6fb83c9e13778d08f8f928fc54a",
+      "byte_identical": true
+    },
+    "image36.png": {
+      "source_sha256": "dcda22907660579f07cb1ab38d47ffacae88eafebac4df8d2611cf988c32f882",
+      "output_sha256": "dcda22907660579f07cb1ab38d47ffacae88eafebac4df8d2611cf988c32f882",
+      "byte_identical": true
+    },
+    "image37.png": {
+      "source_sha256": "42b3844b33cffbfb69c54132df726eee9094c90df598c76d1b0e3dbc04f40505",
+      "output_sha256": "42b3844b33cffbfb69c54132df726eee9094c90df598c76d1b0e3dbc04f40505",
+      "byte_identical": true
+    },
+    "image38.png": {
+      "source_sha256": "90d3d38b336be9ca5bdabece36cbdcbe2bf90eef9e826d2d269b27ca7f0e4600",
+      "output_sha256": "90d3d38b336be9ca5bdabece36cbdcbe2bf90eef9e826d2d269b27ca7f0e4600",
+      "byte_identical": true
+    },
+    "image39.png": {
+      "source_sha256": "a6e71d130110607f13761769f8d0e3e72a0544916f62d17f14c4b2d1d1aab659",
+      "output_sha256": "a6e71d130110607f13761769f8d0e3e72a0544916f62d17f14c4b2d1d1aab659",
+      "byte_identical": true
+    },
+    "image4.png": {
+      "source_sha256": "3ecaa02581fcd31a77802857ab62287b4879cdae111341203c6b73eea0210e8a",
+      "output_sha256": "3ecaa02581fcd31a77802857ab62287b4879cdae111341203c6b73eea0210e8a",
+      "byte_identical": true
+    },
+    "image40.png": {
+      "source_sha256": "3d1df0df64fe5774cdba03f620cba533820a4f86bf62c88bcf3b29f1c551274f",
+      "output_sha256": "3d1df0df64fe5774cdba03f620cba533820a4f86bf62c88bcf3b29f1c551274f",
+      "byte_identical": true
+    },
+    "image41.png": {
+      "source_sha256": "0c07aaeb36e532c02d91bff6ab6210c90ef8f4d02033a7ded1aa5768559c7dbe",
+      "output_sha256": "0c07aaeb36e532c02d91bff6ab6210c90ef8f4d02033a7ded1aa5768559c7dbe",
+      "byte_identical": true
+    },
+    "image42.jpeg": {
+      "source_sha256": "39d8a6d5c5fd84bd1d79588020fc41e137d7f62d72c8df865bd890da058667a2",
+      "output_sha256": "39d8a6d5c5fd84bd1d79588020fc41e137d7f62d72c8df865bd890da058667a2",
+      "byte_identical": true
+    },
+    "image5.png": {
+      "source_sha256": "03c9a69d5d9b11e789cab1b7d4ba334fd81afb0bf9ac4fd2dcbb5594d5adf7b7",
+      "output_sha256": "03c9a69d5d9b11e789cab1b7d4ba334fd81afb0bf9ac4fd2dcbb5594d5adf7b7",
+      "byte_identical": true
+    },
+    "image6.png": {
+      "source_sha256": "077a1656b9389d9edbc2bf13243d03ef770326da5e756bee91b16d51c91a48d9",
+      "output_sha256": "077a1656b9389d9edbc2bf13243d03ef770326da5e756bee91b16d51c91a48d9",
+      "byte_identical": true
+    },
+    "image7.png": {
+      "source_sha256": "f364b01dc8479d18aa74ef45831448d3d865aa950954fdf11126408b1bceada4",
+      "output_sha256": "f364b01dc8479d18aa74ef45831448d3d865aa950954fdf11126408b1bceada4",
+      "byte_identical": true
+    },
+    "image8.png": {
+      "source_sha256": "3086335e7ab296d8bff914064f7457649feb1ca307c8a8d8fb0b146f4a815d8f",
+      "output_sha256": "3086335e7ab296d8bff914064f7457649feb1ca307c8a8d8fb0b146f4a815d8f",
+      "byte_identical": true
+    },
+    "image9.png": {
+      "source_sha256": "d27f8c92326db8f6ec721d90256ca29e9ebfe77d9e72659ce10c8ce768b26a73",
+      "output_sha256": "d27f8c92326db8f6ec721d90256ca29e9ebfe77d9e72659ce10c8ce768b26a73",
+      "byte_identical": true
+    }
+  },
+  "png_checks": {
+    "1": {
+      "dimensions": [
+        2240,
+        3168
+      ],
+      "a4_ratio_ok": true,
+      "bytes": 1950123
+    },
+    "2": {
+      "dimensions": [
+        2240,
+        3168
+      ],
+      "a4_ratio_ok": true,
+      "bytes": 2768708
+    },
+    "3": {
+      "dimensions": [
+        2240,
+        3168
+      ],
+      "a4_ratio_ok": true,
+      "bytes": 2518576
+    },
+    "4": {
+      "dimensions": [
+        2240,
+        3168
+      ],
+      "a4_ratio_ok": true,
+      "bytes": 2604428
+    },
+    "5": {
+      "dimensions": [
+        2240,
+        3168
+      ],
+      "a4_ratio_ok": true,
+      "bytes": 3303146
+    },
+    "6": {
+      "dimensions": [
+        2240,
+        3168
+      ],
+      "a4_ratio_ok": true,
+      "bytes": 2454212
+    }
+  },
+  "note": "All 42 embedded media files are copied byte-identically; source textbox text is audited directly from document.xml."
+}

@@ -1,0 +1,47 @@
+{
+  "style_id": "dark_tech",
+  "style_name": "暗黑科技 (Dark Tech)",
+  "mood_keywords": [
+    "深空冷寂",
+    "精密仪器",
+    "微光脉搏",
+    "数据洪流",
+    "未来感"
+  ],
+  "design_soul": "Der C5 wird als präzises industrielles System in einem tiefblauen Kontrollraum inszeniert; Cyan-Linien verbinden Produkt, Daten, Menschen und Service.",
+  "variation_strategy": "Hero, Systemkarten, technische Matrix, ROI-Konsole, People-Raster und Prozess-Timeline wechseln sich ab; Hintergrund, Logo-Position, Cyan-Akzent und Footer bleiben stabil.",
+  "decoration_dna": {
+    "signature_move": "深空网格 + 冷青扫描线 + L 形角标 + 半透明数据面板",
+    "forbidden": [
+      "linker Seitenkopf",
+      "helle Papierfläche",
+      "große Pillen",
+      "inhaltlose Dekoration",
+      "Textkürzung"
+    ],
+    "recommended_combos": [
+      "产品大图 + 数据轨道",
+      "图标矩阵 + 青色刻度",
+      "人物照片 + 细线档案卡"
+    ]
+  },
+  "font_family": "'Noto Sans', 'Liberation Sans', Arial, sans-serif",
+  "css_variables": {
+    "bg_primary": "#050b1f",
+    "bg_secondary": "#0a1f3d",
+    "card_bg_from": "rgba(34,211,238,0.10)",
+    "card_bg_to": "rgba(99,102,241,0.06)",
+    "card_border": "rgba(34,211,238,0.24)",
+    "card_radius": "8px",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "rgba(255,255,255,0.70)",
+    "accent_1": "#22D3EE",
+    "accent_2": "#3B82F6",
+    "accent_3": "#6366F1",
+    "accent_4": "#FDE047"
+  },
+  "css_snippets": {
+    "panel": "background:linear-gradient(145deg,rgba(34,211,238,.10),rgba(99,102,241,.05));border:1px solid rgba(34,211,238,.24);border-radius:8px;",
+    "label": "font-family:'Noto Sans Mono',monospace;letter-spacing:.15em;text-transform:uppercase;color:#22D3EE;"
+  }
+}

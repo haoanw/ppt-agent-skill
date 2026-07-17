@@ -272,8 +272,8 @@ python3 SKILL_DIR/scripts/prompt_harness.py \
   --var OUTLINE_PATH=OUTPUT_DIR/outline.txt \
   --var SKILL_DIR='$SKILL_DIR' \
   --var STYLE_OUTPUT=OUTPUT_DIR/style.json \
-  --inject-file STYLE_RUNTIME_RULES=SKILL_DIR/references/styles/runtime-style-rules.md \
-  --inject-file STYLE_PRESET_INDEX=SKILL_DIR/references/styles/runtime-style-palette-index.md \
+  --inject-file STYLE_RUNTIME_RULES=SKILL_DIR/references/playbooks/style-phase1-playbook.md \
+  --inject-file STYLE_PRESET_INDEX=SKILL_DIR/references/styles/index.md \
   --inject-file PLAYBOOK=SKILL_DIR/references/playbooks/style-phase1-playbook.md \
   --output OUTPUT_DIR/runtime/prompt-style-phase1.md
 
@@ -284,6 +284,8 @@ python3 SKILL_DIR/scripts/prompt_harness.py \
   --inject-file PLAYBOOK=SKILL_DIR/references/playbooks/style-phase2-playbook.md \
   --output OUTPUT_DIR/runtime/prompt-style-phase2.md
 ```
+
+Phase 1 先用 `styles/index.md` 的决策矩阵选择 `style_id`，再按索引读取该风格所在的 `dark.md` / `light.md` / `vibrant.md` / `cultural.md` / `natural.md`。`style.json` 字段合同以 style playbook 为准。
 
 **2. 生成 orchestrator 调度 prompt：**
 

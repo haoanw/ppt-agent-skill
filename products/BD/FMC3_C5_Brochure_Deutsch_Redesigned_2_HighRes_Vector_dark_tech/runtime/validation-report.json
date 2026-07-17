@@ -1,0 +1,94 @@
+[
+  {
+    "command": [
+      "/home/haoanw/miniforge3/bin/python",
+      "/home/haoanw/workspace/skill_agent/ppt-agent-skill/scripts/contract_validator.py",
+      "interview",
+      "/home/haoanw/workspace/skill_agent/ppt-agent-skill/products/BD/FMC3_C5_Brochure_Deutsch_Redesigned_2_HighRes_Vector_dark_tech/interview-qa.txt"
+    ],
+    "returncode": 0,
+    "stdout": "OK\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/haoanw/miniforge3/bin/python",
+      "/home/haoanw/workspace/skill_agent/ppt-agent-skill/scripts/contract_validator.py",
+      "requirements-interview",
+      "/home/haoanw/workspace/skill_agent/ppt-agent-skill/products/BD/FMC3_C5_Brochure_Deutsch_Redesigned_2_HighRes_Vector_dark_tech/requirements-interview.txt"
+    ],
+    "returncode": 0,
+    "stdout": "OK\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/haoanw/miniforge3/bin/python",
+      "/home/haoanw/workspace/skill_agent/ppt-agent-skill/scripts/contract_validator.py",
+      "source-brief",
+      "/home/haoanw/workspace/skill_agent/ppt-agent-skill/products/BD/FMC3_C5_Brochure_Deutsch_Redesigned_2_HighRes_Vector_dark_tech/source-brief.txt"
+    ],
+    "returncode": 0,
+    "stdout": "OK\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/haoanw/miniforge3/bin/python",
+      "/home/haoanw/workspace/skill_agent/ppt-agent-skill/scripts/contract_validator.py",
+      "outline",
+      "/home/haoanw/workspace/skill_agent/ppt-agent-skill/products/BD/FMC3_C5_Brochure_Deutsch_Redesigned_2_HighRes_Vector_dark_tech/outline.txt"
+    ],
+    "returncode": 0,
+    "stdout": "OK\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/haoanw/miniforge3/bin/python",
+      "/home/haoanw/workspace/skill_agent/ppt-agent-skill/scripts/contract_validator.py",
+      "style",
+      "/home/haoanw/workspace/skill_agent/ppt-agent-skill/products/BD/FMC3_C5_Brochure_Deutsch_Redesigned_2_HighRes_Vector_dark_tech/style.json"
+    ],
+    "returncode": 0,
+    "stdout": "OK\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/haoanw/miniforge3/bin/python",
+      "/home/haoanw/workspace/skill_agent/ppt-agent-skill/scripts/planning_validator.py",
+      "/home/haoanw/workspace/skill_agent/ppt-agent-skill/products/BD/FMC3_C5_Brochure_Deutsch_Redesigned_2_HighRes_Vector_dark_tech/planning",
+      "--refs",
+      "/home/haoanw/workspace/skill_agent/ppt-agent-skill/references"
+    ],
+    "returncode": 0,
+    "stdout": "OK: 6 page(s) validated\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/haoanw/miniforge3/bin/python",
+      "/home/haoanw/workspace/skill_agent/ppt-agent-skill/scripts/contract_validator.py",
+      "images",
+      "/home/haoanw/workspace/skill_agent/ppt-agent-skill/products/BD/FMC3_C5_Brochure_Deutsch_Redesigned_2_HighRes_Vector_dark_tech/planning",
+      "--require-paths"
+    ],
+    "returncode": 0,
+    "stdout": "OK\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/haoanw/miniforge3/bin/python",
+      "/home/haoanw/workspace/skill_agent/ppt-agent-skill/scripts/contract_validator.py",
+      "delivery-manifest",
+      "/home/haoanw/workspace/skill_agent/ppt-agent-skill/products/BD/FMC3_C5_Brochure_Deutsch_Redesigned_2_HighRes_Vector_dark_tech/delivery-manifest.json",
+      "--base-dir",
+      "/home/haoanw/workspace/skill_agent/ppt-agent-skill/products/BD/FMC3_C5_Brochure_Deutsch_Redesigned_2_HighRes_Vector_dark_tech"
+    ],
+    "returncode": 0,
+    "stdout": "OK\n",
+    "stderr": ""
+  }
+]

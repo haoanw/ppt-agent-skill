@@ -1,0 +1,74 @@
+{
+  "ok": true,
+  "source": "/home/haoanw/workspace/skill_agent/ppt-agent-skill/products/BD/FMC3-C5_Deutsch_Broschure_Business.docx",
+  "source_text_segment_count": 59,
+  "missing_source_segments": [],
+  "missing_page_segments": {},
+  "media_checks": {
+    "image1.png": {
+      "source_sha256": "335b63d9c52dba4f9d4d060f5f8b88c2318497b799aa7da888dd2b0bfbde6956",
+      "output_sha256": "335b63d9c52dba4f9d4d060f5f8b88c2318497b799aa7da888dd2b0bfbde6956",
+      "byte_identical": true
+    },
+    "image2.jpeg": {
+      "source_sha256": "74eb7d53e0f3398c825c83cac80ce00a7471d9cb916bbfa4a193e63f33c7d79e",
+      "output_sha256": "74eb7d53e0f3398c825c83cac80ce00a7471d9cb916bbfa4a193e63f33c7d79e",
+      "byte_identical": true
+    },
+    "image3.jpeg": {
+      "source_sha256": "8884cc28186e878fe61d5913dfea146468a31f423b4612a344dd7478093296f5",
+      "output_sha256": "8884cc28186e878fe61d5913dfea146468a31f423b4612a344dd7478093296f5",
+      "byte_identical": true
+    },
+    "image4.png": {
+      "source_sha256": "dbd9b7aff027ec52579f5eb4dcc81f245f3ae460b59c48eb4603fb9a17feb809",
+      "output_sha256": "dbd9b7aff027ec52579f5eb4dcc81f245f3ae460b59c48eb4603fb9a17feb809",
+      "byte_identical": true
+    },
+    "image5.png": {
+      "source_sha256": "e2b5b4084bc4b291002344e27173ab6dfa78db213e133ab58ab75f9f3b4e6822",
+      "output_sha256": "e2b5b4084bc4b291002344e27173ab6dfa78db213e133ab58ab75f9f3b4e6822",
+      "byte_identical": true
+    },
+    "image6.png": {
+      "source_sha256": "8948a432ca36145ac986cb3dbb1ef340448a21a4e0df569526cd6df5604d693b",
+      "output_sha256": "8948a432ca36145ac986cb3dbb1ef340448a21a4e0df569526cd6df5604d693b",
+      "byte_identical": true
+    }
+  },
+  "png_checks": {
+    "1": {
+      "dimensions": [
+        2240,
+        3168
+      ],
+      "a4_ratio_ok": true,
+      "bytes": 2798889
+    },
+    "2": {
+      "dimensions": [
+        2240,
+        3168
+      ],
+      "a4_ratio_ok": true,
+      "bytes": 2609705
+    },
+    "3": {
+      "dimensions": [
+        2240,
+        3168
+      ],
+      "a4_ratio_ok": true,
+      "bytes": 3345869
+    },
+    "4": {
+      "dimensions": [
+        2240,
+        3168
+      ],
+      "a4_ratio_ok": true,
+      "bytes": 3586631
+    }
+  },
+  "note": "Embedded information graphics are preserved byte-identically, retaining all text contained inside those images."
+}

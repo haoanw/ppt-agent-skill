@@ -76,6 +76,23 @@ MENU_CATEGORIES = [
     "design-runtime",
 ]
 
+# Logical resources stored in aggregate markdown files. Planning uses the
+# logical IDs; resolve mode loads the aggregate file that owns each ID.
+AGGREGATE_CATEGORY_FILES = {
+    "charts": ("basic.md", "advanced.md", "complex.md"),
+    "styles": ("dark.md", "light.md", "vibrant.md", "cultural.md", "natural.md"),
+}
+
+# Keep the planning contract compatible with IDs emitted by older prompts.
+LOGICAL_RESOURCE_ALIASES = {
+    "charts": {
+        "kpi": "kpi-card",
+        "comparison-bar": "compare-bar",
+        "ring": "ring-chart",
+        "waffle": "waffle-chart",
+    },
+}
+
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"}
 
 
@@ -131,6 +148,49 @@ def extract_menu_entry(filepath: Path) -> dict[str, str] | None:
     }
 
 
+def discover_aggregate_entries(category_dir: Path, category: str) -> list[dict[str, str]]:
+    """Discover logical IDs and their owning aggregate markdown files."""
+    entries: list[dict[str, str]] = []
+    filenames = AGGREGATE_CATEGORY_FILES.get(category, ())
+
+    for filename in filenames:
+        filepath = category_dir / filename
+        if not filepath.is_file():
+            continue
+        try:
+            lines = filepath.read_text(encoding="utf-8").splitlines()
+        except OSError:
+            continue
+
+        for line in lines:
+            match = re.match(r"^##\s+\d+\.\s+(.+?)\s*$", line.strip())
+            if not match:
+                continue
+            heading = match.group(1)
+            logical_id = ""
+            if category == "charts":
+                backtick_ids = re.findall(r"`([a-z][a-z0-9_-]*)`", heading)
+                paren_ids = re.findall(r"\(([a-z][a-z0-9_-]*)\)", heading)
+                candidates = backtick_ids or paren_ids
+                logical_id = candidates[-1] if candidates else ""
+            elif category == "styles":
+                style_match = re.match(r"([a-z][a-z0-9_-]*)", heading)
+                logical_id = style_match.group(1) if style_match else ""
+
+            if not logical_id:
+                continue
+            entries.append(
+                {
+                    "file": filename,
+                    "id": normalize_ref(logical_id),
+                    "title": heading.replace("`", ""),
+                    "quote": f"聚合资源：{category}/{filename}",
+                }
+            )
+
+    return entries
+
+
 def generate_menu(refs_dir: Path, categories: list[str] | None = None) -> str:
     """Generate resource menu with titles + full blockquotes organized by category."""
     cats = categories or MENU_CATEGORIES
@@ -141,16 +201,19 @@ def generate_menu(refs_dir: Path, categories: list[str] | None = None) -> str:
         if not cat_dir.is_dir():
             continue
 
-        entries: list[dict[str, str]] = []
-        for md_file in sorted(cat_dir.glob("*.md")):
-            if md_file.name.lower() == "readme.md":
-                continue
-            # Skip runtime-only files
-            if md_file.name.startswith("runtime-"):
-                continue
-            entry = extract_menu_entry(md_file)
-            if entry:
-                entries.append(entry)
+        if cat in AGGREGATE_CATEGORY_FILES:
+            entries = discover_aggregate_entries(cat_dir, cat)
+        else:
+            entries = []
+            for md_file in sorted(cat_dir.glob("*.md")):
+                if md_file.name.lower() == "readme.md":
+                    continue
+                # Skip runtime-only files
+                if md_file.name.startswith("runtime-"):
+                    continue
+                entry = extract_menu_entry(md_file)
+                if entry:
+                    entries.append(entry)
 
         if entries:
             cat_lines = [f"### {cat}/"]
@@ -211,6 +274,42 @@ def normalize_ref(value: str) -> str:
         raw = raw[:-3]
     # Normalize underscores to hyphens
     return raw.replace("_", "-")
+
+
+def resolve_resource_path(refs_dir: Path, directory: str, value: str) -> Path | None:
+    """Resolve a direct filename or a logical ID inside an aggregate file."""
+    raw = str(value).strip().strip("`").strip()
+    if not raw:
+        return None
+
+    direct = Path(raw)
+    if direct.is_absolute():
+        return direct if direct.is_file() else None
+    if raw.startswith("references/"):
+        referenced = refs_dir / raw.removeprefix("references/")
+        return referenced if referenced.is_file() else None
+
+    dir_path = refs_dir / directory
+    if not dir_path.is_dir():
+        return None
+
+    ref_id = normalize_ref(raw)
+    direct_candidates = (
+        dir_path / raw,
+        dir_path / f"{raw}.md",
+        dir_path / f"{ref_id}.md",
+        dir_path / f"{ref_id.replace('-', '_')}.md",
+    )
+    for candidate in direct_candidates:
+        if candidate.is_file():
+            return candidate
+
+    target_id = LOGICAL_RESOURCE_ALIASES.get(directory, {}).get(ref_id, ref_id)
+    for entry in discover_aggregate_entries(dir_path, directory):
+        if entry["id"] == target_id:
+            aggregate_path = dir_path / entry["file"]
+            return aggregate_path if aggregate_path.is_file() else None
+    return None
 
 
 def collect_resource_refs(pages: list[dict[str, Any]]) -> dict[str, set[str]]:
@@ -313,23 +412,18 @@ def resolve_resources(refs_dir: Path, planning_path: Path) -> str:
             continue
 
         for ref_id in sorted(ref_ids):
-            # Try multiple filename patterns
-            candidates = [
-                dir_path / f"{ref_id}.md",
-                dir_path / f"{ref_id.replace('-', '_')}.md",
-            ]
-            for candidate in candidates:
-                if candidate.exists() and str(candidate) not in loaded_files:
-                    loaded_files.add(str(candidate))
-                    title_line = ""
-                    for line in candidate.read_text(encoding="utf-8").split("\n"):
-                        if line.strip().startswith("# "):
-                            title_line = line.strip()
-                            break
-                    body = extract_body(candidate)
-                    if body:
-                        sections.append(f"{title_line}\n\n{body}")
+            candidate = resolve_resource_path(refs_dir, directory, ref_id)
+            if candidate is None or str(candidate) in loaded_files:
+                continue
+            loaded_files.add(str(candidate))
+            title_line = ""
+            for line in candidate.read_text(encoding="utf-8").split("\n"):
+                if line.strip().startswith("# "):
+                    title_line = line.strip()
                     break
+            body = extract_body(candidate)
+            if body:
+                sections.append(f"{title_line}\n\n{body}")
 
     # Always-include resources
     for rel_path, condition in ALWAYS_INCLUDE.items():

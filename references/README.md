@@ -10,8 +10,8 @@ references/
   prompts/            -- prompt 模板（多个 tpl-*.md + 2 个 module-*.md + step4/ 下 4 个）
   layouts/            -- 版式资源（10 种）
   blocks/             -- 区域展示组件（8 种 + card-styles）
-  charts/             -- 图表组件（13 种 + runtime-chart-rules）
-  styles/             -- 风格主题（8 种 + runtime-style-rules + runtime-style-palette-index）
+  charts/             -- 聚合图表系统（18 种：basic/advanced/complex + index）
+  styles/             -- 聚合风格系统（26 种：5 个板块文件 + index）
   principles/         -- 设计原则（7 种 + runtime-failure-modes）
   page-templates/     -- 页面结构模板（cover/toc/section/end）
   design-runtime/     -- 数据类型映射 + 设计规格 + CSS 武器库
@@ -29,8 +29,8 @@ references/
 7. `playbooks/step4/page-planning-playbook.md` -- Step 4A 页面规划执行细则
 8. `playbooks/step4/page-html-playbook.md` -- Step 4B HTML 落地执行细则
 9. `playbooks/step4/page-review-playbook.md` -- Step 4C 图审修复执行细则
-10. `styles/runtime-style-rules.md` -- Step 3.5 runtime 风格字段合同
-11. `styles/runtime-style-palette-index.md` -- Step 3.5 预置风格基底入口
+10. `styles/index.md` -- Step 3.5 的 26 风格索引、决策矩阵与 JSON Schema
+11. `styles/{dark,light,vibrant,cultural,natural}.md` -- 选定风格所在板块的完整定义
 
 ## Prompt 模板
 
@@ -76,6 +76,7 @@ P2A/P2B/P3/P3.5/P4 均采用渐进式上下文注入：每个节点有 orchestra
 
 - **menu 模式**：提取所有 `# 标题` + `> 引用`（多行 blockquote）-> planning 阶段消费，也可先落盘成 `runtime/page-planning-menu-N.md` 快照
 - **resolve 模式**：按 planning JSON 字段路由加载对应资源正文 -> html 阶段消费
+- 对 `charts/` 与 `styles/`，menu 展开逻辑 ID；resolve 再把逻辑 ID 映射到对应聚合文件，并对同一文件去重加载
 
 字段路由表：
 
@@ -91,6 +92,7 @@ P2A/P2B/P3/P3.5/P4 均采用渐进式上下文注入：每个节点有 orchestra
 
 - `cover` / `toc` / `section` / `end` 这类非 `content` 页，主消费链是 `page_type -> page-templates/`
 - `resources.page_template` 是显式覆盖口，只有需要强制钉住某个模板正文时才额外填写
+- `chart_type` 使用 18 种逻辑 ID，实际映射到 `charts/basic.md`、`charts/advanced.md` 或 `charts/complex.md`
 
 ## Design Runtime
 
@@ -107,16 +109,12 @@ P2A/P2B/P3/P3.5/P4 均采用渐进式上下文注入：每个节点有 orchestra
 
 ## Style Runtime
 
-风格目录同时包含两类材料：
+风格目录采用 26 风格 / 5 板块聚合结构：
 
-- 预置风格参考：`blue-white.md`、`dark-tech.md` 等 8 个风格文件
-- runtime 风格合同：`runtime-style-rules.md` 与 `runtime-style-palette-index.md`
-
-其中：
-
-- Step 3.5 默认直接注入 runtime 风格合同与预置风格入口
-- 具体预置风格文件只在 style subagent 需要细看某个候选基底时按需读取
-- `runtime-*` 文件不是页面 planning / html 阶段的 menu 资源
+- Step 3.5 直接注入 `styles/index.md`，先用决策矩阵确定候选 `style_id`
+- style subagent 再按索引读取 `dark.md` / `light.md` / `vibrant.md` / `cultural.md` / `natural.md` 中对应的板块文件
+- `style.json` 的运行时字段合同由 `playbooks/style-phase1-playbook.md` 定义，并由 phase2 playbook 自审
+- `resource_loader.py menu` 会把五个板块文件展开为 26 个逻辑 style ID
 
 ## 单一真源与自检
 
@@ -148,4 +146,4 @@ python3 scripts/smoke_skill.py
 - 新增资源文件放到对应目录，`resource_loader.py` 自动发现
 - 每个资源文件必须有 `# 标题` + `> 多行引用`（数据类型、适用场景、约束）
 - 不要在根目录放文件，不要创建新的子目录
-- `runtime-*` 前缀的文件被 resource_loader 的 menu / resolve 流程跳过（仅供主链或特定 runtime 阶段直接读取）
+- 聚合目录新增条目时，应更新对应板块文件的编号标题；`resource_loader.py` 会从标题自动发现逻辑 ID

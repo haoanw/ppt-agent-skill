@@ -344,7 +344,7 @@ ppt-output/
 | `layout_hint` | asymmetric / hero-top / l-shape / mixed-grid / primary-secondary / single-focus / symmetric / t-shape / three-column / waterfall | `references/layouts/<name>.md` | 主次结合 → `references/layouts/primary-secondary.md` |
 | `page_type` | cover / toc / section / end | `references/page-templates/<name>.md` | 封面 → `references/page-templates/cover.md` |
 | `card_type` | text / data / list / quote / timeline / comparison / diagram / image-hero / matrix-chart / people | `references/blocks/<name>.md` | 数据卡 → `references/blocks/card-styles.md` |
-| `chart_type` | progress-bar / ring / sparkline / radar / funnel / kpi / metric-row / waffle / rating / timeline / treemap / comparison-bar / stacked-bar | `references/charts/<name>.md` | 雷达 → `references/charts/radar.md` |
+| `chart_type` | progress_bar / compare_bar / ring_chart / sparkline / waffle_chart / kpi_card / metric_row / rating / radar / timeline / funnel / gauge / grouped_bar / simple_map / world_choropleth / network_graph / sankey_flow / heatmap_calendar | `references/charts/{basic,advanced,complex}.md`（按逻辑 ID 自动映射） | `radar` → `references/charts/advanced.md` |
 
 ## Step 0/1 采访模板规则
 
@@ -368,7 +368,6 @@ ppt-output/
 | `references/typography.md` | **Step 5c** | 排版铁律 14 条（字距/tabular-nums/OpenType/serif italic 混排/字体栈降级）|
 | `references/charts/index.md` | **Step 5c 涉及数据可视化时** | 18 种图表索引 + 决策矩阵 |
 | `references/charts/{basic,advanced,complex}.md` | 选定图表后 | 完整 HTML 模板（基础 8 种 / 进阶 6 种 / ECharts 级 4 种）|
-| `references/charts/<chart_type>.md` | 单一图表精细规格 | sunbigfly 风格的单文件图表（13 个）|
 | `references/layouts/*.md` | Step 5c layout_hint 路由 | 10 个 layout 各成文件（asymmetric / hero-top / l-shape 等）|
 | `references/blocks/*.md` | Step 5c card_type 路由 | 9 个可复用卡片原型（card-styles / comparison / diagram / quote 等）|
 | `references/page-templates/*.md` | Step 5c page_type 路由 | 4 个页面模板（cover / end / section / toc）|

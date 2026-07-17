@@ -210,22 +210,22 @@ def build_content_page_fixture(
     lower_bound, upper_bound = BIAS_BOUNDS[deck_bias]
     base_cards = {
         "low": [
-            make_card(slide_number, "anchor", 1, "一句判断", ["先给出核心判断"], "data_highlight", "accent", 3, "kpi"),
+            make_card(slide_number, "anchor", 1, "一句判断", ["先给出核心判断"], "data_highlight", "accent", 3, "kpi_card"),
             make_card(slide_number, "support", 1, "一句解释", ["只补一层解释"], "text", "outline", 3),
         ],
         "mid_low": [
-            make_card(slide_number, "anchor", 1, "判断先行", ["先说结论，再补解释"], "data_highlight", "accent", 4, "kpi"),
+            make_card(slide_number, "anchor", 1, "判断先行", ["先说结论，再补解释"], "data_highlight", "accent", 4, "kpi_card"),
             make_card(slide_number, "support", 1, "证据一", ["第一组支撑信息"], "data", "outline", 4),
             make_card(slide_number, "context", 1, "范围说明", ["补充边界与上下文"], "text", "transparent", 4),
         ],
         "medium": [
-            make_card(slide_number, "anchor", 1, "核心指标", ["一句解释它为什么重要"], "data_highlight", "accent", 4, "kpi"),
+            make_card(slide_number, "anchor", 1, "核心指标", ["一句解释它为什么重要"], "data_highlight", "accent", 4, "kpi_card"),
             make_card(slide_number, "support", 1, "增长原因", ["增长主要来自高客单区域放量"], "data", "outline", 4, "metric_row"),
             make_card(slide_number, "support", 2, "区域分布", ["北区与华东贡献最高"], "comparison", "filled", 4),
             make_card(slide_number, "context", 1, "边界条件", ["样本期已排除促销异常"], "text", "transparent", 4),
         ],
         "high": [
-            make_card(slide_number, "anchor", 1, "高密结论", ["先看结论，再扫读其余 5 卡"], "data_highlight", "accent", 4, "kpi"),
+            make_card(slide_number, "anchor", 1, "高密结论", ["先看结论，再扫读其余 5 卡"], "data_highlight", "accent", 4, "kpi_card"),
             make_card(slide_number, "support", 1, "渠道", ["直营增长更稳"], "data", "outline", 4, "metric_row"),
             make_card(slide_number, "support", 2, "区域", ["东区拉动明显"], "data", "filled", 4),
             make_card(slide_number, "support", 3, "客群", ["老客复购抬升"], "comparison", "outline", 4),
@@ -233,10 +233,10 @@ def build_content_page_fixture(
             make_card(slide_number, "context", 2, "风险", ["高客单区需继续验证"], "text", "glass", 4),
         ],
         "dashboard": [
-            make_card(slide_number, "anchor", 1, "总览", ["整页以扫读为主，不做大图"], "data_highlight", "accent", 3, "kpi"),
+            make_card(slide_number, "anchor", 1, "总览", ["整页以扫读为主，不做大图"], "data_highlight", "accent", 3, "kpi_card"),
             make_card(slide_number, "support", 1, "营收", ["营收抬升"], "data", "outline", 3, "metric_row"),
             make_card(slide_number, "support", 2, "转化", ["转化改善"], "data", "filled", 3, "progress_bar"),
-            make_card(slide_number, "support", 3, "结构", ["结构更健康"], "comparison", "glass", 3, "comparison_bar"),
+            make_card(slide_number, "support", 3, "结构", ["结构更健康"], "comparison", "glass", 3, "compare_bar"),
             make_card(slide_number, "support", 4, "客群", ["新客占比抬升"], "data", "outline", 3),
             make_card(slide_number, "context", 1, "地区", ["东区领先"], "text", "transparent", 3),
             make_card(slide_number, "context", 2, "阶段", ["第二阶段最强"], "timeline", "transparent", 3),
@@ -1033,7 +1033,12 @@ def run_smoke() -> SmokeResult:
             result,
         )
         if menu.returncode == 0:
-            assert_contains("resource-loader-menu", menu.stdout, ["### layouts/", "#### hero-top", "### blocks/"], result)
+            assert_contains(
+                "resource-loader-menu",
+                menu.stdout,
+                ["### layouts/", "#### hero-top", "### blocks/", "#### kpi-card", "#### dark-tech"],
+                result,
+            )
 
         images_snapshot = run_cmd(
             "resource-loader-images-snapshot",
@@ -1074,7 +1079,7 @@ def run_smoke() -> SmokeResult:
             assert_contains(
                 "resource-loader-menu-snapshot",
                 snapshot_text,
-                ["### layouts/", "#### hero-top", "### blocks/"],
+                ["### layouts/", "#### hero-top", "### blocks/", "#### kpi-card", "#### dark-tech"],
                 result,
             )
 
@@ -1097,8 +1102,9 @@ def run_smoke() -> SmokeResult:
                 resolve.stdout,
                 [
                     "# 顶部英雄式版式",
-                    "# KPI 指标卡（数字+趋势箭头+标签）",
-                    "# 指标行（数字+标签+进度条 组合）",
+                    "# 基础图表（8 种 · 复制即用）",
+                    "## 6. KPI 指标卡 (kpi_card)",
+                    "## 7. 指标行 (metric_row)",
                     "# 视觉层级与 CRAP 原则",
                     "# 构图与留白",
                     "# Director Command Runtime Rules",
@@ -1126,7 +1132,7 @@ def run_smoke() -> SmokeResult:
             assert_contains(
                 "resource-loader-resolve-snapshot",
                 fx["html_resolve"].read_text(encoding="utf-8"),
-                ["# 顶部英雄式版式", "# KPI 指标卡（数字+趋势箭头+标签）"],
+                ["# 顶部英雄式版式", "# 基础图表（8 种 · 复制即用）", "## 6. KPI 指标卡 (kpi_card)"],
                 result,
             )
 
@@ -1273,9 +1279,9 @@ def run_smoke() -> SmokeResult:
                     "--var",
                     f"STYLE_OUTPUT={fx['style']}",
                     "--inject-file",
-                    f"STYLE_RUNTIME_RULES={REFERENCES_DIR / 'styles/runtime-style-rules.md'}",
+                    f"STYLE_RUNTIME_RULES={REFERENCES_DIR / 'playbooks/style-phase1-playbook.md'}",
                     "--inject-file",
-                    f"STYLE_PRESET_INDEX={REFERENCES_DIR / 'styles/runtime-style-palette-index.md'}",
+                    f"STYLE_PRESET_INDEX={REFERENCES_DIR / 'styles/index.md'}",
                     "--inject-file",
                     f"PLAYBOOK={REFERENCES_DIR / 'playbooks/style-phase1-playbook.md'}",
                     "--output",
@@ -1563,8 +1569,7 @@ def run_smoke() -> SmokeResult:
                         label,
                         rendered,
                         [
-                            "# Runtime Style Rules",
-                            "# Runtime Style Palette Index",
+                            "# 风格系统索引（26 风格 / 5 板块）",
                             "# Style Phase 1 Playbook -- 风格合同的定义与输出",
                         ],
                         result,

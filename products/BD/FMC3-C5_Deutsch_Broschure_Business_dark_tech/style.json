@@ -1,0 +1,47 @@
+{
+  "style_id": "dark_tech",
+  "style_name": "暗黑科技 (Dark Tech)",
+  "mood_keywords": [
+    "深空冷寂",
+    "精密仪器",
+    "微光脉搏",
+    "数据洪流",
+    "未来感"
+  ],
+  "design_soul": "深蓝黑幕中的 C5 像一台被冷青扫描光逐层唤醒的精密仪器，数据、产品与团队证据以清晰的工业节奏展开。",
+  "variation_strategy": "封面以产品大图和深空留白聚焦；经济页用青色 KPI 与证据面板形成高密扫描；团队和参数页采用上下叙事；末页以场景图、服务模块和发光 CTA 收束。背景、字体、青色边线和页脚锁定不变。",
+  "decoration_dna": {
+    "signature_move": "深空网格 + 冷青扫描线 + L 形角标 + 半透明数据面板",
+    "forbidden": [
+      "花卉装饰",
+      "马卡龙色",
+      "厚重圆角胶囊",
+      "波浪分隔线",
+      "无关装饰图片"
+    ],
+    "recommended_combos": [
+      "网格底纹 + 青色角标 + 产品大图",
+      "微光边框 + 超级 KPI + 等宽标签",
+      "低透明辉光 + 信息图原图 + 细线页脚"
+    ]
+  },
+  "font_family": "'Noto Sans', 'Liberation Sans', Arial, sans-serif",
+  "css_variables": {
+    "bg_primary": "#050b1f",
+    "bg_secondary": "#0a1f3d",
+    "card_bg_from": "rgba(34,211,238,0.10)",
+    "card_bg_to": "rgba(99,102,241,0.06)",
+    "card_border": "rgba(34,211,238,0.24)",
+    "card_radius": "8px",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "rgba(255,255,255,0.68)",
+    "accent_1": "#22D3EE",
+    "accent_2": "#3B82F6",
+    "accent_3": "#6366F1",
+    "accent_4": "#FDE047"
+  },
+  "css_snippets": {
+    "panel": "background:linear-gradient(145deg,rgba(34,211,238,.10),rgba(99,102,241,.05));border:1px solid rgba(34,211,238,.24);border-radius:8px;",
+    "label": "font-family:'Noto Sans Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#22D3EE;"
+  }
+}

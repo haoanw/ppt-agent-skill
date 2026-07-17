@@ -1,0 +1,86 @@
+# Source Brief
+
+topic: FMC3 C5 Reinigungsroboter, deutsche Business-Broschüre
+usage: B2B-Produktvorstellung und Einladung zu einer Live-Demonstration
+constraints: Jeder Textbaustein und jedes eingebettete Medium muss erhalten bleiben.
+risk: Die Informationsgrafiken enthalten zusätzlichen Text; deshalb werden sie byte-identisch übernommen.
+
+Thema: FMC3 C5 Reinigungsroboter, deutsche Business-Broschüre
+Quelle: products/BD/FMC3-C5_Deutsch_Broschure_Business.docx
+Einsatz: B2B-Produktvorstellung und Einladung zu einer Live-Demonstration
+Einschränkung: Jeder Textbaustein und jedes eingebettete Medium muss erhalten bleiben.
+Risiko: Die Informationsgrafiken enthalten zusätzlichen Text; deshalb werden sie byte-identisch übernommen.
+
+## Seite 1
+
+- Einladung zur Demonstration des C5-Reinigungsroboters von FMC3
+- Intelligenter gewerblicher Reinigungsroboter für mittlere und große Flächen
+- Sehr geehrte Damen und Herren,
+- wir freuen uns, Ihnen unseren Reinigungsroboter C5 vorstellen zu dürfen, und laden Sie herzlich ein, ihn persönlich kennenzulernen.
+- Der C5 ist eine Revolution in der Reinigungstechnik: Mit ihm bieten Sie Ihren Kunden eine präzise und effiziente Reinigung verschiedenster Innenflächen – und damit Dienstleistungen auf höchstem Niveau.
+- Der C5 auf einen Blick
+- Doppelwalzenbürsten – Kehren und Schrubben in einem Arbeitsgang
+- Zwei-Kammer-Saugfuß für gründliche Wasseraufnahme, weniger Restwasser in Fugen
+- Laser- und visuelle Lokalisierung für flexible Einsatzumgebungen
+- Autonomes Laden sowie Frisch- und Schmutzwasser-Management
+- Tür- und Aufzugsanbindung für den gebäudeweiten Einsatz
+- Selbstreinigender Schmutzwassertank – täglicher Wartungsaufwand halbiert
+- Randbürste reinigt dicht an Kanten und Rändern
+- Hochwertige Komponenten für niedrige Lebenszykluskosten
+- 1.980 m²/h
+- theoretische Flächenleistung
+- 550 mm
+- Schrubbbreite
+- < 68 dB(A)
+- Geräuschpegel
+- 90 L
+- großer Wassertank
+
+## Seite 2
+
+- Wirtschaftlichkeit auf einen Blick
+- Präzision und Effizienz stehen bei uns an erster Stelle. Mit dem C5 sparen Sie Zeit und Arbeitskosten und senken zugleich den Verbrauch von Wasser und Reinigungsmitteln – eine Beispielrechnung gegenüber der manuellen Reinigung:
+- 9.089 €
+- Einsparungen pro Jahr
+- 1,3 Jahre
+- Amortisationszeit (ROI)
+- 1,54 Mio. m²
+- gereinigte Fläche pro Jahr
+- Beispielrechnung: jährlicher Kostenvergleich – manuelle Reinigung vs. C5 (60 Monate, 1.000 h/Jahr)
+- Über FMC3 Robotics
+- FMC3 steht für die Zukunft der Robotik. Von unserem Standort in Ingolstadt aus bieten wir Ihnen die neuesten und innovativsten Technologien an. Unser Unternehmen wurde im Oktober 2025 von Herrn Prof. Dr. Bjoern Giesler, Herrn Dr. Wang Cheng und Herrn Dr. David Fan gemeinsam mit dem Ziel gegründet, Europa mit moderner Robotiktechnologie zu versorgen.
+- Seitdem haben wir bereits zahlreiche Verträge mit Kunden in Deutschland und Europa abgeschlossen. Darüber hinaus versorgen wir unsere Kunden mit Begrüßungs- und Lieferrobotern. Unsere Ingenieure in Shanghai arbeiten derzeit an einem humanoiden Roboter; außerdem starten wir eine Zusammenarbeit im Bereich der Sicherheitsroboterhunde.
+- FMC3 auf einen Blick
+- Gegründet: Oktober 2025
+- Hauptsitz: Ingolstadt, Deutschland
+- Entwicklung: Ingolstadt & Shanghai
+- Lieferkapazität: bis zu 30 Roboter/Monat
+- Portfolio: Reinigungs-, Begrüßungs- und Lieferroboter
+
+## Seite 3
+
+- Unser Kernteam
+- Hinter FMC3 steht ein Team europäischer Wissenschaftler für intelligente Systeme – mit langjähriger Erfahrung in der Automobilindustrie, der KI-Forschung und dem internationalen B2B-Geschäft.
+- Das Kernteam von FMC3 Robotics
+- Produktparameter
+- Kompakte Abmessungen, 170 kg Gesamtgewicht und eine Arbeitsstation mit automatischem Frisch- und Schmutzwasser-Management – alle technischen Daten im Überblick:
+- Technische Daten des C5 und der Arbeitsstation
+
+## Seite 4
+
+- Einsatzszenarien, Service und Support
+- Anwendungsszenarien, geeignete Bodenbeläge sowie Service- und Supportsystem
+- Lieferung & Inbetriebnahme
+- Wir sind in der Lage, bis zu 30 Roboter pro Monat auszuliefern, und kümmern uns um den gesamten Prozess – von den Tests über die Installation bis zur Inbetriebnahme.
+- Service & After-Sales
+- Unsere Ingenieure in Ingolstadt stehen Ihnen täglich zur Verfügung – inklusive Schulungen, kurzer Reaktionszeiten und kostenloser Erstwartung.
+- Erleben Sie den C5 live
+- Wenn Sie Interesse an unserem C5 haben, senden wir Ihnen gerne weitere Informationen zu und laden Sie herzlich zu einer Demonstration des Roboters ein – bei Ihnen vor Ort oder in unserem Hauptsitz in Ingolstadt.
+- Wir freuen uns auf Ihre Rückmeldung.
+- Mit freundlichen Grüßen
+- Haoan Wang
+- Ihr Ansprechpartner bei FMC3 Robotics
+
+## Wiederkehrende Fußzeile
+
+- FMC3 Robotics · Ingolstadt, Deutschland · www.FMC3-robotics.ai

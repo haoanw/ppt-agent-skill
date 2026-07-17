@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=1120,initial-scale=1">
+<title>Ein Business Case, der sich rechnen lässt.</title><style>
+@page { size:A4 portrait; margin:0; }
+:root {
+  --bg:#050b1f; --bg2:#0a1f3d; --cyan:#22d3ee; --blue:#3b82f6;
+  --violet:#6366f1; --white:#fff; --muted:rgba(255,255,255,.70);
+  --faint:rgba(255,255,255,.48); --line:rgba(34,211,238,.25);
+}
+*{box-sizing:border-box}
+html,body{width:1120px;height:1584px;margin:0;overflow:hidden}
+body{position:relative;color:var(--white);font-family:'Noto Sans','Liberation Sans',Arial,sans-serif;
+background:radial-gradient(circle at 86% 12%,rgba(99,102,241,.24),transparent 29%),
+radial-gradient(circle at 8% 78%,rgba(34,211,238,.13),transparent 31%),
+linear-gradient(180deg,var(--bg2),var(--bg) 43%,#030817)}
+.grid{position:absolute;inset:0;opacity:.28;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:64px 64px}
+.scan{position:absolute;left:0;right:0;top:164px;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:.65}
+.corner{position:absolute;width:30px;height:30px;opacity:.7} .tl{top:24px;left:24px;border-top:1px solid var(--cyan);border-left:1px solid var(--cyan)} .br{right:24px;bottom:24px;border-right:1px solid var(--cyan);border-bottom:1px solid var(--cyan)}
+.page{position:relative;z-index:2;height:100%;padding:48px 66px 54px}
+.brand{height:58px;display:flex;justify-content:flex-end;align-items:center;margin-bottom:22px} .brand img{width:150px;height:auto}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--cyan);font-size:13px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px}
+.pulse{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px rgba(34,211,238,.9)}
+h1,h2,h3,h4,p{margin:0} h1{font-size:47px;line-height:1.06;font-weight:800} h2{font-size:27px;line-height:1.16} h3{font-size:18px;line-height:1.25} h4{font-size:14px;line-height:1.3}
+.subhead{margin-top:12px;color:var(--muted);font-size:19px;line-height:1.48} .body{color:var(--muted);font-size:15px;line-height:1.55}
+.panel{background:linear-gradient(145deg,rgba(34,211,238,.095),rgba(99,102,241,.05));border:1px solid var(--line);border-radius:8px;box-shadow:0 18px 50px rgba(0,0,0,.2)}
+.image-frame{background:rgba(255,255,255,.97);border:1px solid rgba(34,211,238,.4);border-radius:8px;overflow:hidden;box-shadow:0 0 34px rgba(34,211,238,.10)} .image-frame img{display:block;width:100%;height:100%;object-fit:contain}
+.section-rule{display:flex;align-items:center;gap:14px} .section-rule .line{height:1px;flex:1;background:linear-gradient(90deg,var(--cyan),transparent);opacity:.65}
+.icon{width:42px;height:42px;object-fit:contain;filter:brightness(0) saturate(100%) invert(79%) sepia(86%) saturate(1032%) hue-rotate(139deg) brightness(101%) contrast(89%)}
+.footer{position:absolute;left:66px;right:66px;bottom:27px;display:flex;justify-content:space-between;color:rgba(255,255,255,.42);font-size:10px;letter-spacing:.05em} .footer:before{content:'';position:absolute;left:0;right:0;top:-12px;height:1px;background:linear-gradient(90deg,var(--cyan),rgba(99,102,241,.35),transparent)} .page-no{color:var(--cyan);font-family:'Noto Sans Mono','Liberation Mono',monospace}
+</style></head>
+<body><div class="grid"></div><div class="scan"></div><div class="corner tl"></div><div class="corner br"></div>
+<main class="page"><header class="brand"><img src="../images/image3.png" alt="FMC3 Robotics"></header>
+
+<div class="eyebrow"><span class="pulse"></span>WIRTSCHAFTLICHKEIT</div>
+<h1>Ein Business Case,<br>der sich rechnen lässt.</h1>
+<p class="subhead">Beispielrechnung gegenüber manueller Reinigung – berechnet über 60 Monate und 1.000 Betriebsstunden pro Jahr.</p>
+<section class="roi-kpis">
+  <div class="roi-kpi panel"><img class="icon" src="../images/image22.png"><strong>9.089 €</strong><span>GESCHÄTZTE EINSPARUNGEN<br>PRO JAHR</span></div>
+  <div class="roi-kpi panel"><img class="icon" src="../images/image23.png"><strong>1,3 Jahre</strong><span>AMORTISATIONSZEIT / ROI</span></div>
+  <div class="roi-kpi panel"><img class="icon" src="../images/image24.png"><strong>1,54 Mio. m²</strong><span>GEREINIGTE FLÄCHE PRO JAHR</span></div>
+</section>
+<section class="comparison panel"><h3>JÄHRLICHER VERGLEICH</h3><div class="bar-row"><span>Aktuelle Lösung</span><i class="bar old"></i><strong>20.780 €</strong></div><div class="bar-row"><span>C5 · 60 Monate</span><i class="bar c5"></i><strong>11.691 €</strong></div></section>
+<section class="calculator panel">
+  <h3>ROI- UND EINSPARUNGSRECHNER</h3>
+  <div class="calc-grid">
+    <div class="inputs">
+      <div class="input-card"><div class="input-title"><img class="icon" src="../images/image25.png"><div><strong>Reinigungsleistung</strong><small>Von der Reinigungsfläche berechnete Kosten</small></div></div>
+        <div class="slider"><b>Verrechneter Stundenlohn</b><strong>24 €/h</strong><i style="--p:35%"></i><small><span>15 €/h</span><span>50 €/h</span></small></div>
+        <div class="slider"><b>Reinigungsstunden pro Tag</b><strong>3 h/Tag</strong><i style="--p:28%"></i><small><span>1 h/Tag</span><span>12 h/Tag</span></small></div>
+        <div class="slider"><b>Reinigungstage pro Jahr</b><strong>260 Tage/Jahr</strong><i style="--p:58%"></i><small><span>100 Tage/Jahr</span><span>365 Tage/Jahr</span></small></div>
+      </div>
+      <div class="machine-cost"><img class="icon" src="../images/image26.png"><div><strong>Manuelle Scheuersaugmaschine</strong><p>Anschaffungskosten <b>8.500 €</b></p><p>Wartung <b>30 €/Monat</b></p></div></div>
+    </div>
+    <div class="results">
+      <div class="saving"><span>GESCHÄTZTE JÄHRLICHE EINSPARUNGEN</span><strong>9.089 €</strong><small>entspricht 757 € / Monat</small></div>
+      <div class="mini-compare"><h4>JÄHRLICHER VERGLEICH</h4><p>Aktuelle Lösung <b>20.780 €</b></p><i class="old"></i><p>C5 · 60 Monate <b>11.691 €</b></p><i class="c5"></i></div>
+      <div class="result-pair"><div><span>AMORTISATIONSZEIT / ROI</span><strong>1,3 Jahre</strong></div><div><span>FLÄCHE / JAHR</span><strong>1.544.400 m²</strong></div></div>
+      <div class="offer">Individuelles Angebot erhalten</div>
+    </div>
+  </div>
+</section>
+<section class="basis panel"><strong>ⓘ &nbsp; Berechnungsbasis</strong><span>24 €/h · 3 h/Tag · 260 Tage/Jahr · 8.500 € Maschine · 30 €/Monat Wartung</span><small>Kundennahe Beispielrechnung; Werte können projektspezifisch angepasst werden.</small></section>
+<style>
+h1{font-size:45px}.subhead{font-size:16px}.roi-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}.roi-kpi{height:190px;padding:20px;text-align:center}.roi-kpi .icon{width:35px;height:35px}.roi-kpi strong{display:block;font-size:31px;margin-top:12px}.roi-kpi span{display:block;color:var(--muted);font-size:11px;font-weight:700;line-height:1.45;margin-top:10px}
+.comparison{margin-top:16px;padding:18px 22px}.comparison h3,.calculator>h3{color:var(--cyan);font-size:15px}.bar-row{display:grid;grid-template-columns:145px 1fr 90px;gap:15px;align-items:center;margin-top:15px;font-size:13px}.bar{height:11px;border-radius:5px;background:#8b96a8}.bar.c5{width:61%;background:var(--cyan)}.bar-row strong{text-align:right;font-size:16px}
+.calculator{margin-top:16px;padding:20px}.calc-grid{display:grid;grid-template-columns:.86fr 1.14fr;gap:16px;margin-top:14px}.input-card,.machine-cost,.saving,.mini-compare,.result-pair>div{border:1px solid rgba(255,255,255,.14);border-radius:7px}.input-card{padding:13px}.input-title{display:flex;align-items:center;gap:10px}.input-title .icon{width:30px;height:30px}.input-title strong{font-size:14px}.input-title small{display:block;color:var(--muted);font-size:9px}.slider{position:relative;margin-top:13px}.slider b,.slider strong{font-size:10px}.slider strong{float:right;color:var(--cyan)}.slider i{display:block;position:relative;height:3px;background:rgba(255,255,255,.25);margin-top:7px}.slider i:before{content:'';display:block;width:var(--p);height:3px;background:var(--cyan)}.slider small{display:flex;justify-content:space-between;color:var(--faint);font-size:8px;margin-top:5px}.machine-cost{display:flex;gap:10px;padding:12px;margin-top:10px}.machine-cost .icon{width:29px;height:29px}.machine-cost strong{font-size:12px}.machine-cost p{font-size:9px;margin-top:8px;color:var(--muted)}.machine-cost b{float:right;color:var(--cyan)}
+.saving{text-align:center;padding:17px;background:rgba(34,211,238,.08)}.saving span,.result-pair span{display:block;color:var(--muted);font-size:9px;font-weight:700}.saving strong{display:block;color:var(--cyan);font-size:37px;margin-top:8px}.saving small{font-size:11px}.mini-compare{padding:12px;margin-top:10px}.mini-compare h4{font-size:10px;color:var(--muted)}.mini-compare p{font-size:9px;margin-top:8px}.mini-compare p b{float:right}.mini-compare i{display:block;height:4px;margin-top:4px;background:#8b96a8;border-radius:3px}.mini-compare i.c5{width:61%;background:var(--cyan)}.result-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}.result-pair>div{text-align:center;padding:11px}.result-pair strong{display:block;margin-top:6px;font-size:16px}.offer{margin-top:10px;background:var(--cyan);color:#04111e;text-align:center;padding:10px;border-radius:6px;font-size:12px;font-weight:800}
+.basis{margin-top:15px;padding:15px 20px;display:grid;grid-template-columns:190px 1fr;gap:8px 15px;align-items:center}.basis strong{font-size:12px}.basis span{color:var(--muted);font-size:10px}.basis small{grid-column:2;color:var(--faint);font-size:9px}
+</style>
+<footer class="footer"><span>FMC3 Robotics · Ingolstadt, Deutschland · www.FMC3-robotics.ai</span><span class="page-no">04 / 06</span></footer>
+</main></body></html>

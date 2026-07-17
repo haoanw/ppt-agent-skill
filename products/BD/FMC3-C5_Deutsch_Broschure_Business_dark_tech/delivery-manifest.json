@@ -1,0 +1,45 @@
+{
+  "run_id": "FMC3-C5_Deutsch_Broschure_Business_dark_tech",
+  "generated_at": "2026-07-16T12:51:57.206481Z",
+  "summary": {
+    "total_pages": 4,
+    "format": "A4 portrait brochure"
+  },
+  "artifacts": {
+    "preview_html": "preview.html",
+    "presentation_png_pptx": "presentation-png.pptx",
+    "presentation_svg_pptx": "presentation-svg.pptx",
+    "brochure_pdf": "FMC3-C5_Deutsch_Broschure_Business_dark_tech.pdf",
+    "content_audit": "content-audit.json"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "planning": "planning/planning1.json",
+      "html": "slides/slide-1.html",
+      "png": "png/slide-1.png"
+    },
+    {
+      "page": 2,
+      "planning": "planning/planning2.json",
+      "html": "slides/slide-2.html",
+      "png": "png/slide-2.png"
+    },
+    {
+      "page": 3,
+      "planning": "planning/planning3.json",
+      "html": "slides/slide-3.html",
+      "png": "png/slide-3.png"
+    },
+    {
+      "page": 4,
+      "planning": "planning/planning4.json",
+      "html": "slides/slide-4.html",
+      "png": "png/slide-4.png"
+    }
+  ],
+  "export_notes": {
+    "presentation_png_pptx": "A4 portrait slides with high-resolution page images.",
+    "presentation_svg_pptx": "Compatibility fallback: same A4 raster rendering because Node/dom-to-svg is unavailable."
+  }
+}

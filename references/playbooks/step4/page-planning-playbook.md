@@ -38,7 +38,7 @@
 - `layout_hint` / `page_type`：写 validator 认可的值。`layout_hint` 推荐使用真实文件 stem，如 `hero-top`、`mixed-grid`、`l-shape`。
 - 非 `content` 页优先通过 `page_type` 消费 `page-templates/`（如 `cover` / `toc` / `section` / `end`）。通常不需要再写 `layout_hint`；只有在要显式钉住模板正文时，才额外填写 `resources.page_template`。
 - `card_type`：写 validator 认可的枚举，如 `data_highlight`、`image_hero`、`matrix_chart`。
-- `chart.chart_type`：写 validator 认可的枚举，**使用下划线命名**，如 `metric_row`、`comparison_bar`、`stacked_bar`、`progress_bar`。
+- `chart.chart_type`：写 validator 认可的 18 种逻辑 ID，**使用下划线命名**，如 `metric_row`、`compare_bar`、`grouped_bar`、`progress_bar`。
 - `resources.*_refs` 与 `card.resource_ref.*`：推荐写 `references/` 中的真实文件 stem，如 `metric-row`、`comparison-bar`、`visual-hierarchy`；`resource_loader.py` 会自动做下划线/连字符归一化。
 - `process` 是 schema 原生 `card_type`，但当前没有 `blocks/process.md`。若使用它，必须同时给出更强的 `layout_refs`、`principle_refs`、`director_command` 和必要的 `chart_refs` / `resource_ref`，不要假设会有专属 block 正文可加载。
 
@@ -62,7 +62,7 @@
   "principle_refs": ["visual-hierarchy", "composition"],
   "layout_refs": ["hero-top"],
   "block_refs": [],
-  "chart_refs": ["kpi"]
+  "chart_refs": ["kpi_card"]
 }
 ```
 

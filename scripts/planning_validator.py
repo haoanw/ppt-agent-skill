@@ -17,7 +17,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-# resource_registry removed in v4 refactor; resource lookup inlined below
+from resource_loader import resolve_resource_path
 from workflow_versions import (
     PLANNING_CONTINUITY_VERSION,
     PLANNING_PACKET_VERSION,
@@ -56,8 +56,11 @@ VALID_OVERFLOW_STRATEGIES = {
     "rebalance_layout", "tighten_budget", "table_or_microchart", "rollback_planning",
 }
 VALID_CHART_TYPES = {
-    "kpi", "metric_row", "sparkline", "comparison_bar", "ring", "stacked_bar",
-    "timeline", "funnel", "radar", "treemap", "waffle", "progress_bar", "rating",
+    "progress_bar", "compare_bar", "ring_chart", "sparkline", "waffle_chart", "kpi_card",
+    "metric_row", "rating", "radar", "timeline", "funnel", "gauge", "grouped_bar",
+    "simple_map", "world_choropleth", "network_graph", "sankey_flow", "heatmap_calendar",
+    # Legacy aliases accepted so existing planning packets remain loadable.
+    "kpi", "comparison_bar", "ring", "waffle",
 }
 VALID_IMAGE_USAGES = {
     "hero-background", "inline-illustration", "icon-accent", "data-visualization-bg",
@@ -253,28 +256,10 @@ _GROUP_DIRS = {
 def resource_exists(refs_dir: Path, group: str, value: str) -> bool:
     if not value:
         return True
-    raw = str(value).strip()
-    direct = Path(raw)
-    if direct.is_absolute():
-        return direct.exists()
-    if raw.startswith("references/"):
-        return (refs_dir / raw.removeprefix("references/")).exists()
-    # Resolve via group -> subdirectory mapping
     subdir = _GROUP_DIRS.get(group)
     if not subdir:
         return False
-    # Try exact filename first, then with .md extension
-    base_dir = refs_dir / subdir
-    candidate = base_dir / raw
-    if candidate.exists():
-        return True
-    candidate_md = base_dir / f"{raw}.md"
-    if candidate_md.exists():
-        return True
-    # Try normalized: underscores to hyphens
-    normalized = raw.replace("_", "-")
-    candidate_norm = base_dir / f"{normalized}.md"
-    return candidate_norm.exists()
+    return resolve_resource_path(refs_dir, subdir, str(value)) is not None
 
 
 def validate_card(

@@ -1,0 +1,199 @@
+{
+  "page": {
+    "slide_number": 5,
+    "page_type": "content",
+    "narrative_role": "evidence",
+    "title": "Wissenschaft. Industrie. Umsetzung.",
+    "page_goal": "FMC3 und das fünfköpfige Kernteam als Vertrauensbasis darstellen.",
+    "audience_takeaway": "FMC3 und das fünfköpfige Kernteam als Vertrauensbasis darstellen.",
+    "visual_weight": 8,
+    "density_label": "medium",
+    "density_reason": "Alle Originalinhalte der Quellseite werden in einer scanbaren Dark-Tech-Struktur erhalten.",
+    "density_contract": {
+      "deck_bias": "balanced",
+      "page_lower_bound": "mid_low",
+      "page_upper_bound": "high",
+      "max_cards": 4,
+      "max_charts": 2,
+      "min_body_font_px": 18,
+      "max_lines_per_card": 5,
+      "image_policy": "support_only",
+      "decoration_budget": "medium",
+      "overflow_strategy": "tighten_budget"
+    },
+    "layout_hint": "symmetric",
+    "layout_variation_note": "Jede Seite nutzt eine eigene, dem Inhalt entsprechende Komposition.",
+    "focus_zone": "Titel, Primärbild oder Primärkennzahl im oberen bis mittleren Seitenbereich",
+    "negative_space_target": "medium",
+    "page_text_strategy": "Deutsche Originaltexte unverändert und modular lesbar.",
+    "rhythm_action": "推进",
+    "must_avoid": [
+      "Textkürzung",
+      "linker Seitenkopf",
+      "Bildinhalt beschneiden",
+      "erfundene Daten"
+    ],
+    "variation_guardrails": {
+      "same_gene_as_deck": "Dunkelblauer Grund, Cyan-Akzent, weißes FMC3-Logo rechts, technische Fußzeile.",
+      "different_from_previous": [
+        "Inhaltsspezifische Rasterung und wechselnde Ankerbehandlung."
+      ]
+    },
+    "director_command": {
+      "mood": "präzise industrielle Zukunft",
+      "spatial_strategy": "symmetric mit klarer Scan-Reihenfolge",
+      "anchor_treatment": "Originalbild oder Hauptkennzahl erhält die stärkste Cyan-Kontur.",
+      "techniques": [
+        "grid",
+        "scan-line",
+        "cyan-rule"
+      ],
+      "prose": "Die Seite wirkt wie ein präzises Instrumentenpanel und bleibt trotz hoher Informationsdichte ruhig."
+    },
+    "decoration_hints": {
+      "background": {
+        "feel": "tiefer technischer Raum",
+        "restraint": "niedrige Deckkraft",
+        "techniques": [
+          "grid"
+        ]
+      },
+      "floating": {
+        "feel": "Instrumentenmarker",
+        "restraint": "maximal zwei",
+        "techniques": [
+          "corner-lines"
+        ]
+      },
+      "page_accent": {
+        "feel": "kaltes Cyan",
+        "restraint": "nur Primärwerte",
+        "techniques": [
+          "cyan-rule"
+        ]
+      }
+    },
+    "resources": {
+      "page_template": null,
+      "layout_refs": [
+        "symmetric"
+      ],
+      "block_refs": [
+        "people"
+      ],
+      "chart_refs": [],
+      "principle_refs": [
+        "visual-hierarchy",
+        "composition",
+        "cognitive-load"
+      ],
+      "resource_rationale": "Das gewählte Raster entspricht dem Inhaltstyp und bewahrt die Lesbarkeit der Originalinhalte."
+    },
+    "cards": [
+      {
+        "card_id": "s05-anchor-1",
+        "role": "anchor",
+        "card_type": "people",
+        "card_style": "accent",
+        "argument_role": "evidence",
+        "headline": "Wissenschaft. Industrie. Umsetzung.",
+        "body": [
+          "Wissenschaft. Industrie. Umsetzung.",
+          "Europäische Wissenschaftler für intelligente Systeme – mit Erfahrung aus Automobilindustrie, KI-Forschung und internationalem B2B-Geschäft.",
+          "Über FMC3 Robotics",
+          "FMC3 bringt moderne Robotiktechnologie vom Standort Ingolstadt in den europäischen Markt. Das Unternehmen wurde im Oktober 2025 von Prof. Dr. Björn Giesler, Dr. Wang Cheng und Dr. David Fan gegründet. Das Portfolio umfasst Reinigungs-, Begrüßungs- und Lieferroboter.",
+          "Wissenschaftliche Exzellenz, industrielle Erfahrung und ein internationales Netzwerk bilden die Grundlage für zuverlässige und skalierbare Lösungen im professionellen Einsatz.",
+          "Okt. 2025",
+          "GEGRÜNDET",
+          "Ingolstadt"
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 42,
+          "body_max_bullets": 8,
+          "body_max_lines": 5
+        },
+        "image": {
+          "mode": "provided",
+          "needed": true,
+          "usage": "inline-illustration",
+          "placement": "inline",
+          "content_description": "Original visual from the supplied FMC3 brochure.",
+          "source_hint": "images/image27.png",
+          "decorate_brief": "Use without changing semantic content; preserve full subject and labels."
+        },
+        "resource_ref": {
+          "principle": "visual-hierarchy"
+        }
+      },
+      {
+        "card_id": "s05-support-1",
+        "role": "support",
+        "card_type": "text",
+        "card_style": "outline",
+        "argument_role": "framework",
+        "headline": "FMC3 ROBOTICS",
+        "body": [
+          "HAUPTSITZ",
+          "DE & Shanghai",
+          "ENTWICKLUNG",
+          "30 / Monat",
+          "LIEFERKAPAZITÄT",
+          "DAS KERNTEAM",
+          "Dr. Wang Cheng",
+          "CEO",
+          "Dr.-Ing. der Technischen Universität München (TUM). Experte für autonomes Fahren. Architekt von Audis Intelligent Driving System. Track Record in Produktion und Auslieferung von über 1 Mio. intelligenten Fahrzeugen.",
+          "Prof. Dr. Björn Giesler",
+          "CTO",
+          "PhD in Informatik am KIT; anerkannte Autorität in KI-Architektur. Über 50 Core-Patente zu Sensing und Datenverarbeitung. Führung von F&E-Teams mit mehr als 500 Mitgliedern.",
+          "Fan David, PhD",
+          "COO",
+          "Ehemaliger Präsident von Marelli China. Verantwortlich für Geschäftsbereiche mit über 1,5 Mrd. €. Post-Merger-Integrationen und Supply-Chain-Restrukturierungen.",
+          "Dr. Huang Dong",
+          "CPO",
+          "Dr.-Ing. in Informatik vom KIT. Ehemaliger Scientist bei Siemens Labs und CTO von TerraIT. Über 15 Jahre Expertise in Datensimulation und Sim-to-Real-Domänen.",
+          "Florian Obermeier",
+          "MD Germany",
+          "Mitgründer der SANEON GmbH. Über 16 Jahre B2B-Erfahrung mit OEMs und Tier-1-Automobilzulieferern. Markterschließung in Europa, Asien und den USA.",
+          "LOKALE BETREUUNG · INTERNATIONALE ENTWICKLUNG",
+          "Persönliche Betreuung in Deutschland · Technische Entwicklung in Ingolstadt und Shanghai",
+          "Reinigungsroboter",
+          "Begrüßungsroboter",
+          "Lieferroboter"
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 42,
+          "body_max_bullets": 8,
+          "body_max_lines": 5
+        },
+        "image": {
+          "mode": "decorate",
+          "needed": false,
+          "usage": null,
+          "placement": null,
+          "content_description": null,
+          "source_hint": null,
+          "decorate_brief": "Dark-tech grid and cyan scan-line treatment only."
+        },
+        "resource_ref": {
+          "principle": "composition"
+        }
+      }
+    ],
+    "source_guidance": {
+      "brief_sections": [
+        "source-brief.txt#seite-5"
+      ],
+      "citation_expectation": "Nur Inhalte und Originalmedien der bereitgestellten DOCX.",
+      "strictness": "Keine Ergänzungen oder Umformulierungen."
+    },
+    "workflow_metadata": {
+      "stage": "planning",
+      "workflow_version": "2026.04.09-v4.1",
+      "planning_schema_version": "4.1",
+      "planning_packet_version": "4.1",
+      "planning_continuity_version": "4.1"
+    }
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "page": {
+    "density_contract": {
+      "deck_bias": "balanced",
+      "page_lower_bound": "mid_low",
+      "page_upper_bound": "high",
+      "max_cards": 4,
+      "max_charts": 2,
+      "min_body_font_px": 18,
+      "max_lines_per_card": 5,
+      "image_policy": "support_only",
+      "decoration_budget": "medium",
+      "overflow_strategy": "tighten_budget"
+    },
+    "density_label": "medium",
+    "negative_space_target": "medium",
+    "page_text_strategy": "Deutsche Originaltexte unverändert, klare technische Hierarchie und kurze scanbare Module.",
+    "must_avoid": [
+      "Textkürzung",
+      "Informationsgrafiken beschneiden",
+      "zu geringe Schriftgröße",
+      "dekorative Bilder ohne Quellenbezug"
+    ],
+    "variation_guardrails": {
+      "same_gene_as_deck": "Dunkelblauer Grund, Cyan-Linien, weiße Typografie, technische Footer-Leiste.",
+      "different_from_previous": [
+        "Ein dominantes Szenarienbild",
+        "zwei Servicekarten",
+        "breiter CTA-Abschluss"
+      ]
+    },
+    "decoration_hints": {
+      "background": {
+        "feel": "tiefer technischer Raum",
+        "restraint": "sehr niedrige Deckkraft",
+        "techniques": [
+          "grid",
+          "scan-line"
+        ]
+      },
+      "floating": {
+        "feel": "präzise Instrumentenmarker",
+        "restraint": "maximal zwei Akzente",
+        "techniques": [
+          "corner-lines"
+        ]
+      },
+      "page_accent": {
+        "feel": "kaltes Cyan",
+        "restraint": "nur Fokusdaten",
+        "techniques": [
+          "cyan-rule"
+        ]
+      }
+    },
+    "source_guidance": {
+      "brief_sections": [
+        "source-brief.txt"
+      ],
+      "citation_expectation": "Nur Inhalte und Originalmedien aus der bereitgestellten DOCX.",
+      "strictness": "Keine Ergänzungen oder Umformulierungen."
+    },
+    "slide_number": 4,
+    "page_type": "content",
+    "narrative_role": "cta",
+    "title": "Einsatzszenarien, Service und Support",
+    "page_goal": "Einsatzbreite und Serviceversprechen in eine klare Demonstrationseinladung überführen.",
+    "audience_takeaway": "Der C5 deckt vielfältige gewerbliche Einsatzfelder ab und FMC3 begleitet Lieferung, Schulung und Erstwartung.",
+    "visual_weight": 7,
+    "density_reason": "Eine große Anwendungsgrafik, zwei Serviceblöcke, CTA und persönliche Signatur werden mit mittlerer Dichte hierarchisch gestaffelt.",
+    "layout_hint": "l-shape",
+    "layout_variation_note": "Die Schlussseite öffnet sich wieder: großes Szenarienbild oben, Service und CTA als klare Abschlussstufen.",
+    "focus_zone": "Anwendungsgrafik und cyan leuchtender Demonstrationsaufruf",
+    "rhythm_action": "收束",
+    "director_command": {
+      "mood": "verlässlicher Abschluss mit Handlungsimpuls",
+      "spatial_strategy": "große Einsatzgrafik, parallele Servicekarten, breite CTA-Leiste, persönliche Signatur",
+      "anchor_treatment": "CTA erhält den stärksten Cyan-Rand der gesamten Broschüre",
+      "techniques": [
+        "l-shape",
+        "service-pair",
+        "cta-glow"
+      ],
+      "prose": "Nach der Einsatzübersicht verdichtet sich die Seite zu Serviceversprechen und einer klaren Einladung, den C5 live zu erleben."
+    },
+    "resources": {
+      "page_template": null,
+      "layout_refs": [
+        "l-shape"
+      ],
+      "block_refs": [],
+      "chart_refs": [],
+      "principle_refs": [
+        "narrative-arc",
+        "visual-hierarchy",
+        "composition"
+      ],
+      "resource_rationale": "L-shape lässt die große Szenariengrafik führen und ordnet Service, CTA und Signatur als Abschlussbewegung darunter."
+    },
+    "cards": [
+      {
+        "card_id": "s04-anchor-1",
+        "role": "anchor",
+        "card_type": "diagram",
+        "card_style": "accent",
+        "argument_role": "evidence",
+        "headline": "Einsatzszenarien, Service und Support",
+        "body": [
+          "Anwendungsszenarien, geeignete Bodenbeläge sowie Service- und Supportsystem"
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 42,
+          "body_max_bullets": 1,
+          "body_max_lines": 4
+        },
+        "image": {
+          "mode": "provided",
+          "needed": true,
+          "usage": "inline-illustration",
+          "placement": "inline",
+          "content_description": "Original FMC3 brochure visual, preserved without content changes.",
+          "source_hint": "images/image5.png",
+          "decorate_brief": "Place inside a restrained cyan technical frame; do not crop away text."
+        },
+        "resource_ref": {
+          "principle": "visual-hierarchy"
+        }
+      },
+      {
+        "card_id": "s04-support-1",
+        "role": "support",
+        "card_type": "process",
+        "card_style": "outline",
+        "argument_role": "method",
+        "headline": "Lieferung & Inbetriebnahme",
+        "body": [
+          "Wir sind in der Lage, bis zu 30 Roboter pro Monat auszuliefern, und kümmern uns um den gesamten Prozess – von den Tests über die Installation bis zur Inbetriebnahme."
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 42,
+          "body_max_bullets": 1,
+          "body_max_lines": 5
+        },
+        "image": {
+          "mode": "decorate",
+          "needed": false,
+          "usage": null,
+          "placement": null,
+          "content_description": null,
+          "source_hint": null,
+          "decorate_brief": "Dark-tech grid and cyan scan-line treatment only."
+        },
+        "resource_ref": {
+          "principle": "composition"
+        }
+      },
+      {
+        "card_id": "s04-support-2",
+        "role": "support",
+        "card_type": "text",
+        "card_style": "filled",
+        "argument_role": "method",
+        "headline": "Service & After-Sales",
+        "body": [
+          "Unsere Ingenieure in Ingolstadt stehen Ihnen täglich zur Verfügung – inklusive Schulungen, kurzer Reaktionszeiten und kostenloser Erstwartung."
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 42,
+          "body_max_bullets": 1,
+          "body_max_lines": 5
+        },
+        "image": {
+          "mode": "decorate",
+          "needed": false,
+          "usage": null,
+          "placement": null,
+          "content_description": null,
+          "source_hint": null,
+          "decorate_brief": "Dark-tech grid and cyan scan-line treatment only."
+        },
+        "resource_ref": {
+          "principle": "composition"
+        }
+      },
+      {
+        "card_id": "s04-context-1",
+        "role": "context",
+        "card_type": "quote",
+        "card_style": "glass",
+        "argument_role": "synthesis",
+        "headline": "Erleben Sie den C5 live",
+        "body": [
+          "Wenn Sie Interesse an unserem C5 haben, senden wir Ihnen gerne weitere Informationen zu und laden Sie herzlich zu einer Demonstration des Roboters ein – bei Ihnen vor Ort oder in unserem Hauptsitz in Ingolstadt.",
+          "Wir freuen uns auf Ihre Rückmeldung.",
+          "Mit freundlichen Grüßen",
+          "Haoan Wang",
+          "Ihr Ansprechpartner bei FMC3 Robotics"
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 42,
+          "body_max_bullets": 5,
+          "body_max_lines": 5
+        },
+        "image": {
+          "mode": "decorate",
+          "needed": false,
+          "usage": null,
+          "placement": null,
+          "content_description": null,
+          "source_hint": null,
+          "decorate_brief": "Dark-tech grid and cyan scan-line treatment only."
+        },
+        "resource_ref": {
+          "principle": "composition"
+        }
+      }
+    ],
+    "workflow_metadata": {
+      "stage": "planning",
+      "workflow_version": "2026.04.09-v4.1",
+      "planning_schema_version": "4.1",
+      "planning_packet_version": "4.1",
+      "planning_continuity_version": "4.1"
+    }
+  }
+}

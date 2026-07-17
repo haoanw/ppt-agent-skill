@@ -1,0 +1,46 @@
+# Outline
+
+密度倾向: balanced
+密度曲线: mid_low -> medium -> medium -> medium
+
+### 第 1 页: C5 Produktauftakt
+页目标: Die Einladung und den C5 als präzise gewerbliche Reinigungslösung positionieren
+页面类型映射: cover
+密度下限: low
+密度目标: mid_low
+密度上限: medium
+节奏动作: 铺垫
+信息姿态: 结论页
+锚点类型: 图片
+
+### 第 2 页: Wirtschaftlichkeit und FMC3
+页目标: Wirtschaftlichen Nutzen belegen und FMC3 als europäischen Robotikpartner einordnen
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 爆发
+信息姿态: 证据页
+锚点类型: KPI
+
+### 第 3 页: Team und Produktparameter
+页目标: Kompetenz des Kernteams und technische Leistungsfähigkeit des C5 zeigen
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 解释页
+锚点类型: 图片
+
+### 第 4 页: Einsatz und Einladung
+页目标: Einsatzbreite und Serviceversprechen in eine klare Demonstrationseinladung überführen
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 收束
+信息姿态: 结论页
+锚点类型: 图片
+
+自审通过: Alle vier Originalseiten und ihre Inhalte sind vollständig abgebildet.

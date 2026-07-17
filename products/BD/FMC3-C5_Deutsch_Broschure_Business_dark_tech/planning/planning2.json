@@ -1,0 +1,237 @@
+{
+  "page": {
+    "density_contract": {
+      "deck_bias": "balanced",
+      "page_lower_bound": "mid_low",
+      "page_upper_bound": "high",
+      "max_cards": 4,
+      "max_charts": 2,
+      "min_body_font_px": 18,
+      "max_lines_per_card": 5,
+      "image_policy": "support_only",
+      "decoration_budget": "medium",
+      "overflow_strategy": "tighten_budget"
+    },
+    "density_label": "medium",
+    "negative_space_target": "medium",
+    "page_text_strategy": "Deutsche Originaltexte unverändert, klare technische Hierarchie und kurze scanbare Module.",
+    "must_avoid": [
+      "Textkürzung",
+      "Informationsgrafiken beschneiden",
+      "zu geringe Schriftgröße",
+      "dekorative Bilder ohne Quellenbezug"
+    ],
+    "variation_guardrails": {
+      "same_gene_as_deck": "Dunkelblauer Grund, Cyan-Linien, weiße Typografie, technische Footer-Leiste.",
+      "different_from_previous": [
+        "Stärkere Datenrasterung",
+        "ROI-Grafik als zentraler Beweis",
+        "Textbeleg im unteren Drittel"
+      ]
+    },
+    "decoration_hints": {
+      "background": {
+        "feel": "tiefer technischer Raum",
+        "restraint": "sehr niedrige Deckkraft",
+        "techniques": [
+          "grid",
+          "scan-line"
+        ]
+      },
+      "floating": {
+        "feel": "präzise Instrumentenmarker",
+        "restraint": "maximal zwei Akzente",
+        "techniques": [
+          "corner-lines"
+        ]
+      },
+      "page_accent": {
+        "feel": "kaltes Cyan",
+        "restraint": "nur Fokusdaten",
+        "techniques": [
+          "cyan-rule"
+        ]
+      }
+    },
+    "source_guidance": {
+      "brief_sections": [
+        "source-brief.txt"
+      ],
+      "citation_expectation": "Nur Inhalte und Originalmedien aus der bereitgestellten DOCX.",
+      "strictness": "Keine Ergänzungen oder Umformulierungen."
+    },
+    "slide_number": 2,
+    "page_type": "content",
+    "narrative_role": "evidence",
+    "title": "Wirtschaftlichkeit auf einen Blick",
+    "page_goal": "Wirtschaftlichen Nutzen belegen und FMC3 als europäischen Robotikpartner einordnen.",
+    "audience_takeaway": "Der C5 amortisiert sich in 1,3 Jahren und wird von einem europäischen Robotikunternehmen betreut.",
+    "visual_weight": 8,
+    "density_reason": "ROI-Grafik, drei Kennzahlen und zwei Unternehmensblöcke benötigen mittlere Dichte und eine vertikale Beweisführung.",
+    "layout_hint": "mixed-grid",
+    "layout_variation_note": "Nach dem offenen Produktcover folgt eine datengetriebene Instrumententafel mit klar getrenntem Unternehmensnachweis.",
+    "focus_zone": "obere KPI-Leiste und zentrale ROI-Grafik",
+    "rhythm_action": "爆发",
+    "director_command": {
+      "mood": "wirtschaftlicher Beweis",
+      "spatial_strategy": "KPI-Leiste, große Beweisgrafik, zweispaltiger Unternehmensblock",
+      "anchor_treatment": "9.089 € als leuchtender Primärwert",
+      "techniques": [
+        "data-rail",
+        "evidence-frame",
+        "split-proof"
+      ],
+      "prose": "Eine dunkle Kontrolltafel zeigt zuerst die Einsparung, dann die vollständige Berechnung und schließlich den Anbieter dahinter."
+    },
+    "resources": {
+      "page_template": null,
+      "layout_refs": [
+        "mixed-grid"
+      ],
+      "block_refs": [],
+      "chart_refs": [],
+      "principle_refs": [
+        "data-visualization",
+        "visual-hierarchy",
+        "composition"
+      ],
+      "resource_rationale": "Mixed-grid verbindet drei KPIs, die unveränderte ROI-Grafik und den Unternehmensnachweis auf einer A4-Seite."
+    },
+    "cards": [
+      {
+        "card_id": "s02-anchor-1",
+        "role": "anchor",
+        "card_type": "data_highlight",
+        "card_style": "accent",
+        "argument_role": "claim",
+        "headline": "Wirtschaftlichkeit",
+        "body": [
+          "Präzision und Effizienz stehen bei uns an erster Stelle. Mit dem C5 sparen Sie Zeit und Arbeitskosten und senken zugleich den Verbrauch von Wasser und Reinigungsmitteln – eine Beispielrechnung gegenüber der manuellen Reinigung:",
+          "9.089 €",
+          "Einsparungen pro Jahr",
+          "1,3 Jahre",
+          "Amortisationszeit (ROI)",
+          "1,54 Mio. m²",
+          "gereinigte Fläche pro Jahr"
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 42,
+          "body_max_bullets": 7,
+          "body_max_lines": 5
+        },
+        "image": {
+          "mode": "decorate",
+          "needed": false,
+          "usage": null,
+          "placement": null,
+          "content_description": null,
+          "source_hint": null,
+          "decorate_brief": "Dark-tech grid and cyan scan-line treatment only."
+        },
+        "resource_ref": {
+          "principle": "visual-hierarchy"
+        }
+      },
+      {
+        "card_id": "s02-support-1",
+        "role": "support",
+        "card_type": "diagram",
+        "card_style": "outline",
+        "argument_role": "evidence",
+        "headline": "Beispielrechnung: jährlicher Kostenvergleich – manuelle Reinigung vs. C5 (60 Monate, 1.000 h/Jahr)",
+        "body": [
+          "Beispielrechnung: jährlicher Kostenvergleich – manuelle Reinigung vs. C5 (60 Monate, 1.000 h/Jahr)"
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 42,
+          "body_max_bullets": 1,
+          "body_max_lines": 3
+        },
+        "image": {
+          "mode": "provided",
+          "needed": true,
+          "usage": "inline-illustration",
+          "placement": "inline",
+          "content_description": "Original FMC3 brochure visual, preserved without content changes.",
+          "source_hint": "images/image2.jpeg",
+          "decorate_brief": "Place inside a restrained cyan technical frame; do not crop away text."
+        },
+        "resource_ref": {
+          "principle": "composition"
+        }
+      },
+      {
+        "card_id": "s02-support-2",
+        "role": "support",
+        "card_type": "text",
+        "card_style": "filled",
+        "argument_role": "evidence",
+        "headline": "Über FMC3 Robotics",
+        "body": [
+          "FMC3 steht für die Zukunft der Robotik. Von unserem Standort in Ingolstadt aus bieten wir Ihnen die neuesten und innovativsten Technologien an. Unser Unternehmen wurde im Oktober 2025 von Herrn Prof. Dr. Bjoern Giesler, Herrn Dr. Wang Cheng und Herrn Dr. David Fan gemeinsam mit dem Ziel gegründet, Europa mit moderner Robotiktechnologie zu versorgen.",
+          "Seitdem haben wir bereits zahlreiche Verträge mit Kunden in Deutschland und Europa abgeschlossen. Darüber hinaus versorgen wir unsere Kunden mit Begrüßungs- und Lieferrobotern. Unsere Ingenieure in Shanghai arbeiten derzeit an einem humanoiden Roboter; außerdem starten wir eine Zusammenarbeit im Bereich der Sicherheitsroboterhunde."
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 42,
+          "body_max_bullets": 2,
+          "body_max_lines": 5
+        },
+        "image": {
+          "mode": "decorate",
+          "needed": false,
+          "usage": null,
+          "placement": null,
+          "content_description": null,
+          "source_hint": null,
+          "decorate_brief": "Dark-tech grid and cyan scan-line treatment only."
+        },
+        "resource_ref": {
+          "principle": "composition"
+        }
+      },
+      {
+        "card_id": "s02-context-1",
+        "role": "context",
+        "card_type": "list",
+        "card_style": "glass",
+        "argument_role": "framework",
+        "headline": "FMC3 auf einen Blick",
+        "body": [
+          "Gegründet: Oktober 2025",
+          "Hauptsitz: Ingolstadt, Deutschland",
+          "Entwicklung: Ingolstadt & Shanghai",
+          "Lieferkapazität: bis zu 30 Roboter/Monat",
+          "Portfolio: Reinigungs-, Begrüßungs- und Lieferroboter"
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 42,
+          "body_max_bullets": 5,
+          "body_max_lines": 5
+        },
+        "image": {
+          "mode": "decorate",
+          "needed": false,
+          "usage": null,
+          "placement": null,
+          "content_description": null,
+          "source_hint": null,
+          "decorate_brief": "Dark-tech grid and cyan scan-line treatment only."
+        },
+        "resource_ref": {
+          "principle": "composition"
+        }
+      }
+    ],
+    "workflow_metadata": {
+      "stage": "planning",
+      "workflow_version": "2026.04.09-v4.1",
+      "planning_schema_version": "4.1",
+      "planning_packet_version": "4.1",
+      "planning_continuity_version": "4.1"
+    }
+  }
+}

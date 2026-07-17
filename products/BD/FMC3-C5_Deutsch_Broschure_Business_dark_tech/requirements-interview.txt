@@ -1,0 +1,21 @@
+# Requirements Interview
+
+scenario: Deutsche B2B-Produktbroschüre und Einladung zur C5-Demonstration
+audience: Gebäudereiniger, Facility-Management, gewerbliche Entscheider und potenzielle Vertriebspartner
+target_action: Interesse wecken und eine persönliche C5-Demonstration vereinbaren
+expected_pages: 4
+page_density: balanced
+style: dark_tech
+brand: FMC3 Robotics; vorhandenes Logo, Bildmaterial und alle Originalinhalte beibehalten
+must_include: Vollständiger Inhalt der Quelldatei FMC3-C5_Deutsch_Broschure_Business.docx
+must_avoid: Keine Kürzungen, keine Übersetzungen, keine neuen Leistungsversprechen
+language: Deutsch
+imagery: provided
+material_strategy: non-research; nur bereitgestellte Quelle
+subagent_model_strategy: Hauptagent
+subagent_thinking_effort: hoch
+manual_audit_mode: fine_grained
+manual_audit_scope: page_html, page_review
+manual_audit_assets: planning, html, png, content-audit
+density_bias: balanced
+branch: 非research

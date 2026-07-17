@@ -77,7 +77,7 @@ python3 SKILL_DIR/scripts/resource_loader.py resolve --refs-dir REFS_DIR --plann
 - 每个根节点都要带 `data-card-id="<card_id>"`，便于 Review 阶段与 planning 对账。
 - `role = anchor` 的卡必须成为全页第一视觉落点；`support/context` 退后，但不能消失。
 - 任何**纯装饰节点**都必须带 `data-decoration-layer="background|floating|page-accent"`，并同时写 `aria-hidden="true"`；`visual_qa.py` 会直接按这个标记统计装饰预算。
-- 若卡片带 `chart.chart_type`，最终图表类型必须与 planning 保持一致；不要把 `comparison_bar` 偷换成普通 list。
+- 若卡片带 `chart.chart_type`，最终图表类型必须与 planning 保持一致；不要把 `compare_bar` 偷换成普通 list。
 - 若 `source_guidance` 要求保留来源，至少在卡片 footer / caption / 注释位中给出来源提示。
 - 卡片数量、图表数量、每卡行数都不得超出 `density_contract` 的预算上限。
 - **【反泄漏清扫防线】**：在你把 JSON 里的 `body` 和 `headline` 填入 HTML 标签时，如果读到了明显的**“旁白解说”、“排版动作”**（例如：“这一页先做铺垫，最后收束到结论”等废话），**绝对不准老实巴交地把它渲染在大屏幕上！** 这是前置 Planning 代理漏掉的导演指导语，你必须主动充当最后一道防火墙将其直接剔除，或自行将其改写为干货文案！
