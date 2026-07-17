@@ -1,0 +1,155 @@
+{
+  "page": {
+    "slide_number": 17,
+    "page_type": "content",
+    "narrative_role": "evidence",
+    "title": "Products",
+    "page_goal": "Preserve and present all source content for slide 17.",
+    "audience_takeaway": "Products",
+    "cards": [
+      {
+        "card_id": "s17-anchor-1",
+        "role": "anchor",
+        "card_type": "text",
+        "card_style": "accent",
+        "argument_role": "evidence",
+        "headline": "Products",
+        "body": [
+          "Products",
+          "FMC³ Brain+ODM",
+          "Robo dog",
+          "SLAM Localization and Mapping",
+          "Autonomous Navigation",
+          "Omnidirectional Obstacle Avoidance",
+          "Point Cloud Surround View",
+          "Intelligent Management and Scheduling System",
+          "Functions",
+          "Autonomous Charging",
+          "High reliability",
+          "Aftersales support",
+          "Standing Dimensions (mm)",
+          "820 × 440 × 570",
+          "Weight",
+          "37 kg",
+          "Continuous Working Payload",
+          "25 kg"
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 100,
+          "body_max_bullets": 18,
+          "body_max_lines": 5
+        },
+        "image": {
+          "mode": "provided",
+          "needed": true,
+          "usage": "inline-illustration",
+          "placement": "inline",
+          "content_description": "Original visual from the supplied product manual.",
+          "source_hint": "images/slide-17-asset-01.png",
+          "decorate_brief": "Preserve the source visual and its semantic content."
+        }
+      },
+      {
+        "card_id": "s17-support-2",
+        "role": "support",
+        "card_type": "text",
+        "card_style": "outline",
+        "argument_role": "framework",
+        "headline": "Source content",
+        "body": [
+          "Max. Continuous Step Height",
+          "30 cm",
+          "Max. Step Height",
+          "80 cm",
+          "Limit Test Speed",
+          "5 m/s",
+          "Max. Operating Speed",
+          "3.7 m/s",
+          "Max. Climbing Angle",
+          "Approx. 45°",
+          "Trench Crossing Width",
+          "NoLoad Endurance Time / Range",
+          "5 h / 20 km",
+          "Effective Payload Endurance Time / Range",
+          "3 h / 12.5 km",
+          "Battery Capacity",
+          "907 Wh",
+          "Parameters"
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 100,
+          "body_max_bullets": 18,
+          "body_max_lines": 5
+        },
+        "image": {
+          "mode": "decorate",
+          "needed": false,
+          "usage": null,
+          "placement": null,
+          "content_description": null,
+          "source_hint": null,
+          "decorate_brief": "Dark-tech grid and cyan rules only."
+        }
+      }
+    ],
+    "visual_weight": 7,
+    "density_label": "medium",
+    "density_reason": "Source-controlled density preserves all supplied product content.",
+    "density_contract": {
+      "deck_bias": "balanced",
+      "page_lower_bound": "mid_low",
+      "page_upper_bound": "high",
+      "max_cards": 4,
+      "max_charts": 2,
+      "min_body_font_px": 18,
+      "max_lines_per_card": 5,
+      "image_policy": "support_only",
+      "decoration_budget": "medium",
+      "overflow_strategy": "tighten_budget"
+    },
+    "layout_hint": "primary-secondary",
+    "director_command": {
+      "mood": "precise industrial future",
+      "spatial_strategy": "Preserve source hierarchy within a dark technical frame.",
+      "anchor_treatment": "Product evidence receives the strongest cyan edge."
+    },
+    "decoration_hints": {
+      "background": {
+        "feel": "deep technical space",
+        "techniques": [
+          "grid"
+        ]
+      },
+      "page_accent": {
+        "feel": "cyan instrumentation",
+        "techniques": [
+          "cyan-rule"
+        ]
+      }
+    },
+    "resources": {
+      "page_template": "content",
+      "layout_refs": [],
+      "block_refs": [],
+      "chart_refs": [],
+      "principle_refs": []
+    },
+    "source_guidance": {
+      "brief_sections": [
+        "source-brief.txt#slide-17"
+      ],
+      "citation_expectation": "Use only the supplied PPTX content and embedded media.",
+      "strictness": "No additions, rewriting, translation, deletion, or reordering.",
+      "speaker_notes": []
+    },
+    "workflow_metadata": {
+      "stage": "planning",
+      "workflow_version": "2026.04.09-v4.1",
+      "planning_schema_version": "4.1",
+      "planning_packet_version": "4.1",
+      "planning_continuity_version": "4.1"
+    }
+  }
+}

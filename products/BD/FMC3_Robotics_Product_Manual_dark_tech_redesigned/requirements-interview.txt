@@ -1,0 +1,21 @@
+# Requirements Interview
+
+scenario: FMC3 Robotics corporate product manual
+audience: Western-market B2B customers, partners, integrators, and industrial decision-makers
+target_action: Understand FMC3 positioning, compliance, platform capabilities, and full product portfolio
+expected_pages: 30
+page_density: balanced
+style: dark_tech
+brand: FMC3 Robotics
+must_include: Every source slide, text block, table, note, and embedded product visual
+must_avoid: Content deletion, rewriting, translation, invented specifications, or reordered slides
+language: English, preserving source wording
+imagery: provided only
+material_strategy: non-research; the supplied PPTX is the sole content authority
+subagent_model_strategy: main agent
+subagent_thinking_effort: high
+manual_audit_mode: fine_grained
+manual_audit_scope: planning, presentation, rendered_pages
+manual_audit_assets: source-brief, outline, style, pptx, pdf, png, content-audit
+density_bias: balanced
+branch: non-research

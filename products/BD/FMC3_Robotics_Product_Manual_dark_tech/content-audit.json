@@ -1,0 +1,403 @@
+{
+  "ok": true,
+  "source": "/home/haoanw/workspace/skill_agent/ppt-agent-skill/products/BD/FMC³ Robotics_product Manual_0606.pptx",
+  "output": "/home/haoanw/workspace/skill_agent/ppt-agent-skill/products/BD/FMC3_Robotics_Product_Manual_dark_tech/FMC3_Robotics_Product_Manual_dark_tech.pptx",
+  "slide_count": 30,
+  "page_checks": [
+    {
+      "page": 1,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 2,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 3,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 4,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 5,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 6,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 7,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 8,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 9,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 10,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 11,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 12,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 13,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 14,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 15,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 16,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 17,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 18,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 19,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 20,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 21,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 22,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 23,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 24,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 25,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 26,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 27,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 28,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 29,
+      "text_match": true,
+      "notes_match": true
+    },
+    {
+      "page": 30,
+      "text_match": true,
+      "notes_match": true
+    }
+  ],
+  "source_media_count": 123,
+  "output_media_count": 124,
+  "missing_source_media_hashes": [],
+  "png_checks": {
+    "1": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 1842378
+    },
+    "2": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 587318
+    },
+    "3": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 648172
+    },
+    "4": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 909305
+    },
+    "5": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 194295
+    },
+    "6": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 549042
+    },
+    "7": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 218971
+    },
+    "8": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 476389
+    },
+    "9": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 303762
+    },
+    "10": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 366103
+    },
+    "11": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 709726
+    },
+    "12": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 335642
+    },
+    "13": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 331155
+    },
+    "14": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 421564
+    },
+    "15": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 328651
+    },
+    "16": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 410293
+    },
+    "17": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 747545
+    },
+    "18": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 580477
+    },
+    "19": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 580900
+    },
+    "20": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 427555
+    },
+    "21": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 405548
+    },
+    "22": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 1212216
+    },
+    "23": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 669613
+    },
+    "24": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 286018
+    },
+    "25": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 381790
+    },
+    "26": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 365950
+    },
+    "27": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 366541
+    },
+    "28": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 314510
+    },
+    "29": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 297922
+    },
+    "30": {
+      "dimensions": [
+        1921,
+        1080
+      ],
+      "ratio_16_9": true,
+      "bytes": 1990807
+    }
+  }
+}

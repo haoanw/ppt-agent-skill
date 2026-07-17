@@ -1,0 +1,149 @@
+{
+  "page": {
+    "slide_number": 13,
+    "page_type": "content",
+    "narrative_role": "evidence",
+    "title": "Products",
+    "page_goal": "Preserve and present all source content for slide 13.",
+    "audience_takeaway": "Products",
+    "cards": [
+      {
+        "card_id": "s13-anchor-1",
+        "role": "anchor",
+        "card_type": "text",
+        "card_style": "accent",
+        "argument_role": "evidence",
+        "headline": "Products",
+        "body": [
+          "Products",
+          "FMC³ Brain+ODM",
+          "Robo dogD1 MAX",
+          "Highlights",
+          "1. Core Performance Advantages",
+          "Engineered for industrialgrade performance",
+          "Low selfweight paired with high payload capacity",
+          "Longlasting battery life for extended operations",
+          "Robust environmental protection design",
+          "Agile yet stable locomotion for demanding tasks",
+          "2. Intelligent Locomotion & Terrain Adaptability",
+          "Reinforcement learningbased motion control model",
+          "Builtin capabilities: impact resistance, disturbance rejection",
+          "Fall selfrecovery mechanism for reliable field use",
+          "Dynamic adaptive control for complex environments"
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 100,
+          "body_max_bullets": 15,
+          "body_max_lines": 5
+        },
+        "image": {
+          "mode": "provided",
+          "needed": true,
+          "usage": "inline-illustration",
+          "placement": "inline",
+          "content_description": "Original visual from the supplied product manual.",
+          "source_hint": "images/slide-13-asset-01.png",
+          "decorate_brief": "Preserve the source visual and its semantic content."
+        }
+      },
+      {
+        "card_id": "s13-support-2",
+        "role": "support",
+        "card_type": "text",
+        "card_style": "outline",
+        "argument_role": "framework",
+        "headline": "Source content",
+        "body": [
+          "Autonomous adaptation to diverse terrains and road conditions",
+          "3. FullScene Perception & Navigation",
+          "Multimodal perception system: vision, LiDAR, ultrasonic, and INS",
+          "Environmental detection and mapping capabilities",
+          "Autonomous navigation in unstructured spaces",
+          "Realtime target recognition and tracking",
+          "Enables intelligent, collisionfree operations",
+          "4. MultiScenario Application Capabilities",
+          "Rich set of power and communication interfaces",
+          "Versatile for industrial and public safety use cases:",
+          "Security patrol & surveillance",
+          "Power grid inspection",
+          "Logistics and heavy payload transport",
+          "Onsite task execution & response",
+          "Personnel search & rescue (SAR)"
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 100,
+          "body_max_bullets": 15,
+          "body_max_lines": 5
+        },
+        "image": {
+          "mode": "decorate",
+          "needed": false,
+          "usage": null,
+          "placement": null,
+          "content_description": null,
+          "source_hint": null,
+          "decorate_brief": "Dark-tech grid and cyan rules only."
+        }
+      }
+    ],
+    "visual_weight": 7,
+    "density_label": "medium",
+    "density_reason": "Source-controlled density preserves all supplied product content.",
+    "density_contract": {
+      "deck_bias": "balanced",
+      "page_lower_bound": "mid_low",
+      "page_upper_bound": "high",
+      "max_cards": 4,
+      "max_charts": 2,
+      "min_body_font_px": 18,
+      "max_lines_per_card": 5,
+      "image_policy": "support_only",
+      "decoration_budget": "medium",
+      "overflow_strategy": "tighten_budget"
+    },
+    "layout_hint": "primary-secondary",
+    "director_command": {
+      "mood": "precise industrial future",
+      "spatial_strategy": "Preserve source hierarchy within a dark technical frame.",
+      "anchor_treatment": "Product evidence receives the strongest cyan edge."
+    },
+    "decoration_hints": {
+      "background": {
+        "feel": "deep technical space",
+        "techniques": [
+          "grid"
+        ]
+      },
+      "page_accent": {
+        "feel": "cyan instrumentation",
+        "techniques": [
+          "cyan-rule"
+        ]
+      }
+    },
+    "resources": {
+      "page_template": "content",
+      "layout_refs": [],
+      "block_refs": [],
+      "chart_refs": [],
+      "principle_refs": []
+    },
+    "source_guidance": {
+      "brief_sections": [
+        "source-brief.txt#slide-13"
+      ],
+      "citation_expectation": "Use only the supplied PPTX content and embedded media.",
+      "strictness": "No additions, rewriting, translation, deletion, or reordering.",
+      "speaker_notes": []
+    },
+    "workflow_metadata": {
+      "stage": "planning",
+      "workflow_version": "2026.04.09-v4.1",
+      "planning_schema_version": "4.1",
+      "planning_packet_version": "4.1",
+      "planning_continuity_version": "4.1"
+    }
+  }
+}

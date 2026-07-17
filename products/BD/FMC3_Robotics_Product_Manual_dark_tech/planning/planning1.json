@@ -1,0 +1,102 @@
+{
+  "page": {
+    "slide_number": 1,
+    "page_type": "cover",
+    "narrative_role": "cover",
+    "title": "FMC³ Robotics",
+    "page_goal": "Preserve and present all source content for slide 1.",
+    "audience_takeaway": "FMC³ Robotics",
+    "cards": [
+      {
+        "card_id": "s01-anchor-1",
+        "role": "anchor",
+        "card_type": "image_hero",
+        "card_style": "accent",
+        "argument_role": "evidence",
+        "headline": "FMC³ Robotics",
+        "body": [
+          "FMC³ Robotics",
+          "The Embodied AI Brain from Europe",
+          "The Embodied AI Brain from Europe",
+          "Product Manual",
+          "Mar, 2026",
+          "Confidential"
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 100,
+          "body_max_bullets": 6,
+          "body_max_lines": 4
+        },
+        "image": {
+          "mode": "provided",
+          "needed": true,
+          "usage": "inline-illustration",
+          "placement": "inline",
+          "content_description": "Original visual from the supplied product manual.",
+          "source_hint": "images/slide-01-image-01.png",
+          "decorate_brief": "Preserve the source visual and its semantic content."
+        }
+      }
+    ],
+    "visual_weight": 7,
+    "density_label": "mid_low",
+    "density_reason": "Source-controlled density preserves all supplied product content.",
+    "density_contract": {
+      "deck_bias": "balanced",
+      "page_lower_bound": "low",
+      "page_upper_bound": "high",
+      "max_cards": 3,
+      "max_charts": 1,
+      "min_body_font_px": 20,
+      "max_lines_per_card": 4,
+      "image_policy": "flexible",
+      "decoration_budget": "medium",
+      "overflow_strategy": "rebalance_layout"
+    },
+    "layout_hint": "primary-secondary",
+    "director_command": {
+      "mood": "precise industrial future",
+      "spatial_strategy": "Preserve source hierarchy within a dark technical frame.",
+      "anchor_treatment": "Product evidence receives the strongest cyan edge."
+    },
+    "decoration_hints": {
+      "background": {
+        "feel": "deep technical space",
+        "techniques": [
+          "grid"
+        ]
+      },
+      "page_accent": {
+        "feel": "cyan instrumentation",
+        "techniques": [
+          "cyan-rule"
+        ]
+      }
+    },
+    "resources": {
+      "page_template": "cover",
+      "layout_refs": [],
+      "block_refs": [],
+      "chart_refs": [],
+      "principle_refs": []
+    },
+    "source_guidance": {
+      "brief_sections": [
+        "source-brief.txt#slide-1"
+      ],
+      "citation_expectation": "Use only the supplied PPTX content and embedded media.",
+      "strictness": "No additions, rewriting, translation, deletion, or reordering.",
+      "speaker_notes": [
+        "简化定位，指向明确"
+      ]
+    },
+    "workflow_metadata": {
+      "stage": "planning",
+      "workflow_version": "2026.04.09-v4.1",
+      "planning_schema_version": "4.1",
+      "planning_packet_version": "4.1",
+      "planning_continuity_version": "4.1"
+    }
+  }
+}

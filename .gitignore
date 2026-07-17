@@ -4,7 +4,8 @@ package.json
 .vscode/
 .superpowers/
 .DS_Store
-*__pycache__/*
+__pycache__/
+*.py[cod]
 
 # 运行时产物（style-gallery/ 保留 26 风格预览用于 README 效果展示）
 ppt-output/*
@@ -15,3 +16,6 @@ tests/smoke-results/*/screenshots/
 
 # Puppeteer 运行时产物
 *.bundle.js
+
+# PowerPoint 抽取的 WMF 中间素材（可从源文件重建）
+products/BD/*_dark_tech*/images/*.wmf

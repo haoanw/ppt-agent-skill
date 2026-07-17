@@ -1,0 +1,160 @@
+{
+  "page": {
+    "slide_number": 20,
+    "page_type": "content",
+    "narrative_role": "evidence",
+    "title": "Products",
+    "page_goal": "Preserve and present all source content for slide 20.",
+    "audience_takeaway": "Products",
+    "cards": [
+      {
+        "card_id": "s20-anchor-1",
+        "role": "anchor",
+        "card_type": "text",
+        "card_style": "accent",
+        "argument_role": "evidence",
+        "headline": "Products",
+        "body": [
+          "Products",
+          "FMC³ Brain+ODM",
+          "Unified Integrated Control, No Interface Boundaries",
+          "SelfDeveloped Positioning Compensation, EnvironmentResilient",
+          "Intuitive HMI, OneClick Command Execution",
+          "Dual LiDAR + Dual Vision + Collision Detection, Enhanced Safety",
+          "Rapid Battery Swap, 24/7 Continuous Operation",
+          "Modular Chassis + Backpack Design, Maximized Flexibility",
+          "Functions",
+          "Parameters",
+          "Workbot",
+          "Automotive: LineSide Feeding, Flexible",
+          "CNC: Machine Tending, MultiMachine",
+          "3C: Component Handling, MultiSKU",
+          "Logistics: Tote/Pallet Handling, Automation",
+          "General Industry: Flexible Line Retrofit",
+          "Application Scenarios",
+          "Dimensions (L×W×H)",
+          "950×630×850 mm (excluding arm)",
+          "Manipulator",
+          "Reach 1327 mm, payload 12 kg (incl. end effector)"
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 100,
+          "body_max_bullets": 21,
+          "body_max_lines": 5
+        },
+        "image": {
+          "mode": "provided",
+          "needed": true,
+          "usage": "inline-illustration",
+          "placement": "inline",
+          "content_description": "Original visual from the supplied product manual.",
+          "source_hint": "images/slide-20-image-01.png",
+          "decorate_brief": "Preserve the source visual and its semantic content."
+        }
+      },
+      {
+        "card_id": "s20-support-2",
+        "role": "support",
+        "card_type": "text",
+        "card_style": "outline",
+        "argument_role": "framework",
+        "headline": "Source content",
+        "body": [
+          "Weight & Payload",
+          "Weight < 300 kg, usable payload 150 kg",
+          "Speed",
+          "Arm TCP ≤1.8 m/s, travel ≤1.2 m/s",
+          "Mobility",
+          "Obstacle ≤10 mm, gap ≤20 mm",
+          "Passage Width",
+          "Travel ≥850 mm, turning ≥1250 mm",
+          "Protection",
+          "Body splashproof, arm IP68",
+          "Accuracy",
+          "Station ±10 mm, comprehensive ±0.5 mm",
+          "Endurance",
+          "Single battery 3 h, dual batteries 6 h",
+          "Cycle Time",
+          "20 s",
+          "Radar Layout",
+          "Diagonal dual radar",
+          "Rotation Diameter",
+          "1000 mm"
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 100,
+          "body_max_bullets": 20,
+          "body_max_lines": 5
+        },
+        "image": {
+          "mode": "decorate",
+          "needed": false,
+          "usage": null,
+          "placement": null,
+          "content_description": null,
+          "source_hint": null,
+          "decorate_brief": "Dark-tech grid and cyan rules only."
+        }
+      }
+    ],
+    "visual_weight": 7,
+    "density_label": "medium",
+    "density_reason": "Source-controlled density preserves all supplied product content.",
+    "density_contract": {
+      "deck_bias": "balanced",
+      "page_lower_bound": "mid_low",
+      "page_upper_bound": "high",
+      "max_cards": 4,
+      "max_charts": 2,
+      "min_body_font_px": 18,
+      "max_lines_per_card": 5,
+      "image_policy": "support_only",
+      "decoration_budget": "medium",
+      "overflow_strategy": "tighten_budget"
+    },
+    "layout_hint": "asymmetric",
+    "director_command": {
+      "mood": "precise industrial future",
+      "spatial_strategy": "Preserve source hierarchy within a dark technical frame.",
+      "anchor_treatment": "Product evidence receives the strongest cyan edge."
+    },
+    "decoration_hints": {
+      "background": {
+        "feel": "deep technical space",
+        "techniques": [
+          "grid"
+        ]
+      },
+      "page_accent": {
+        "feel": "cyan instrumentation",
+        "techniques": [
+          "cyan-rule"
+        ]
+      }
+    },
+    "resources": {
+      "page_template": "content",
+      "layout_refs": [],
+      "block_refs": [],
+      "chart_refs": [],
+      "principle_refs": []
+    },
+    "source_guidance": {
+      "brief_sections": [
+        "source-brief.txt#slide-20"
+      ],
+      "citation_expectation": "Use only the supplied PPTX content and embedded media.",
+      "strictness": "No additions, rewriting, translation, deletion, or reordering.",
+      "speaker_notes": []
+    },
+    "workflow_metadata": {
+      "stage": "planning",
+      "workflow_version": "2026.04.09-v4.1",
+      "planning_schema_version": "4.1",
+      "planning_packet_version": "4.1",
+      "planning_continuity_version": "4.1"
+    }
+  }
+}

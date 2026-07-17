@@ -1,6 +1,6 @@
 {
   "run_id": "FMC3_C5_Brochure_Deutsch_Redesigned_2_HighRes_Vector_dark_tech",
-  "generated_at": "2026-07-16T14:44:45.636650Z",
+  "generated_at": "2026-07-17T11:47:33.436095Z",
   "summary": {
     "total_pages": 6,
     "format": "A4 portrait brochure"
@@ -9,7 +9,7 @@
     "preview_html": "preview.html",
     "presentation_png_pptx": "presentation-png.pptx",
     "presentation_svg_pptx": "presentation-svg.pptx",
-    "brochure_pdf": "FMC3_C5_Brochure_Deutsch_Redesigned_2_HighRes_Vector_dark_tech.pdf",
+    "brochure_pdf": "FMC3_C5_Brochure_Deutsch.pdf",
     "content_audit": "content-audit.json"
   },
   "pages": [

@@ -1,0 +1,40 @@
+{
+  "style_id": "dark_tech",
+  "style_name": "Dark Tech",
+  "mood_keywords": [
+    "precise",
+    "industrial",
+    "futuristic",
+    "technical"
+  ],
+  "design_soul": "A restrained European industrial interface with deep navy space, cyan instrumentation, and clear product evidence.",
+  "variation_strategy": "Product images and source layouts remain page-specific; background, panel, typography, logo, grid, and navigation treatments stay locked.",
+  "decoration_dna": {
+    "signature_move": "cyan technical frame with subtle grid",
+    "forbidden": [
+      "content rewriting",
+      "decorative stock imagery",
+      "oversized rounded cards"
+    ],
+    "recommended_combos": [
+      "dark panel + cyan rule",
+      "white product viewport + navy specification panel"
+    ]
+  },
+  "font_family": "Aptos",
+  "css_variables": {
+    "bg_primary": "#050B1F",
+    "bg_secondary": "#08162E",
+    "card_bg_from": "#0B1A34",
+    "card_bg_to": "#102545",
+    "card_border": "#163B59",
+    "card_radius": "6px",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#C3CDDB",
+    "accent_1": "#22D3EE",
+    "accent_2": "#3B82F6",
+    "accent_3": "#6366F1",
+    "accent_4": "#FDE047",
+    "css_snippets": {}
+  }
+}

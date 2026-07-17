@@ -1,0 +1,152 @@
+{
+  "page": {
+    "slide_number": 28,
+    "page_type": "content",
+    "narrative_role": "evidence",
+    "title": "Products",
+    "page_goal": "Preserve and present all source content for slide 28.",
+    "audience_takeaway": "Products",
+    "cards": [
+      {
+        "card_id": "s28-anchor-1",
+        "role": "anchor",
+        "card_type": "text",
+        "card_style": "accent",
+        "argument_role": "evidence",
+        "headline": "Products",
+        "body": [
+          "Products",
+          "FMC³ Brain+ODM",
+          "GreetingBot Nova Service Robot",
+          "Application Scenarios",
+          "•Showrooms & exhibitions",
+          "•Reception desks & office buildings",
+          "•Museums, galleries, guided tours",
+          "•Hotels, hospitals, retail stores",
+          "Functions",
+          "•Large language model voice interaction in 30+ languages",
+          "•Smart reception, intelligent Q&A, guidance and tour explanation",
+          "•Dynamic promotion with 14-inch FHD customer-facing screen",
+          "•Marker-free deployment, autonomous navigation and obstacle avoidance",
+          "•Automatic recharge for continuous front-of-house service",
+          "Parameters",
+          "Size",
+          "558 × 525 × 1350 mm"
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 100,
+          "body_max_bullets": 17,
+          "body_max_lines": 5
+        },
+        "image": {
+          "mode": "provided",
+          "needed": true,
+          "usage": "inline-illustration",
+          "placement": "inline",
+          "content_description": "Original visual from the supplied product manual.",
+          "source_hint": "images/slide-28-asset-01.png",
+          "decorate_brief": "Preserve the source visual and its semantic content."
+        }
+      },
+      {
+        "card_id": "s28-support-2",
+        "role": "support",
+        "card_type": "text",
+        "card_style": "outline",
+        "argument_role": "framework",
+        "headline": "Source content",
+        "body": [
+          "Net Weight",
+          "56 kg",
+          "Screen",
+          "14-inch; 1080 FHD",
+          "Camera",
+          "13M high-definition head camera",
+          "Mobility",
+          "0.5-1.2 m/s adjustable cruising speed",
+          "Endurance",
+          "12-14 h typical cruising scene",
+          "Charging",
+          "4.5 h via automatic charging dock or cable",
+          "Interfaces",
+          "USB 2.0, Type-C, LAN, DC power 12V 3A",
+          "Business Value",
+          "Reduce routine reception work; improve visitor engagement"
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 100,
+          "body_max_bullets": 16,
+          "body_max_lines": 5
+        },
+        "image": {
+          "mode": "decorate",
+          "needed": false,
+          "usage": null,
+          "placement": null,
+          "content_description": null,
+          "source_hint": null,
+          "decorate_brief": "Dark-tech grid and cyan rules only."
+        }
+      }
+    ],
+    "visual_weight": 7,
+    "density_label": "medium",
+    "density_reason": "Source-controlled density preserves all supplied product content.",
+    "density_contract": {
+      "deck_bias": "balanced",
+      "page_lower_bound": "mid_low",
+      "page_upper_bound": "high",
+      "max_cards": 4,
+      "max_charts": 2,
+      "min_body_font_px": 18,
+      "max_lines_per_card": 5,
+      "image_policy": "support_only",
+      "decoration_budget": "medium",
+      "overflow_strategy": "tighten_budget"
+    },
+    "layout_hint": "asymmetric",
+    "director_command": {
+      "mood": "precise industrial future",
+      "spatial_strategy": "Preserve source hierarchy within a dark technical frame.",
+      "anchor_treatment": "Product evidence receives the strongest cyan edge."
+    },
+    "decoration_hints": {
+      "background": {
+        "feel": "deep technical space",
+        "techniques": [
+          "grid"
+        ]
+      },
+      "page_accent": {
+        "feel": "cyan instrumentation",
+        "techniques": [
+          "cyan-rule"
+        ]
+      }
+    },
+    "resources": {
+      "page_template": "content",
+      "layout_refs": [],
+      "block_refs": [],
+      "chart_refs": [],
+      "principle_refs": []
+    },
+    "source_guidance": {
+      "brief_sections": [
+        "source-brief.txt#slide-28"
+      ],
+      "citation_expectation": "Use only the supplied PPTX content and embedded media.",
+      "strictness": "No additions, rewriting, translation, deletion, or reordering.",
+      "speaker_notes": []
+    },
+    "workflow_metadata": {
+      "stage": "planning",
+      "workflow_version": "2026.04.09-v4.1",
+      "planning_schema_version": "4.1",
+      "planning_packet_version": "4.1",
+      "planning_continuity_version": "4.1"
+    }
+  }
+}

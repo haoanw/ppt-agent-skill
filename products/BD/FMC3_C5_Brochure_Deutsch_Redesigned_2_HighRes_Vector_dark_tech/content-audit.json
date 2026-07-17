@@ -2,6 +2,12 @@
   "ok": true,
   "source": "/home/haoanw/workspace/skill_agent/ppt-agent-skill/products/BD/FMC3_C5_Brochure_Deutsch_Redesigned_2_HighRes_Vector.docx",
   "source_xml_segment_count": 242,
+  "approved_text_corrections": [
+    {
+      "source": "Wang Haoan",
+      "corrected": "Haoan Wang"
+    }
+  ],
   "missing_source_segments": [],
   "missing_page_segments": {},
   "media_checks": {
@@ -223,7 +229,7 @@
         3168
       ],
       "a4_ratio_ok": true,
-      "bytes": 1950123
+      "bytes": 1953408
     },
     "2": {
       "dimensions": [
@@ -231,7 +237,7 @@
         3168
       ],
       "a4_ratio_ok": true,
-      "bytes": 2768708
+      "bytes": 2802185
     },
     "3": {
       "dimensions": [
@@ -239,7 +245,7 @@
         3168
       ],
       "a4_ratio_ok": true,
-      "bytes": 2518576
+      "bytes": 2539170
     },
     "4": {
       "dimensions": [
@@ -247,7 +253,7 @@
         3168
       ],
       "a4_ratio_ok": true,
-      "bytes": 2604428
+      "bytes": 2759056
     },
     "5": {
       "dimensions": [
@@ -255,7 +261,7 @@
         3168
       ],
       "a4_ratio_ok": true,
-      "bytes": 3303146
+      "bytes": 3395044
     },
     "6": {
       "dimensions": [
@@ -263,8 +269,8 @@
         3168
       ],
       "a4_ratio_ok": true,
-      "bytes": 2454212
+      "bytes": 2457872
     }
   },
-  "note": "All 42 embedded media files are copied byte-identically; source textbox text is audited directly from document.xml."
+  "note": "All 42 embedded media files are copied byte-identically; source textbox text is audited directly from document.xml, with explicit user-approved corrections recorded separately."
 }

@@ -1,0 +1,306 @@
+# Outline
+
+密度倾向: balanced
+密度曲线: mid_low -> medium -> medium -> high -> medium -> mid_low
+
+### 第 1 页: FMC³ Robotics
+页目标: Preserve and present the source content for FMC³ Robotics.
+页面类型映射: cover
+密度下限: mid_low
+密度目标: mid_low
+密度上限: high
+节奏动作: 铺垫
+信息姿态: 结论页
+锚点类型: 图片
+
+### 第 2 页: China Office
+页目标: Preserve and present the source content for China Office.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 解释页
+锚点类型: 图片
+
+### 第 3 页: One Brain filt all
+页目标: Preserve and present the source content for One Brain filt all.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 解释页
+锚点类型: 图片
+
+### 第 4 页: Core team
+页目标: Preserve and present the source content for Core team.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 证据页
+锚点类型: 图片
+
+### 第 5 页: Compliant with the EU AI Act
+页目标: Preserve and present the source content for Compliant with the EU AI Act.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 解释页
+锚点类型: 图片
+
+### 第 6 页: Entering the European Industry: Building a Moat Based on "Deterministic, Safe, and Compliant" Standa
+页目标: Preserve and present the source content for Entering the European Industry: Building a Moat Based on "Deterministic, Safe, and Compliant" Standa.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 证据页
+锚点类型: 图片
+
+### 第 7 页: Our Partners and Clients
+页目标: Preserve and present the source content for Our Partners and Clients.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 解释页
+锚点类型: 图片
+
+### 第 8 页: Robo dog
+页目标: Preserve and present the source content for Robo dog.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 解释页
+锚点类型: 图片
+
+### 第 9 页: Realtime Teleoperation & Emergency Takeover
+页目标: Preserve and present the source content for Realtime Teleoperation & Emergency Takeover.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 证据页
+锚点类型: 图片
+
+### 第 10 页: FMC³ Omni-Grab : Ultra-Fidelity, Body-Free Human-Ego-Centric Data Capture System
+页目标: Preserve and present the source content for FMC³ Omni-Grab : Ultra-Fidelity, Body-Free Human-Ego-Centric Data Capture System.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 证据页
+锚点类型: 图片
+
+### 第 11 页: Products
+页目标: Preserve and present the source content for Products.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 解释页
+锚点类型: 图片
+
+### 第 12 页: Products
+页目标: Preserve and present the source content for Products.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 证据页
+锚点类型: 图片
+
+### 第 13 页: Products
+页目标: Preserve and present the source content for Products.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 证据页
+锚点类型: 图片
+
+### 第 14 页: Products
+页目标: Preserve and present the source content for Products.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 证据页
+锚点类型: 图片
+
+### 第 15 页: Products
+页目标: Preserve and present the source content for Products.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 证据页
+锚点类型: 图片
+
+### 第 16 页: Products
+页目标: Preserve and present the source content for Products.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 解释页
+锚点类型: 图片
+
+### 第 17 页: Products
+页目标: Preserve and present the source content for Products.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 证据页
+锚点类型: 图片
+
+### 第 18 页: Products
+页目标: Preserve and present the source content for Products.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 证据页
+锚点类型: 图片
+
+### 第 19 页: Size
+页目标: Preserve and present the source content for Size.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 证据页
+锚点类型: 图片
+
+### 第 20 页: Products
+页目标: Preserve and present the source content for Products.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 证据页
+锚点类型: 图片
+
+### 第 21 页: Products
+页目标: Preserve and present the source content for Products.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 证据页
+锚点类型: 图片
+
+### 第 22 页: Production Line Loading and Unloading
+页目标: Preserve and present the source content for Production Line Loading and Unloading.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 解释页
+锚点类型: 图片
+
+### 第 23 页: Humanoid configuration for confined space operation, reducing wrist space requirements by 50%+
+页目标: Preserve and present the source content for Humanoid configuration for confined space operation, reducing wrist space requirements by 50%+.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 解释页
+锚点类型: 图片
+
+### 第 24 页: Seven-Axis Bionic Arm
+页目标: Preserve and present the source content for Seven-Axis Bionic Arm.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 解释页
+锚点类型: 图片
+
+### 第 25 页: Products
+页目标: Preserve and present the source content for Products.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 证据页
+锚点类型: 图片
+
+### 第 26 页: Products
+页目标: Preserve and present the source content for Products.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 证据页
+锚点类型: 图片
+
+### 第 27 页: Products
+页目标: Preserve and present the source content for Products.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 证据页
+锚点类型: 图片
+
+### 第 28 页: Products
+页目标: Preserve and present the source content for Products.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 证据页
+锚点类型: 图片
+
+### 第 29 页: Products
+页目标: Preserve and present the source content for Products.
+页面类型映射: content
+密度下限: mid_low
+密度目标: medium
+密度上限: high
+节奏动作: 推进
+信息姿态: 证据页
+锚点类型: 图片
+
+### 第 30 页: FMC³ Robotics
+页目标: Preserve and present the source content for FMC³ Robotics.
+页面类型映射: end
+密度下限: mid_low
+密度目标: mid_low
+密度上限: high
+节奏动作: 收束
+信息姿态: 结论页
+锚点类型: 图片
+
+自审通过: All 30 source pages remain in the original order with no text, note, table, or media loss.

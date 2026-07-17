@@ -1,0 +1,371 @@
+{
+  "ok": true,
+  "source": "/home/haoanw/workspace/skill_agent/ppt-agent-skill/products/BD/FMC³ Robotics_product Manual_0606.pptx",
+  "output": "/home/haoanw/workspace/skill_agent/ppt-agent-skill/products/BD/FMC3_Robotics_Product_Manual_dark_tech_redesigned/FMC3_Robotics_Product_Manual_dark_tech_redesigned.pptx",
+  "slide_count": 30,
+  "page_checks": [
+    {
+      "page": 1,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 2,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 3,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 4,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 5,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 6,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 7,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 8,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 9,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 10,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 11,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 12,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 13,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 14,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 15,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 16,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 17,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 18,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 19,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 20,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 21,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 22,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 23,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 24,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 25,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 26,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 27,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 28,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 29,
+      "missing_text": [],
+      "ok": true
+    },
+    {
+      "page": 30,
+      "missing_text": [],
+      "ok": true
+    }
+  ],
+  "source_slide_asset_relations": 174,
+  "png_checks": {
+    "1": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 1677603
+    },
+    "2": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 343476
+    },
+    "3": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 337347
+    },
+    "4": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 419558
+    },
+    "5": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 165069
+    },
+    "6": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 461665
+    },
+    "7": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 236757
+    },
+    "8": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 214019
+    },
+    "9": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 307165
+    },
+    "10": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 282127
+    },
+    "11": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 350453
+    },
+    "12": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 279478
+    },
+    "13": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 223453
+    },
+    "14": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 275509
+    },
+    "15": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 226954
+    },
+    "16": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 220953
+    },
+    "17": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 400181
+    },
+    "18": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 337106
+    },
+    "19": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 315060
+    },
+    "20": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 292173
+    },
+    "21": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 331355
+    },
+    "22": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 1058143
+    },
+    "23": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 278407
+    },
+    "24": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 206559
+    },
+    "25": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 226357
+    },
+    "26": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 257672
+    },
+    "27": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 291572
+    },
+    "28": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 228311
+    },
+    "29": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 225568
+    },
+    "30": {
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "bytes": 1850851
+    }
+  }
+}

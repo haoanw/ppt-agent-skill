@@ -1,0 +1,173 @@
+{
+  "run_id": "FMC3_Robotics_Product_Manual_dark_tech_redesigned",
+  "generated_at": "2026-07-17T13:20:26.740781Z",
+  "summary": {
+    "total_pages": 30,
+    "format": "16:9 widescreen",
+    "build": "blank-canvas redesign"
+  },
+  "artifacts": {
+    "preview_html": "preview.html",
+    "presentation_pptx": "FMC3_Robotics_Product_Manual_dark_tech_redesigned.pptx",
+    "presentation_png_pptx": "FMC3_Robotics_Product_Manual_dark_tech_redesigned.pptx",
+    "presentation_svg_pptx": "FMC3_Robotics_Product_Manual_dark_tech_redesigned.pptx",
+    "brochure_pdf": "FMC3_Robotics_Product_Manual_dark_tech_redesigned.pdf",
+    "content_audit": "content-audit.json"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "planning": "planning/planning1.json",
+      "png": "png/slide-01.png"
+    },
+    {
+      "page": 2,
+      "planning": "planning/planning2.json",
+      "png": "png/slide-02.png"
+    },
+    {
+      "page": 3,
+      "planning": "planning/planning3.json",
+      "png": "png/slide-03.png"
+    },
+    {
+      "page": 4,
+      "planning": "planning/planning4.json",
+      "png": "png/slide-04.png"
+    },
+    {
+      "page": 5,
+      "planning": "planning/planning5.json",
+      "png": "png/slide-05.png"
+    },
+    {
+      "page": 6,
+      "planning": "planning/planning6.json",
+      "png": "png/slide-06.png"
+    },
+    {
+      "page": 7,
+      "planning": "planning/planning7.json",
+      "png": "png/slide-07.png"
+    },
+    {
+      "page": 8,
+      "planning": "planning/planning8.json",
+      "png": "png/slide-08.png"
+    },
+    {
+      "page": 9,
+      "planning": "planning/planning9.json",
+      "png": "png/slide-09.png"
+    },
+    {
+      "page": 10,
+      "planning": "planning/planning10.json",
+      "png": "png/slide-10.png"
+    },
+    {
+      "page": 11,
+      "planning": "planning/planning11.json",
+      "png": "png/slide-11.png"
+    },
+    {
+      "page": 12,
+      "planning": "planning/planning12.json",
+      "png": "png/slide-12.png"
+    },
+    {
+      "page": 13,
+      "planning": "planning/planning13.json",
+      "png": "png/slide-13.png"
+    },
+    {
+      "page": 14,
+      "planning": "planning/planning14.json",
+      "png": "png/slide-14.png"
+    },
+    {
+      "page": 15,
+      "planning": "planning/planning15.json",
+      "png": "png/slide-15.png"
+    },
+    {
+      "page": 16,
+      "planning": "planning/planning16.json",
+      "png": "png/slide-16.png"
+    },
+    {
+      "page": 17,
+      "planning": "planning/planning17.json",
+      "png": "png/slide-17.png"
+    },
+    {
+      "page": 18,
+      "planning": "planning/planning18.json",
+      "png": "png/slide-18.png"
+    },
+    {
+      "page": 19,
+      "planning": "planning/planning19.json",
+      "png": "png/slide-19.png"
+    },
+    {
+      "page": 20,
+      "planning": "planning/planning20.json",
+      "png": "png/slide-20.png"
+    },
+    {
+      "page": 21,
+      "planning": "planning/planning21.json",
+      "png": "png/slide-21.png"
+    },
+    {
+      "page": 22,
+      "planning": "planning/planning22.json",
+      "png": "png/slide-22.png"
+    },
+    {
+      "page": 23,
+      "planning": "planning/planning23.json",
+      "png": "png/slide-23.png"
+    },
+    {
+      "page": 24,
+      "planning": "planning/planning24.json",
+      "png": "png/slide-24.png"
+    },
+    {
+      "page": 25,
+      "planning": "planning/planning25.json",
+      "png": "png/slide-25.png"
+    },
+    {
+      "page": 26,
+      "planning": "planning/planning26.json",
+      "png": "png/slide-26.png"
+    },
+    {
+      "page": 27,
+      "planning": "planning/planning27.json",
+      "png": "png/slide-27.png"
+    },
+    {
+      "page": 28,
+      "planning": "planning/planning28.json",
+      "png": "png/slide-28.png"
+    },
+    {
+      "page": 29,
+      "planning": "planning/planning29.json",
+      "png": "png/slide-29.png"
+    },
+    {
+      "page": 30,
+      "planning": "planning/planning30.json",
+      "png": "png/slide-30.png"
+    }
+  ],
+  "export_notes": {
+    "presentation_pptx": "Editable native PowerPoint rebuilt from a blank canvas.",
+    "content_policy": "Source wording, data, order, notes, and meaningful supplied visuals preserved."
+  }
+}

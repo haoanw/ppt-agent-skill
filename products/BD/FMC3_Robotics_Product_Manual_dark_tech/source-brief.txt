@@ -1,0 +1,841 @@
+# Source Brief
+
+topic: FMC3 Robotics corporate positioning, compliance, embodied-AI platform, and product portfolio
+usage: B2B product introduction for customers, partners, integrators, and industrial decision-makers
+constraints: Preserve all 30 source slides, wording, order, notes, tables, and embedded media without invention.
+risk: Dense specification pages and picture-filled logo shapes require rendered-page inspection after native PPTX restyling.
+source: /home/haoanw/workspace/skill_agent/ppt-agent-skill/products/BD/FMC³ Robotics_product Manual_0606.pptx
+slides: 30
+
+## Slide 1: FMC³ Robotics
+- FMC³ Robotics
+- The Embodied AI Brain from Europe
+- The Embodied AI Brain from Europe
+- Product Manual
+- Mar, 2026
+- Confidential
+- Speaker notes:
+  - 简化定位，指向明确
+
+## Slide 2: China Office
+- China Office
+- Europe HQ
+- Strategic HQ: Direct market access with a focus on realworld deployment.
+- Data Moat: Compliance with EU AI Acts and GDPR data regulations.
+- Training & Delivery: Building the data training closed loop.
+- R&D & Design: Development of highfidelity data collection systems.
+- Hardware Supply Chain: Comprehensive upstream and downstream robotics resources.
+- Pilot & Testing: Rapid POC/MVP iterations and closedloop training tests.
+- Schloßlände 26, Ingolstadt
+- Bavaria, Germany
+- Jia Xing & Shanghai
+- China
+- Positioning
+- HQ
+- Product &Engineering
+- China office
+- RD&Product design
+- Maximizing the commercial value of Embodied AI in developed Western markets by leveraging German commercial scenarios and Chinese supply chain excellence.
+- Establishing crossscenario standards for Embodied AI through a "Physical AI + ForceTouch Closed Loop" to achieve fullstack autonomy.
+- 06/06/2026
+- www.FMC3robotics.ai
+- 2
+
+## Slide 3: One Brain filt all
+- One Brain filt all
+- Big Model
+- Edge Brain
+- Multi-body adaptation
+- Humanoid
+- Complex Flexible Assembly
+- Wheeled Robot
+- Wide-range Mobile Manipulation
+- Robotic Arm
+- High-precision Station Operation
+- Long-horizon Task Orchestration
+- Zero-code Task Orchestration
+- Industry Knowledge Base LLM
+- Multi-agent Collaborative Scheduling
+- Data
+- Loop
+- Data Acquisition
+- Data Training
+- Inference Optimization
+- www.fmc3-robotics.ai
+- Speaker notes:
+  - 强调德国部分，看要不要加上美国
+
+## Slide 4: Core team
+- Core team
+- Prof. Dr. Giesler Bjoern
+- CTO
+- Fan David, PhD
+- COO
+- Dr. Huang Dong
+- CPO
+- Dr. Wang Cheng
+- CEO
+- Dr.-Ing. from Technical University of Munich (TUM).
+- Expert in Autonomous Driving.
+- Architect of Audi’s Intelligent Driving System.
+- Proven track record in the mass production and delivery of over 1 million intelligent driving vehicles.
+- PhD in Computer Science from KIT; a leading authority in AI architecture.
+- Holds 50+ core patents in sensing and data training.
+- Extensive experience managing international R&D teams of 500+ members.
+- Former President of Marelli China.
+- Managed business operations with annual revenues exceeding $1.5 billion.
+- Led multiple post-M&A organizational integrations and supply chain restructurings.
+- Dr.-Ing. in Computer Science from KIT.
+- Former Scientist at Siemens Labs and CTO of TerraIT.
+- 15+ years of expertise in data simulation and Sim-to-Real domains.
+- A Team of European Intelligent Systems Scientists
+- Obermeier Florian
+- MD Germany
+- Co-founder of SANEON GmbH.
+- 16+ years of B2B experience with OEMs and Tier-1 automotive suppliers.
+- Global track record serving clients across Europe, Asia, and the US.
+- 06/06/2026
+- www.FMC3-robotics.ai
+- 4
+
+## Slide 5: Compliant with the EU AI Act
+- Compliant with the EU AI Act
+- Fully compliant with regulatory requirements for high-risk AI systems, featuring transparent and interpretable auditing capabilities.
+- Localized Data Closed-Loop Architecture (Germany/Europe)
+- Local Data Loop
+- Local Collection
+- Zero Cross-border Transfer. All industrial data stored 100% within German sovereign data centers.
+- Encrypted
+- Privacy Computing
+- Auto-Anonymization. Real-time de-identification of facial & environmental metadata; GDPR compliant.
+- Anonymized
+- Federated Learning
+- Gradient-only Sync. Local data remains on-premise; only model parameters are transmitted.
+- Secure ML
+- GDPR Data Compliance
+- Fermi Robot Business Plan | Confidential
+- 2026-03
+- Principle of data minimization
+- right of user to be forgotten
+- storage limitation principle
+- Limitation Principle of Purpose
+
+## Slide 6: Entering the European Industry: Building a Moat Based on "Deterministic, Safe, and Compliant" Standa
+- 06/06/2026
+- www.FMC3-robotics.ai
+- 6
+- Entering the European Industry: Building a Moat Based on "Deterministic, Safe, and Compliant" Standards
+- Collaborative Safety & Compliance
+- Machinery Regulation (EU) Core Operational Safety
+- RED: Wireless Communication Security
+- EMC Directive
+- Device Interference-free Operation
+- EU AI Act
+- AI Algorithm Governance
+- 1. Safety of Control Systems
+- Resilience against operational stress and interference.
+- Must not lead to hazardous situations
+- 2.Special Requirements for Autonomous Mobility
+- Sensing & Stopping: Automatic stop upon detection of humans.
+- Motion Stability: Anti-tip and anti-loss-of-control measures.
+- 3.Risk Monitoring & Cybersecurity
+- Defense against malicious network manipulation.
+- 4. Software Safety & Self-learning
+- Learning Boundaries: Implementation of strict learning constraints.
+- OTA Assessment: Mandatory safety re-evaluation for all remote software updates.
+- 1
+- 2
+- 3
+- 4
+- The Four Hard Requirements for Embodied AI Robots under the "Machinery Regulation"
+
+## Slide 7: Our Partners and Clients
+- www.fmc3-robotics.ai
+- Our Partners and Clients
+
+## Slide 8: Robo dog
+- Robo dog
+- Commercial & Industrial Cleaning
+- Workbot
+- Cobot
+- FMC³ Brain + FMC³ Data Acquisition Suit
+- Industrial
+- Service Robot
+- Humanoid Home Service Robot
+- Products
+- FMC³ Brain+ODM
+- GreetingBot
+- * All hardware, software, solutions, and related services can be provided either as standalone component or as fully integrated turnkey packages, depending on customer requirement.
+
+## Slide 9: Realtime Teleoperation & Emergency Takeover
+- Realtime Teleoperation & Emergency Takeover
+- LowLatency Streaming: Supports crossborder remote operations.
+- Dataintheloop: Realtime cleaning and ingestion of teleoperation data into the database.
+- Safety Critical: Industrialgrade safety takeover mechanism.
+- FullLink Data Toolchain
+- Workflow: Collection → Autolabeling → Training Closed Loop.
+- Compatibility : Fully compatible with NVIDIA Omniverse and Isaac Sim.
+- Heterogeneous Data Fusion: Seamless integration of Realworld + Simulation data.
+- Core Data Set
+- Industrial Haptic MultiAgent Dataset
+- Proprietary industrialgrade dataset featuring haptic/force modalities.
+- Covers 3,000+ core industrial processes, including precision assembly, flexible sorting, and surface polishing.
+- Joint R&D: Shanghai Jiao Tong University (SJTU) Robotics Institute
+- Products
+- FMC³ Brain+Data Acquisition Suit
+- Main Computing Chips:
+- Nvidia Orin / Thor
+- Computing Power:
+- 275 TOPS (Scalable)
+- Interface Standards:
+- EtherCAT / CAN FD
+- Power Consumption:
+- 15W 60W (Dynamic)
+- FMC³ Brain
+- Long-horizon Task Planner
+- Code Generator
+- LLM Database
+- Multi-agent Scheduling
+- Data Collection
+- Model Training
+- Inference
+
+## Slide 10: FMC³ Omni-Grab : Ultra-Fidelity, Body-Free Human-Ego-Centric Data Capture System
+- 06/06/2026
+- www.FMC3-robotics.ai
+- 10
+- FMC³ Omni-Grab : Ultra-Fidelity, Body-Free Human-Ego-Centric Data Capture System
+- Active IR Stereo RGB-D Headset
+- Delivers first-person 3D depth spatial perception. Both depth and color run at 1280×720 @ 30fps with an integrated 6-axis IMU (50Hz) for dynamic tracking.
+- First-person geometric and semantic depth alignment.
+- 400-Point High-Density Haptic Glove
+- 32 sensors per finger, trigger force as low as 30g, max range 1500g, with 200Hz haptic stream high-speed export.
+- Delivers the force-feedback ground truth most critical for imitation learning
+- Portable Data Sync Hub
+- Supports 16 hours of continuous single-session recording
+- Handles global millisecond-grade hardware time alignment, local caching, and data security.
+- End-to-End Automated Processing Pipeline
+- STEP 1
+- STEP 2
+- STEP 3
+- STEP 4
+- STEP 5
+- DATA REFINERY PIPELINE
+- High-Precision Synchronized Capture:
+- Raw video, IMU, haptic, and EMG streams are hardware-stamped and losslessly aligned to disk.
+- Automatic Scene Segmentation & Slicing:
+- ORB-SLAM3-powered segmentation automatically slices semantically rich task episodes by action and odometry.
+- Smart Cleaning & Multi-Dimensional QA:
+- Physics-plausibility validation automatically filters corrupted frames, body penetrations, and violent jitter.
+- Auto-Annotation & Programmatic Augmentation:
+- Integrates YOLO and SAM2 for object detection, plus HaMeR for hand pose and contact torque estimation. Supports lighting and viewpoint augmentation.
+- Standardized Packaging & Universal Export:
+- One-click export to ROS Bag, PyTorch Dataset, and TFRecord- ready for mixed-model training out of the box.
+- Products
+- FMC³ Brain+Data Acquisition Suit
+
+## Slide 11: Products
+- Products
+- FMC³ Brain+ODM
+- Robo dogD1 MAX PRO
+- Highlights
+- Ultrahigh Payload
+- Supports sustained effective payload of 50kg, meeting the demands of heavyload scenarios such as integration with large payload modules, overweight transportation, and material handling.
+- Reliable Battery Life
+- Equipped with a 2160Wh highcapacity battery featuring exceptional power conversion efficiency. It delivers 2.5 hours of continuous operation under rated load, and up to 5.5 hours (industryleading) in idle conditions. The system also supports hotswappable batteries, with an optional autonomous charging dock available.
+- Outstanding Mobility Performance
+- Boasts exceptional agility and allterrain adaptability. Capable of smoothly climbing 30cm continuous staircases and open industrial stairs, with a robust selfrighting mechanism in place.
+- Superior Environmental Adaptability
+- With IP67 industrialgrade protection, it operates reliably across a wide temperature range of 20°C to 55°C and in water depths up to 20cm. Built to withstand extreme cold, scorching heat, wind, and rain, ensuring stable performance in harsh conditions.
+
+## Slide 12: Products
+- Products
+- FMC³ Brain+ODM
+- Robo dogD1 MAX PRO
+- Standard Motions: Standing, Lying Down, Damping, Force
+- Unloading; Stair Climbing (Up/Down), Obstacle Crossing
+- RealTime Image Transmission: Supported
+- Secondary Development: Supported
+- 4G Communication: Optional
+- Functions
+- Parameters
+- Standing Dimensions (L × W × H): 1230mm × 530mm × 730mm
+- Prone Dimensions (L × W × H): 1313mm × 530mm × 300mm
+- Total Weight (Including Battery): 68kg
+- Operating Temperature: 20℃ ~ 55℃
+- Protection Class: IP67
+- Battery: Rated Capacity 45Ah, Voltage 48V
+- Charging Time: 4.5h (2h Fast Charging Optional)
+- Battery Runtime: 5.5h (No Load), 2.5h (Full Load)
+- Maximum Range (Full Load): 13.5km
+- Performance Parameters
+- Continuous Walking Speed: 1.5m/s
+- Maximum Speed: 3m/s
+- Rated Payload: 50kg
+- Continuous Stair Climbing Height: 30cm
+- Maximum Climbing Slope: 45°
+- Robot Joint Parameters
+- Maximum Joint Torque: 180N·m
+- Joint Motion Range (Body): 45° ~ 45°
+- Joint Motion Range (Thigh): 200° ~ 20°
+- Joint Motion Range (Calf): 30° ~ 160°
+- Sensing Unit
+- LiDAR: 1 × 96channel LiDAR (Frontmounted), Coverage Angle: 360° × 90°, Coverage Diameter: 120m, Accuracy: 1.5cm
+- WideAngle Camera: 1 × WideAngle Camera at the Front and 1 at the Rear, Industrial Grade 2Megapixel, Field of View: DFOV 150°, HFOV 130°, VFOV 73°
+- IMU: Standard Configuration (SC)
+
+## Slide 13: Products
+- Products
+- FMC³ Brain+ODM
+- Robo dogD1 MAX
+- Highlights
+- 1. Core Performance Advantages
+- Engineered for industrialgrade performance
+- Low selfweight paired with high payload capacity
+- Longlasting battery life for extended operations
+- Robust environmental protection design
+- Agile yet stable locomotion for demanding tasks
+- 2. Intelligent Locomotion & Terrain Adaptability
+- Reinforcement learningbased motion control model
+- Builtin capabilities: impact resistance, disturbance rejection
+- Fall selfrecovery mechanism for reliable field use
+- Dynamic adaptive control for complex environments
+- Autonomous adaptation to diverse terrains and road conditions
+- 3. FullScene Perception & Navigation
+- Multimodal perception system: vision, LiDAR, ultrasonic, and INS
+- Environmental detection and mapping capabilities
+- Autonomous navigation in unstructured spaces
+- Realtime target recognition and tracking
+- Enables intelligent, collisionfree operations
+- 4. MultiScenario Application Capabilities
+- Rich set of power and communication interfaces
+- Versatile for industrial and public safety use cases:
+- Security patrol & surveillance
+- Power grid inspection
+- Logistics and heavy payload transport
+- Onsite task execution & response
+- Personnel search & rescue (SAR)
+
+## Slide 14: Products
+- Products
+- FMC³ Brain+ODM
+- Robo dogD1 MAX
+- Basic Information
+- Material: Aluminum Alloy + HighStrength Engineering Plastic
+- Standing Dimensions (L × W × H): 920mm × 480mm × 570mm
+- Prone Dimensions (L × W × H): 930mm × 630mm × 200mm
+- Total Weight (Including Battery): 40kg
+- Operating Temperature: 20℃ ~ 55℃
+- Protection Class: IP67
+- Battery: Rated Capacity 10Ah, Voltage 54V
+- Charging Time: ＜ 2h
+- Battery Runtime: 5h (No Load), 2.5h (Full Load)
+- Maximum Range: 29km (No Load), 18km (Full Load)
+- Performance Parameters
+- Maximum Speed: 8m/s
+- Rated Payload: 25 ~ 30kg
+- Continuous Stair Climbing Height: 22cm
+- Maximum Climbing Slope: 45°
+- Jumping Height Off the Ground: 80cm
+- Maximum Obstacle & Ditch Crossing Height: 80cm
+- Loaded Obstacle Crossing Height: 50cm
+- Minimum Passable Width: 50cm
+- Robot Joint Parameters
+- Maximum Joint Torque: 150N·m
+- Joint Motion Range (Body): 30° ~ 40°
+- Joint Motion Range (Thigh): 160° ~ 160°
+- Joint Motion Range (Calf): 160° ~ 160°
+- Sensing Unit
+- LiDAR: 1 × 192channel LiDAR at the front and 1 at the rear, with a coverage angle of 360° × 90° and a coverage diameter of 120m
+- Camera FOV: 1 × FPV camera at the front and 1 at the rear, industrialgrade 8megapixel, field of view: DFOV 122°, HFOV 111°, VFOV 70°
+- Fill Light: 4 × Fill Lights, 1 on each side of the FPV cameras
+- IMU: 1 × AutomotiveGrade IMU
+- RTK Module: 1 × GNSS RTK
+- Ultrasonic Sensor: 1 × Ultrasonic Sensor on each side, supporting obstacle recognition within 5m
+
+## Slide 15: Products
+- Products
+- FMC³ Brain+ODM
+- Robo dog D1 Ultra
+- Designed for specialized and industrialapplications
+- IndustrialGrade Compact Quadruped RobotDesigned for specialized and industrialapplications requiring reliability, mobility, and flexible deployment.
+- Tackle various complex terrains
+- Reinforcement learning (RL)based gait control enables autonomous adaptation to diverse and complex terrains, with builtin selfbalancing, antitipping, and disturbance rejection capabilities
+- Maximum running speed of 3.7 m/s, maximum climbing/descending slope angle ≥ 30°
+- Forward or vertical jump liftoff height up to 35 cm
+- Supports continuous climbing of stairs with a maximum riser height of 16 cm
+- Highlights
+- Robot Joint Parameters
+- Maximum Joint Torque: 48N·m
+- Joint Motion Range (Body): 28° ~ 28°
+- Joint Motion Range (Thigh): 170° ~ 66°
+- Joint Motion Range (Calf): 35° ~ 156°
+- Sensors
+- IMU: Standard Configuration (SC)
+- Camera FOV: 1 Camera with 1920×1080p Resolution, Field of View: DFOV 122°, HFOV 111°, VFOV 70°
+- Performance Parameters
+- Maximum Speed: 3.7m/s
+- Rated Payload: 5kg
+- Continuous Stair Climbing Height: 16cm
+- Maximum Climbing Slope: 30° in Standard Environment, Up to 40° in Extreme Conditions
+- Jumping Height Off the Ground: 35cm
+
+## Slide 16: Products
+- Products
+- FMC³ Brain+ODM
+- Robo dog D1 Pro
+- Designed for specialized and industrialapplications
+- IndustrialGrade Compact Quadruped RobotDesigned for specialized and industrialapplications requiring reliability, mobility, and flexible deployment.
+- Highlights
+- Powerful Locomotion to Tackle All Complex Terrains
+- Reinforcement learning (RL)-powered gait control enables autonomous adaptation to diverse and challenging terrains.
+- Built-in capabilities: self-balancing, anti-tipping, and disturbance rejection for stable performance in dynamic environments.
+- -Prone Dimensions (L × W × H): 675mm × 435mm × 145mm
+- -Total Weight (Including Battery): 15.5kg
+- -Operating Temperature: 0℃ ~ 40℃
+- -Protection Class: IP54
+- -Battery: Rated Capacity 4.6Ah, Voltage 43.2V
+- -Charging Time: 1h
+- -Battery Life: 1–2h
+- -Maximum Range: 6km
+
+## Slide 17: Products
+- Products
+- FMC³ Brain+ODM
+- Robo dog
+- SLAM Localization and Mapping
+- Autonomous Navigation
+- Omnidirectional Obstacle Avoidance
+- Point Cloud Surround View
+- Intelligent Management and Scheduling System
+- Functions
+- Autonomous Charging
+- High reliability
+- Aftersales support
+- Standing Dimensions (mm)
+- 820 × 440 × 570
+- Weight
+- 37 kg
+- Continuous Working Payload
+- 25 kg
+- Max. Continuous Step Height
+- 30 cm
+- Max. Step Height
+- 80 cm
+- Limit Test Speed
+- 5 m/s
+- Max. Operating Speed
+- 3.7 m/s
+- Max. Climbing Angle
+- Approx. 45°
+- Trench Crossing Width
+- NoLoad Endurance Time / Range
+- 5 h / 20 km
+- Effective Payload Endurance Time / Range
+- 3 h / 12.5 km
+- Battery Capacity
+- 907 Wh
+- Parameters
+
+## Slide 18: Products
+- Products
+- FMC³ Brain+ODM
+- Allinone vacuuming & scrubbing
+- Laservision fusion positioning
+- Auto charge, water refill/drain, selfcleaning
+- Highefficiency edgetoedge cleaning
+- Low maintenance, long service life
+- Functions
+- Parameters
+- Commercial & Industrial Cleaning
+- Garbage collection rate
+- 95%
+- Overall noise
+- <68 db(A)
+- Machine weight
+- 170 kg
+- Extra large volume of water tank
+- 90 L
+- Selfcleaning dirty water tank
+- 4 min
+- Floor scrubbing endurance
+- 3 h
+- Battery specification
+- 24V 80 Ah
+- Scrubbing pressure
+- 25 kg
+- Maximum efficiency
+- 1980 m²/h
+- Scrubbing width
+- 550 mm
+- Lifespan of Fan
+- 10000 h
+- Water tank capacity
+- 8 L
+- Water filling speed
+- 710 L/min
+- Dirty water discharging speed
+- 1015 L/min
+- Maximum power
+- 1800 W
+- Rated input voltage
+- 200240 V
+- Large supermarkets
+- Office buildings
+- Transportation hubs
+- Factories
+- Commercial
+- Hospitals
+- Application Scenarios
+- Applicable Floor Types
+
+## Slide 19: Size
+- Size
+- 558mm×525mm×1350mm
+- Net Weight
+- 56kg
+- Screen Size
+- 14-inch; 1080 HD
+- Chest Part Load Weight
+- 5Kg
+- Narrowest Passage Width
+- 70cm
+- Hardware Platform
+- Qualcomm 8-core chip + Industrial-grade MCU
+- Navigation Sensor
+- Li DAR*1 + Depth Vision Camera*3 + Fisheye Camera*2 + Infrared
+- Camera*2 + Odometer + IMU*1
+- Microphone Array
+- 6-Mic arrays, 360° sound source positioning,
+- 5 m sound range
+- Battery Life
+- 12 H (typical cruising scene)
+- Charging Time
+- 4.5 H
+- Supports Secondary Interface
+- USB 2.0 A port*2, Type-C port*1; LAN 100Mbps Ethernet port *1; DC
+- power port 12V 3A
+- Network Supports
+- 4G (supports TDD-LTE, FDD-LTE), Wi Fi supports 2.4G/5G
+- GreetingBot Star Key Specifications
+
+## Slide 20: Products
+- Products
+- FMC³ Brain+ODM
+- Unified Integrated Control, No Interface Boundaries
+- SelfDeveloped Positioning Compensation, EnvironmentResilient
+- Intuitive HMI, OneClick Command Execution
+- Dual LiDAR + Dual Vision + Collision Detection, Enhanced Safety
+- Rapid Battery Swap, 24/7 Continuous Operation
+- Modular Chassis + Backpack Design, Maximized Flexibility
+- Functions
+- Parameters
+- Workbot
+- Automotive: LineSide Feeding, Flexible
+- CNC: Machine Tending, MultiMachine
+- 3C: Component Handling, MultiSKU
+- Logistics: Tote/Pallet Handling, Automation
+- General Industry: Flexible Line Retrofit
+- Application Scenarios
+- Dimensions (L×W×H)
+- 950×630×850 mm (excluding arm)
+- Manipulator
+- Reach 1327 mm, payload 12 kg (incl. end effector)
+- Weight & Payload
+- Weight < 300 kg, usable payload 150 kg
+- Speed
+- Arm TCP ≤1.8 m/s, travel ≤1.2 m/s
+- Mobility
+- Obstacle ≤10 mm, gap ≤20 mm
+- Passage Width
+- Travel ≥850 mm, turning ≥1250 mm
+- Protection
+- Body splashproof, arm IP68
+- Accuracy
+- Station ±10 mm, comprehensive ±0.5 mm
+- Endurance
+- Single battery 3 h, dual batteries 6 h
+- Cycle Time
+- 20 s
+- Radar Layout
+- Diagonal dual radar
+- Rotation Diameter
+- 1000 mm
+
+## Slide 21: Products
+- Products
+- FMC³ Brain+ODM
+- Seven-degree-of-freedom bionic arm
+- Dual-arm rated payload 7Kg, maximum 10Kg
+- Seven-axis anthropomorphic configuration, low weight-to-payload ratio
+- Seven torque sensors for compliant force control
+- Omnidirectional Mobile Chassis
+- Compact dimensions:594X591mm
+- Operating in narrow workstations and aisles
+- Omnidirectional movement, in-place rotation
+- Maximum Speed: 1.5m/s
+- Power management system
+- Endurance time: 8h
+- Supports hot-swap battery exchange
+- Embodied Intelligence
+- Supports high computing power of 2070 Tops
+- Compatible with mainstream Embodied Large Models
+- Compatible with multiple data acquisition devices
+- Quick-change End Effector
+- Supports quick-change for dexterous hands, grippers, and fixtures
+- Full-body Motion Control System
+- Full-body Coordinated High-frequency Motion Control
+- Supports ECAT hard master station, high reliability
+- Waist pitch and 180° rotation, for larger and more efficient working space
+- Navigation system
+- Multi-sensor fusion navigation: 3D LiDAR + 2D LiDAR + 3D camera
+
+## Slide 22: Production Line Loading and Unloading
+- Production Line Loading and Unloading
+- Wellness and Elderly Care Collaboration
+- Logistics Sorting
+- Research and Education
+- Unmanned Retail
+- Data Collection Training
+- Application Scenario
+
+## Slide 23: Humanoid configuration for confined space operation, reducing wrist space requirements by 50%+
+- Humanoid configuration for confined space operation, reducing wrist space requirements by 50%+
+- Smooth motion control, stable grasping, maximum overshoot ≤ 1mm, settling time ≤ 0.5s
+- Seven-joint force sensing, high-precision force control,1000Hz full-body force control frequency
+- Rated/Max. load: 3.5 kg/3.5 kg
+- Weight: 7.5 kg
+- Force-controlled insertion: Active force-position coupling for correction, dynamic adjustment of sub-millimeter deviations, ensuring successful completion of precision insertion tasks
+- Safe collaboration: < 1 N high-precision detection, stop within < 1s in case of collision, ensuring human safety
+- Vibration suppression: High-efficiency vibration damping, precise start-stop, precise compensation of joint flexibility, reduced vibration, no jitter during heavy-load operations
+- Suitable for operation within a 60 x 60 cm workspace, with minimal motion interference, compact wrist design for greater reachable positions
+- Humanoid upper limb, compliant control, safe human-robot collaboration
+
+## Slide 24: Seven-Axis Bionic Arm
+- Seven-Axis Bionic Arm
+- Full-body Motion Control
+- Omni-directional Chassis
+- Motion Optimization and Coordinated Movement
+- Interface Invocation
+- Ethernet interface
+- （Motion Control Message Interface)
+- Motion Control System
+- High Computational Power – NVIDIA Thor
+- Folding Mechanism
+- AI Hardware Platform with Underlying Motion Control Hardware Platform, Operating System, Message Interface, and SDK; comprehensive infrastructure configured in a single deployment
+- The client AI system invokes perception data via the SDK, and the motion control interface sends all degrees of freedom space positions in one command for the robot to achieve full-body coordinated motion control
+- Vision System Data
+- Embodied AI Model
+- Refined and User-Friendly Infrastructure – Customer focus is on AI model deployment and research
+
+## Slide 25: Products
+- Products
+- FMC³ Brain+ODM
+- Functions
+- Parameters
+- Cobot
+- Dualarm collaborative mobile manipulation
+- Omnidirectional movement + waist lift/pitch
+- Multimodal sensing & 1ms fast response
+- Quick deployment, outofbox use
+- Application Scenarios
+- Sorting
+- Handling
+- Loading & Unloading
+- Flexible Grasping
+- Configuration
+- 2×7axis arms, 4×vision cameras, 1×mobile chassis, 1×lifting unit
+- Total DOF
+- 21
+- Waist Movement
+- Lift 0–800 mm; Pitch 0°–90°
+- Neck Movement
+- Rotate ±90°; Pitch 0°–45°
+- Arm Payload
+- 5 kg
+- Dimensions & Weight
+- 750×600×1565 mm; 200 kg
+- Controller
+- Intel i512th Gen, 128G SSD, WIFI6
+- Power & Interface
+- DC 30–60 V, 1500 W; EtherCAT, 4×GigE LAN
+- Environment
+- IP20, 0–50 °C
+- Material
+- Steel + Aluminum Alloy
+- Efficient
+- DualArm Collaboration
+- DualArm Coordination
+- & Full Workspace Reachability
+- MultiModal Perception
+- & Safety Assurance
+
+## Slide 26: Products
+- Products
+- FMC³ Brain+ODM
+- Functions
+- Parameters
+- Industrial
+- Service Robot
+- Perform highprecision assembly and manipulation
+- Move flexibly in all directions
+- Interact intelligently with humans
+- Execute realtime remote operation
+- Application Scenarios
+- Logistics sorting
+- Highprecision assembly & operation
+- Industrial inspection
+- Guided tours
+- Security check
+- R&D support
+- Body
+- 26 DOF; humanlike motion; 5‑DOF waist‑leg system
+- Mobility
+- 4wheel steering; omnidirectional movement; inplace rotation; crab walk; max speed 1.5 m/s
+- Arms
+- 7DOF arms; ≤0.5N force control precision; submillimeter accuracy; 5 kg payload
+- Hands
+- Dexterous hand (optional); 3D tactile sensing; quick replacement; full joint torque sensing
+- Computing
+- NVIDIA Jetson Thor 5000 (2070 TFLOPS FP4);
+- Vision
+- Binocular stereo camera; RGB‑D cameras; fisheye array; 360° surround view; 2× LiDAR
+- Audio
+- Mic array; sound source localization; 8W speaker
+- Power
+- Dual hot‑swappable batteries; autonomous charging; 24/7 operation
+- Safety
+- 360° perception; arm collision detection; active‑passive protection
+- Neck
+- Roll, Pitch, Yaw
+- Waist & Legs
+- 3× waist joints; 2× leg joints; 360° coverage
+- Ecosystem
+- Genie RL Toolkit; GDK; AGIBOT WORLD dataset; Genie Envisioner foundation model
+- Ensure safe operation in all scenarios
+- Work continuously with autonomous charging
+- Support fast application development
+
+## Slide 27: Products
+- Products
+- FMC³ Brain+ODM
+- Functions
+- Parameters
+- Humanoid Home Service Robot
+- Whole‑body teleoperation & human motion mapping
+- Precise manipulation with multi‑DOF dexterous hands
+- Emotional interaction & social companionship
+- Application Scenarios
+- Social & emotional companionship
+- Public service & guidance
+- Elderly care & assistance
+- Rehabilitation & health support
+- Family accompanying & interaction
+- AI research & development
+- Assisted care, rehabilitation training support
+- 24/7 operation with hot‑swap batteries
+- Customizable functions
+- Height
+- 165 cm
+- Weight
+- 71 kg
+- Total DOF
+- 55
+- Hand
+- 12‑DOF dexterous hand
+- Arm Payload
+- 3 kg per arm
+- Actuator
+- Self‑developed highperformance integrated actuator
+- Battery
+- Dual hot‑swappable
+- Battery Life
+- 3 hours per battery
+- Operation
+- 24/7 continuous operation
+- Vision
+- RGB + structured‑light camera; facial recognition & tracking
+- Audio
+- 4‑mic array; echo cancellation; sound source localization
+- Tactile
+- Distributed pressure sensors for touch interaction
+- Control
+- Wholebody teleoperation; low‑latency motion mapping
+- Structure
+- Modular design; compact & lightweight
+- Versions
+- GR‑3: soft skin; GR‑3C: reinforced shell + LED ring head
+
+## Slide 28: Products
+- Products
+- FMC³ Brain+ODM
+- GreetingBot Nova Service Robot
+- Application Scenarios
+- •Showrooms & exhibitions
+- •Reception desks & office buildings
+- •Museums, galleries, guided tours
+- •Hotels, hospitals, retail stores
+- Functions
+- •Large language model voice interaction in 30+ languages
+- •Smart reception, intelligent Q&A, guidance and tour explanation
+- •Dynamic promotion with 14-inch FHD customer-facing screen
+- •Marker-free deployment, autonomous navigation and obstacle avoidance
+- •Automatic recharge for continuous front-of-house service
+- Parameters
+- Size
+- 558 × 525 × 1350 mm
+- Net Weight
+- 56 kg
+- Screen
+- 14-inch; 1080 FHD
+- Camera
+- 13M high-definition head camera
+- Mobility
+- 0.5-1.2 m/s adjustable cruising speed
+- Endurance
+- 12-14 h typical cruising scene
+- Charging
+- 4.5 h via automatic charging dock or cable
+- Interfaces
+- USB 2.0, Type-C, LAN, DC power 12V 3A
+- Business Value
+- Reduce routine reception work; improve visitor engagement
+
+## Slide 29: Products
+- Products
+- FMC³ Brain+ODM
+- IBen-A03 Service Robot
+- Application Scenarios
+- •Banks & government service halls
+- •Exhibition halls and showrooms
+- •Reception, greeting and consultation
+- •Guided tours, entertainment interaction
+- Functions
+- •Humanoid design with 10-DOF flexible dual arms
+- •Reception & greeting with user recognition and custom greetings
+- •Business consultation via business knowledge base and LLM connection
+- •Indoor autonomous navigation, leading and real-time obstacle avoidance
+- •Android SDK / web adaptation for extend development
+- Parameters
+- Dimensions
+- 54 × 54 × 155 cm
+- Weight
+- 79 kg
+- Arms
+- 5-DOF per arm; shoulder, elbow and finger movement
+- Screen
+- 15-inch HD touchscreen
+- Sensors
+- 30 m radar, 3 ultrasonic sensors, 1 depth camera
+- Compute
+- RK3588 8-core CPU; 8G+64G
+- Battery
+- 30Ah LiFePO4; 8 h usage, 6 h charge
+- Speed
+- 0.3-0.7 m/s adjustable; ±5 cm positioning accuracy
+
+## Slide 30: FMC³ Robotics
+- FMC³ Robotics
+- Thanks
+- Thanks
+- www.fmc3robotics.ai

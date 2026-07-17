@@ -1,0 +1,167 @@
+{
+  "page": {
+    "slide_number": 27,
+    "page_type": "content",
+    "narrative_role": "evidence",
+    "title": "Products",
+    "page_goal": "Preserve and present all source content for slide 27.",
+    "audience_takeaway": "Products",
+    "cards": [
+      {
+        "card_id": "s27-anchor-1",
+        "role": "anchor",
+        "card_type": "text",
+        "card_style": "accent",
+        "argument_role": "evidence",
+        "headline": "Products",
+        "body": [
+          "Products",
+          "FMC³ Brain+ODM",
+          "Functions",
+          "Parameters",
+          "Humanoid Home Service Robot",
+          "Whole‑body teleoperation & human motion mapping",
+          "Precise manipulation with multi‑DOF dexterous hands",
+          "Emotional interaction & social companionship",
+          "Application Scenarios",
+          "Social & emotional companionship",
+          "Public service & guidance",
+          "Elderly care & assistance",
+          "Rehabilitation & health support",
+          "Family accompanying & interaction",
+          "AI research & development",
+          "Assisted care, rehabilitation training support",
+          "24/7 operation with hot‑swap batteries",
+          "Customizable functions",
+          "Height",
+          "165 cm",
+          "Weight",
+          "71 kg",
+          "Total DOF",
+          "55"
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 100,
+          "body_max_bullets": 24,
+          "body_max_lines": 5
+        },
+        "image": {
+          "mode": "provided",
+          "needed": true,
+          "usage": "inline-illustration",
+          "placement": "inline",
+          "content_description": "Original visual from the supplied product manual.",
+          "source_hint": "images/slide-27-asset-01.png",
+          "decorate_brief": "Preserve the source visual and its semantic content."
+        }
+      },
+      {
+        "card_id": "s27-support-2",
+        "role": "support",
+        "card_type": "text",
+        "card_style": "outline",
+        "argument_role": "framework",
+        "headline": "Source content",
+        "body": [
+          "Hand",
+          "12‑DOF dexterous hand",
+          "Arm Payload",
+          "3 kg per arm",
+          "Actuator",
+          "Self‑developed highperformance integrated actuator",
+          "Battery",
+          "Dual hot‑swappable",
+          "Battery Life",
+          "3 hours per battery",
+          "Operation",
+          "24/7 continuous operation",
+          "Vision",
+          "RGB + structured‑light camera; facial recognition & tracking",
+          "Audio",
+          "4‑mic array; echo cancellation; sound source localization",
+          "Tactile",
+          "Distributed pressure sensors for touch interaction",
+          "Control",
+          "Wholebody teleoperation; low‑latency motion mapping",
+          "Structure",
+          "Modular design; compact & lightweight",
+          "Versions",
+          "GR‑3: soft skin; GR‑3C: reinforced shell + LED ring head"
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 100,
+          "body_max_bullets": 24,
+          "body_max_lines": 5
+        },
+        "image": {
+          "mode": "decorate",
+          "needed": false,
+          "usage": null,
+          "placement": null,
+          "content_description": null,
+          "source_hint": null,
+          "decorate_brief": "Dark-tech grid and cyan rules only."
+        }
+      }
+    ],
+    "visual_weight": 7,
+    "density_label": "medium",
+    "density_reason": "Source-controlled density preserves all supplied product content.",
+    "density_contract": {
+      "deck_bias": "balanced",
+      "page_lower_bound": "mid_low",
+      "page_upper_bound": "high",
+      "max_cards": 4,
+      "max_charts": 2,
+      "min_body_font_px": 18,
+      "max_lines_per_card": 5,
+      "image_policy": "support_only",
+      "decoration_budget": "medium",
+      "overflow_strategy": "tighten_budget"
+    },
+    "layout_hint": "primary-secondary",
+    "director_command": {
+      "mood": "precise industrial future",
+      "spatial_strategy": "Preserve source hierarchy within a dark technical frame.",
+      "anchor_treatment": "Product evidence receives the strongest cyan edge."
+    },
+    "decoration_hints": {
+      "background": {
+        "feel": "deep technical space",
+        "techniques": [
+          "grid"
+        ]
+      },
+      "page_accent": {
+        "feel": "cyan instrumentation",
+        "techniques": [
+          "cyan-rule"
+        ]
+      }
+    },
+    "resources": {
+      "page_template": "content",
+      "layout_refs": [],
+      "block_refs": [],
+      "chart_refs": [],
+      "principle_refs": []
+    },
+    "source_guidance": {
+      "brief_sections": [
+        "source-brief.txt#slide-27"
+      ],
+      "citation_expectation": "Use only the supplied PPTX content and embedded media.",
+      "strictness": "No additions, rewriting, translation, deletion, or reordering.",
+      "speaker_notes": []
+    },
+    "workflow_metadata": {
+      "stage": "planning",
+      "workflow_version": "2026.04.09-v4.1",
+      "planning_schema_version": "4.1",
+      "planning_packet_version": "4.1",
+      "planning_continuity_version": "4.1"
+    }
+  }
+}

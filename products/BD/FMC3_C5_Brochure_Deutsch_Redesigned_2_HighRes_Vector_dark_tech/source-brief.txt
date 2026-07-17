@@ -196,7 +196,7 @@ Quelle: products/BD/FMC3_C5_Brochure_Deutsch_Redesigned_2_HighRes_Vector.docx
 - ERLEBEN SIE DEN C5 LIVE
 - Wir senden Ihnen weitere Informationen und laden Sie zu einer Demonstration ein.
 - Ihr Ansprechpartner
-- Wang Haoan
+- Haoan Wang
 - FMC3 Robotics
 - Ingolstadt · Deutschland
 - FMC3 Robotics · C5 Autonomous Commercial Cleaning Robot

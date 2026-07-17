@@ -1,0 +1,154 @@
+{
+  "page": {
+    "slide_number": 14,
+    "page_type": "content",
+    "narrative_role": "evidence",
+    "title": "Products",
+    "page_goal": "Preserve and present all source content for slide 14.",
+    "audience_takeaway": "Products",
+    "cards": [
+      {
+        "card_id": "s14-anchor-1",
+        "role": "anchor",
+        "card_type": "text",
+        "card_style": "accent",
+        "argument_role": "evidence",
+        "headline": "Products",
+        "body": [
+          "Products",
+          "FMC³ Brain+ODM",
+          "Robo dogD1 MAX",
+          "Basic Information",
+          "Material: Aluminum Alloy + HighStrength Engineering Plastic",
+          "Standing Dimensions (L × W × H): 920mm × 480mm × 570mm",
+          "Prone Dimensions (L × W × H): 930mm × 630mm × 200mm",
+          "Total Weight (Including Battery): 40kg",
+          "Operating Temperature: 20℃ ~ 55℃",
+          "Protection Class: IP67",
+          "Battery: Rated Capacity 10Ah, Voltage 54V",
+          "Charging Time: ＜ 2h",
+          "Battery Runtime: 5h (No Load), 2.5h (Full Load)",
+          "Maximum Range: 29km (No Load), 18km (Full Load)",
+          "Performance Parameters",
+          "Maximum Speed: 8m/s",
+          "Rated Payload: 25 ~ 30kg",
+          "Continuous Stair Climbing Height: 22cm"
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 100,
+          "body_max_bullets": 18,
+          "body_max_lines": 5
+        },
+        "image": {
+          "mode": "provided",
+          "needed": true,
+          "usage": "inline-illustration",
+          "placement": "inline",
+          "content_description": "Original visual from the supplied product manual.",
+          "source_hint": "images/slide-14-image-01.png",
+          "decorate_brief": "Preserve the source visual and its semantic content."
+        }
+      },
+      {
+        "card_id": "s14-support-2",
+        "role": "support",
+        "card_type": "text",
+        "card_style": "outline",
+        "argument_role": "framework",
+        "headline": "Source content",
+        "body": [
+          "Maximum Climbing Slope: 45°",
+          "Jumping Height Off the Ground: 80cm",
+          "Maximum Obstacle & Ditch Crossing Height: 80cm",
+          "Loaded Obstacle Crossing Height: 50cm",
+          "Minimum Passable Width: 50cm",
+          "Robot Joint Parameters",
+          "Maximum Joint Torque: 150N·m",
+          "Joint Motion Range (Body): 30° ~ 40°",
+          "Joint Motion Range (Thigh): 160° ~ 160°",
+          "Joint Motion Range (Calf): 160° ~ 160°",
+          "Sensing Unit",
+          "LiDAR: 1 × 192channel LiDAR at the front and 1 at the rear, with a coverage angle of 360° × 90° and a coverage diameter of 120m",
+          "Camera FOV: 1 × FPV camera at the front and 1 at the rear, industrialgrade 8megapixel, field of view: DFOV 122°, HFOV 111°, VFOV 70°",
+          "Fill Light: 4 × Fill Lights, 1 on each side of the FPV cameras",
+          "IMU: 1 × AutomotiveGrade IMU",
+          "RTK Module: 1 × GNSS RTK",
+          "Ultrasonic Sensor: 1 × Ultrasonic Sensor on each side, supporting obstacle recognition within 5m"
+        ],
+        "data_points": [],
+        "content_budget": {
+          "headline_max_chars": 100,
+          "body_max_bullets": 17,
+          "body_max_lines": 5
+        },
+        "image": {
+          "mode": "decorate",
+          "needed": false,
+          "usage": null,
+          "placement": null,
+          "content_description": null,
+          "source_hint": null,
+          "decorate_brief": "Dark-tech grid and cyan rules only."
+        }
+      }
+    ],
+    "visual_weight": 7,
+    "density_label": "medium",
+    "density_reason": "Source-controlled density preserves all supplied product content.",
+    "density_contract": {
+      "deck_bias": "balanced",
+      "page_lower_bound": "mid_low",
+      "page_upper_bound": "high",
+      "max_cards": 4,
+      "max_charts": 2,
+      "min_body_font_px": 18,
+      "max_lines_per_card": 5,
+      "image_policy": "support_only",
+      "decoration_budget": "medium",
+      "overflow_strategy": "tighten_budget"
+    },
+    "layout_hint": "asymmetric",
+    "director_command": {
+      "mood": "precise industrial future",
+      "spatial_strategy": "Preserve source hierarchy within a dark technical frame.",
+      "anchor_treatment": "Product evidence receives the strongest cyan edge."
+    },
+    "decoration_hints": {
+      "background": {
+        "feel": "deep technical space",
+        "techniques": [
+          "grid"
+        ]
+      },
+      "page_accent": {
+        "feel": "cyan instrumentation",
+        "techniques": [
+          "cyan-rule"
+        ]
+      }
+    },
+    "resources": {
+      "page_template": "content",
+      "layout_refs": [],
+      "block_refs": [],
+      "chart_refs": [],
+      "principle_refs": []
+    },
+    "source_guidance": {
+      "brief_sections": [
+        "source-brief.txt#slide-14"
+      ],
+      "citation_expectation": "Use only the supplied PPTX content and embedded media.",
+      "strictness": "No additions, rewriting, translation, deletion, or reordering.",
+      "speaker_notes": []
+    },
+    "workflow_metadata": {
+      "stage": "planning",
+      "workflow_version": "2026.04.09-v4.1",
+      "planning_schema_version": "4.1",
+      "planning_packet_version": "4.1",
+      "planning_continuity_version": "4.1"
+    }
+  }
+}
