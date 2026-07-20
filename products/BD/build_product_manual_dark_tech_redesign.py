@@ -218,7 +218,7 @@ def add_text(
         paragraph = frame.paragraphs[0] if index == 0 else frame.add_paragraph()
         paragraph.text = value
         paragraph.alignment = align
-        paragraph.space_after = Pt(max(1, size * 0.22))
+        paragraph.space_after = Pt(max(0.5, size * 0.14))
         paragraph.line_spacing = spacing
         paragraph.font.name = font
         paragraph.font.size = Pt(size)
@@ -314,17 +314,104 @@ def add_section_label(slide, text: str, x, y, w, *, accent=CYAN):
     add_text(slide, text, x, y, w, 0.29, size=10, color=accent, bold=True, font=MONO)
 
 
-def add_card(slide, title: str, body: list[str], x, y, w, h, *, accent=CYAN, body_size=10.5, title_size=10.5, bullet=False):
+def add_card(slide, title: str, body: list[str], x, y, w, h, *, accent=CYAN, body_size=11.0, title_size=12.0, bullet=False):
     rect(slide, x, y, w, h, PANEL, GRID)
     rect(slide, x, y, 0.035, h, accent, None)
-    add_text(slide, title, x + 0.18, y + 0.12, w - 0.32, 0.3, size=title_size, color=accent, bold=True)
-    add_text(slide, body, x + 0.18, y + 0.50, w - 0.32, h - 0.58, size=body_size, color=TEXT, spacing=1.0, bullet=bullet)
+    add_text(slide, title, x + 0.18, y + 0.12, w - 0.34, 0.36, size=title_size, color=accent, bold=True)
+    add_text(slide, body, x + 0.18, y + 0.58, w - 0.34, h - 0.68, size=body_size, color=TEXT, spacing=0.96, bullet=bullet)
+
+
+def add_list_grid_card(slide, title: str, items: list[str], x, y, w, h, *, columns=2, accent=CYAN, body_size=10.8):
+    """Render exact source strings in balanced columns without shrinking text."""
+    rect(slide, x, y, w, h, PANEL, GRID)
+    rect(slide, x, y, 0.035, h, accent, None)
+    add_text(slide, title, x + 0.18, y + 0.12, w - 0.34, 0.36, size=12.0, color=accent, bold=True)
+    count = max(1, math.ceil(len(items) / columns))
+    gap = 0.20
+    col_w = (w - 0.36 - gap * (columns - 1)) / columns
+    for col in range(columns):
+        subset = items[col * count:(col + 1) * count]
+        if not subset:
+            continue
+        add_text(
+            slide, subset, x + 0.18 + col * (col_w + gap), y + 0.58,
+            col_w, h - 0.70, size=body_size, color=TEXT, spacing=0.94,
+        )
+
+
+def add_kv_card(slide, title: str, items: list[str], x, y, w, h, *, columns=2, accent=BLUE, label_size=9.7, value_size=10.6, label_ratio=0.43):
+    """Render alternating label/value source strings as aligned key-value rows."""
+    rect(slide, x, y, w, h, PANEL, GRID)
+    rect(slide, x, y, 0.035, h, accent, None)
+    add_text(slide, title, x + 0.18, y + 0.12, w - 0.34, 0.36, size=12.0, color=accent, bold=True)
+    rows = pairs(items)
+    rows_per_col = max(1, math.ceil(len(rows) / columns))
+    gap = 0.22
+    col_w = (w - 0.36 - gap * (columns - 1)) / columns
+    for col in range(columns):
+        col_rows = rows[col * rows_per_col:(col + 1) * rows_per_col]
+        if not col_rows:
+            continue
+        cx = x + 0.18 + col * (col_w + gap)
+        label_w = col_w * label_ratio
+        label_chars = max(12, int(label_w * 12))
+        value_chars = max(14, int((col_w - label_w) * 13))
+        weights = [
+            max(1, math.ceil(len(label) / label_chars), math.ceil(len(value) / value_chars))
+            for label, value in col_rows
+        ]
+        unit_h = (h - 0.76) / sum(weights)
+        cy = y + 0.60
+        for row, ((label, value), weight) in enumerate(zip(col_rows, weights)):
+            row_h = unit_h * weight
+            if row:
+                line(slide, cx, cy - 0.02, cx + col_w, cy - 0.02, GRID, 0.45)
+            add_text(slide, label, cx, cy + 0.02, label_w - 0.06, row_h - 0.04, size=label_size, color=CYAN, bold=True, valign=MSO_ANCHOR.MIDDLE)
+            add_text(slide, value, cx + label_w, cy + 0.02, col_w - label_w, row_h - 0.04, size=value_size, color=WHITE, valign=MSO_ANCHOR.MIDDLE)
+            cy += row_h
+
+
+def add_spec_grid_card(slide, title: str, items: list[str], x, y, w, h, *, columns=3, accent=BLUE, label_size=9.3, value_size=9.8):
+    """Render dense specifications as stacked label/value cells."""
+    rect(slide, x, y, w, h, PANEL, GRID)
+    rect(slide, x, y, 0.035, h, accent, None)
+    add_text(slide, title, x + 0.18, y + 0.12, w - 0.34, 0.36, size=12.0, color=accent, bold=True)
+    rows = pairs(items)
+    rows_per_col = max(1, math.ceil(len(rows) / columns))
+    gap = 0.20
+    col_w = (w - 0.36 - gap * (columns - 1)) / columns
+    for col in range(columns):
+        col_rows = rows[col * rows_per_col:(col + 1) * rows_per_col]
+        if not col_rows:
+            continue
+        cx = x + 0.18 + col * (col_w + gap)
+        value_chars = max(24, int(col_w * 12.5))
+        minimum_heights = []
+        for label, value in col_rows:
+            label_lines = max(1, math.ceil(len(label) / max(20, int(col_w * 15))))
+            value_lines = max(1, math.ceil(len(value) / value_chars))
+            minimum_heights.append(label_lines * 0.13 + value_lines * 0.136 + 0.07)
+        available_h = h - 0.76
+        extra_h = max(0, available_h - sum(minimum_heights)) / len(minimum_heights)
+        scale = min(1.0, available_h / sum(minimum_heights))
+        cy = y + 0.60
+        for row, ((label, value), minimum_h) in enumerate(zip(col_rows, minimum_heights)):
+            row_h = minimum_h * scale + extra_h
+            if row:
+                line(slide, cx, cy - 0.02, cx + col_w, cy - 0.02, GRID, 0.45)
+            label_h = max(0.13, math.ceil(len(label) / max(20, int(col_w * 15))) * 0.13 * scale)
+            add_text(slide, label, cx, cy + 0.02, col_w, label_h, size=label_size, color=CYAN, bold=True, margins=(0, 0, 0, 0), spacing=0.90)
+            add_text(
+                slide, value, cx, cy + label_h + 0.055, col_w, row_h - label_h - 0.07,
+                size=value_size, color=WHITE, spacing=0.88, margins=(0, 0, 0, 0),
+            )
+            cy += row_h
 
 
 def add_metric(slide, value: str, label: str, x, y, w, *, accent=CYAN):
     rect(slide, x, y, w, 0.78, PANEL, GRID)
     add_text(slide, value, x + 0.15, y + 0.10, w - 0.3, 0.36, size=18, color=WHITE, bold=True)
-    add_text(slide, label, x + 0.15, y + 0.49, w - 0.3, 0.18, size=7.2, color=accent, bold=True, font=MONO)
+    add_text(slide, label, x + 0.15, y + 0.49, w - 0.3, 0.22, size=9.2, color=accent, bold=True, font=MONO)
 
 
 def split_sections(items: list[str], headings: list[str]) -> list[tuple[str, list[str]]]:
@@ -396,18 +483,29 @@ def build_positioning(prs, texts, assets, runtime):
     slide = prs.slides.add_slide(prs.slide_layouts[6]); add_background(slide, 2, texts, section="POSITIONING")
     add_title(slide, "Positioning")
     strategy = [texts[17], texts[18]]
-    add_text(slide, strategy, 0.62, 1.15, 6.0, 1.28, size=13.5, color=WHITE, bold=True, spacing=1.02, bullet=True)
+    add_text(slide, strategy, 0.62, 1.18, 5.85, 1.28, size=12.2, color=WHITE, bold=True, spacing=0.96, bullet=True)
     map_path = tint_map(assets[0], runtime / "world-map-cyan.png")
-    add_picture_contain(slide, map_path, 7.15, 1.0, 5.5, 4.55)
-    line(slide, 8.15, 3.2, 10.9, 3.85, CYAN, 1.2)
-    rect(slide, 7.86, 2.98, 0.16, 0.16, CYAN, None, radius=True)
-    rect(slide, 10.82, 3.77, 0.16, 0.16, BLUE, None, radius=True)
+    map_x, map_y, map_w, map_h = 6.90, 1.45, 5.80, 2.92
+    add_picture_contain(slide, map_path, map_x, map_y, map_w, map_h)
+    # Equirectangular projection: Ingolstadt (11.42E, 48.77N), Shanghai (121.47E, 31.23N).
+    # The supplied map uses a stylized projection; these calibrated positions land on the cities.
+    germany = (9.62, 2.42)
+    shanghai = (11.53, 2.72)
+    line(slide, germany[0], germany[1], shanghai[0], shanghai[1], CYAN, 1.1)
+    rect(slide, germany[0] - 0.07, germany[1] - 0.07, 0.14, 0.14, CYAN, None, radius=True)
+    rect(slide, shanghai[0] - 0.07, shanghai[1] - 0.07, 0.14, 0.14, BLUE, None, radius=True)
+    add_text(slide, "Ingolstadt", germany[0] - 0.76, germany[1] - 0.35, 1.18, 0.22, size=9.4, color=CYAN, bold=True, align=PP_ALIGN.CENTER, font=MONO)
+    add_text(slide, "Jia Xing / Shanghai", shanghai[0] - 0.94, shanghai[1] + 0.13, 1.88, 0.22, size=9.4, color=BLUE, bold=True, align=PP_ALIGN.CENTER, font=MONO)
     europe = [texts[2], texts[3], texts[4], texts[8], texts[9]]
     china = [texts[5], texts[6], texts[7], texts[10], texts[11]]
-    add_card(slide, "Europe HQ", europe, 0.62, 2.7, 5.8, 1.55, accent=CYAN, body_size=10.2)
-    add_card(slide, "China Office", china, 0.62, 4.45, 5.8, 1.55, accent=BLUE, body_size=10.2)
-    add_text(slide, ["HQ", "Product &Engineering"], 7.15, 4.9, 2.15, 0.72, size=10, color=WHITE, bold=True, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
-    add_text(slide, ["China office", "RD&Product design"], 10.16, 4.9, 2.25, 0.72, size=10, color=WHITE, bold=True, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
+    add_card(slide, "Europe HQ", europe, 0.62, 2.65, 5.85, 1.72, accent=CYAN, body_size=10.7)
+    add_card(slide, "China Office", china, 0.62, 4.55, 5.85, 1.72, accent=BLUE, body_size=10.7)
+    rect(slide, 7.25, 4.72, 2.28, 1.10, PANEL, CYAN)
+    rect(slide, 10.10, 4.72, 2.28, 1.10, PANEL, BLUE)
+    add_text(slide, ["HQ", "Product &Engineering"], 7.38, 4.91, 2.02, 0.70, size=11.0, color=WHITE, bold=True, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
+    add_text(slide, ["China office", "RD&Product design"], 10.23, 4.91, 2.02, 0.70, size=11.0, color=WHITE, bold=True, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
+    line(slide, germany[0], germany[1] + 0.10, 8.39, 4.72, CYAN, 0.7)
+    line(slide, shanghai[0], shanghai[1] + 0.10, 11.24, 4.72, BLUE, 0.7)
     return slide
 
 
@@ -416,17 +514,18 @@ def build_brain(prs, texts, assets):
     add_title(slide, "One Brain filt all", subtitle="Data loop, embodied intelligence and multi-body adaptation")
     items = clean_footer_items(text_without(texts, ["One Brain filt all"]))
     left = items[:3]
-    add_picture_contain(slide, assets[2], 4.35, 1.55, 4.55, 3.15)
+    add_picture_contain(slide, assets[2], 4.37, 1.52, 4.35, 3.02)
     for i, value in enumerate(left):
-        add_card(slide, value, [], 0.58, 1.55 + i * 1.2, 3.2, 0.88, accent=CYAN, title_size=12)
-        line(slide, 3.78, 1.99 + i * 1.2, 4.4, 2.3 + i * 0.55, CYAN, 0.8)
+        add_card(slide, value, [], 0.58, 1.52 + i * 1.08, 3.25, 0.86, accent=CYAN, title_size=12.5)
+        line(slide, 3.83, 1.95 + i * 1.08, 4.38, 2.14 + i * 0.54, CYAN, 0.8)
     right = [(items[3], items[4]), (items[5], items[6]), (items[7], items[8])]
     for i, (heading, detail) in enumerate(right):
-        add_card(slide, heading, [detail], 9.45, 1.55 + i * 1.2, 3.2, 0.88, accent=BLUE, title_size=10.5, body_size=8.4)
-    add_picture_contain(slide, assets[12], 5.15, 4.68, 3.0, 1.2)
-    add_text(slide, items[9:], 8.75, 4.72, 3.85, 1.60, size=8.6, color=TEXT, bullet=True)
+        add_card(slide, heading, [detail], 9.40, 1.52 + i * 1.08, 3.28, 0.86, accent=BLUE, title_size=11.3, body_size=10.2)
+    rect(slide, 0.58, 4.82, 12.10, 1.78, PANEL, GRID)
     for index, asset in enumerate(assets[13:17]):
-        add_picture_contain(slide, asset, 0.65 + index * 2.0, 5.78, 1.55, 0.95)
+        add_picture_contain(slide, asset, 0.82 + index * 1.12, 5.12, 0.88, 1.04)
+    add_picture_contain(slide, assets[12], 5.18, 5.05, 2.02, 0.92)
+    add_list_grid_card(slide, "Data Loop", items[9:], 7.50, 4.94, 5.00, 1.52, columns=2, body_size=10.3)
     return slide
 
 
@@ -440,14 +539,14 @@ def build_team(prs, texts, assets):
         ("Dr. Huang Dong", "CPO", texts[19:22], assets[2]),
         ("Obermeier Florian", "MD Germany", texts[25:28], assets[5]),
     ]
-    for i, (name, role, bio, image) in enumerate(people):
-        x = 0.56 + i * 2.52
-        rect(slide, x, 1.55, 2.30, 5.15, PANEL, GRID)
-        rect(slide, x, 1.55, 2.30, 0.045, CYAN if i < 4 else BLUE, None)
-        add_picture_contain(slide, image, x + 0.10, 1.68, 2.10, 1.55)
-        add_text(slide, name, x + 0.14, 3.34, 2.02, 0.42, size=11.1, color=WHITE, bold=True)
-        add_text(slide, role, x + 0.14, 3.77, 2.02, 0.24, size=8.2, color=CYAN, bold=True, font=MONO)
-        add_text(slide, bio, x + 0.14, 4.12, 2.02, 2.35, size=8.0, color=TEXT, spacing=0.98, bullet=True)
+    positions = [(0.58, 1.48), (4.70, 1.48), (8.82, 1.48), (2.64, 4.15), (6.76, 4.15)]
+    for i, ((name, role, bio, image), (x, y)) in enumerate(zip(people, positions)):
+        rect(slide, x, y, 3.90, 2.38, PANEL, GRID)
+        rect(slide, x, y, 3.90, 0.045, CYAN if i < 4 else BLUE, None)
+        add_picture_contain(slide, image, x + 0.12, y + 0.16, 1.15, 1.17)
+        add_text(slide, name, x + 1.42, y + 0.20, 2.30, 0.38, size=12.0, color=WHITE, bold=True)
+        add_text(slide, role, x + 1.42, y + 0.64, 2.30, 0.28, size=10.0, color=CYAN, bold=True, font=MONO)
+        add_text(slide, bio, x + 0.16, y + 1.40, 3.58, 0.80, size=9.8, color=TEXT, spacing=0.92, bullet=True)
     return slide
 
 
@@ -455,38 +554,40 @@ def build_gdpr(prs, texts, assets):
     slide = prs.slides.add_slide(prs.slide_layouts[6]); add_background(slide, 5, texts, section="GDPR / EU AI ACT")
     add_title(slide, "GDPR Data Compliance", subtitle="Localized Data Closed-Loop Architecture (Germany/Europe)")
     body = clean_footer_items(text_without(texts, ["GDPR Data Compliance", "Localized Data Closed-Loop Architecture (Germany/Europe)"]))
-    add_card(slide, body[0], body[1:2], 0.62, 1.48, 3.0, 1.15, accent=RED, body_size=9.4)
-    add_picture_contain(slide, assets[0], 0.78, 1.68, 0.42, 0.42)
-    add_section_label(slide, body[2], 4.0, 1.12, 8.65)
+    add_card(slide, body[0], body[1:2], 0.62, 1.48, 3.10, 1.42, accent=RED, body_size=10.6)
+    add_picture_contain(slide, assets[0], 3.02, 1.72, 0.46, 0.46)
+    add_section_label(slide, body[2], 4.02, 1.34, 8.62)
     stages = [
         (body[3], body[4], body[5], assets[2]),
         (body[6], body[7], body[8], assets[4]),
         (body[9], body[10], body[11], assets[5]),
     ]
     for i, (title, description, state, icon) in enumerate(stages):
-        y = 1.48 + i * 1.5
-        rect(slide, 4.0, y, 8.65, 1.10, PANEL, GRID)
-        add_picture_contain(slide, icon, 4.22, y + 0.25, 0.52, 0.52)
-        add_text(slide, title, 4.92, y + 0.16, 2.4, 0.25, size=11, color=WHITE, bold=True)
-        add_text(slide, description, 4.92, y + 0.48, 5.35, 0.39, size=9.1, color=TEXT)
-        rect(slide, 10.62, y + 0.28, 1.58, 0.48, PANEL_2, CYAN, radius=True)
-        add_text(slide, state, 10.7, y + 0.35, 1.42, 0.22, size=8.2, color=CYAN, bold=True, align=PP_ALIGN.CENTER, font=MONO)
+        y = 1.72 + i * 1.43
+        rect(slide, 4.02, y, 8.62, 1.22, PANEL, GRID)
+        add_picture_contain(slide, icon, 4.22, y + 0.28, 0.56, 0.56)
+        add_text(slide, title, 4.96, y + 0.16, 2.55, 0.30, size=12.0, color=WHITE, bold=True)
+        add_text(slide, description, 4.96, y + 0.52, 5.10, 0.52, size=10.6, color=TEXT)
+        rect(slide, 10.70, y + 0.35, 1.58, 0.50, PANEL_2, CYAN, radius=True)
+        add_text(slide, state, 10.78, y + 0.43, 1.42, 0.24, size=9.4, color=CYAN, bold=True, align=PP_ALIGN.CENTER, font=MONO)
     principles = body[-4:]
     for i, value in enumerate(principles):
-        x = 4.0 + i * 2.16
-        rect(slide, x, 6.10, 2.02, 0.48, BG_2, GRID)
-        add_text(slide, value, x + 0.08, 6.18, 1.86, 0.25, size=7.8, color=TEXT, align=PP_ALIGN.CENTER)
-    add_text(slide, "Fermi Robot Business Plan | Confidential", 0.66, 6.70, 3.1, 0.18, size=7.2, color=MUTED, font=MONO)
+        x = 0.62 + (i % 2) * 1.60
+        y = 3.20 + (i // 2) * 1.03
+        rect(slide, x, y, 1.48, 0.84, BG_2, GRID)
+        add_text(slide, value, x + 0.10, y + 0.12, 1.28, 0.60, size=9.4, color=TEXT, bold=True, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
+    add_text(slide, "Fermi Robot Business Plan | Confidential", 0.66, 6.55, 3.1, 0.22, size=8.5, color=MUTED, font=MONO)
     return slide
 
 
 def build_safety(prs, texts, assets):
     slide = prs.slides.add_slide(prs.slide_layouts[6]); add_background(slide, 6, texts, section="EU SAFETY")
     title = 'Entering the European Industry: Building a Moat Based on "Deterministic, Safe, and Compliant" Standards'
-    add_title(slide, title, compact=True)
+    display_title = title.replace(": Building", ":\nBuilding")
+    add_text(slide, display_title, 0.55, 0.34, 10.85, 0.86, size=19.0, color=WHITE, bold=True, spacing=0.90)
     body = clean_footer_items(text_without(texts, [title, "The Four Hard Requirements for Embodied AI Robots under the \"Machinery Regulation\""]))
-    add_picture_contain(slide, assets[1], 0.62, 1.30, 4.05, 2.2)
-    add_card(slide, "Collaborative Safety & Compliance", body[1:7], 4.95, 1.30, 7.68, 2.2, accent=CYAN, body_size=9.7)
+    add_picture_contain(slide, assets[1], 0.62, 1.42, 3.55, 1.85)
+    add_card(slide, "Collaborative Safety & Compliance", body[1:7], 4.42, 1.42, 8.22, 1.85, accent=CYAN, body_size=10.6)
     headings = [
         "1. Safety of Control Systems", "2.Special Requirements for Autonomous Mobility",
         "3.Risk Monitoring & Cybersecurity", "4. Software Safety & Self-learning",
@@ -495,11 +596,11 @@ def build_safety(prs, texts, assets):
     icons = assets[2:6]
     for i, (heading, content) in enumerate(sections[:4]):
         x = 0.62 + i * 3.02
-        add_card(slide, heading, content, x, 4.0, 2.78, 2.25, accent=CYAN if i < 2 else BLUE, body_size=8.9, title_size=9.2)
+        add_card(slide, heading, content, x, 3.55, 2.78, 2.70, accent=CYAN if i < 2 else BLUE, body_size=10.3, title_size=10.5)
         if i < len(icons):
-            add_picture_contain(slide, icons[i], x + 2.05, 4.15, 0.52, 0.52)
-        add_text(slide, str(i + 1), x + 0.12, 5.82, 0.35, 0.25, size=12, color=CYAN, bold=True, font=MONO)
-    add_text(slide, 'The Four Hard Requirements for Embodied AI Robots under the "Machinery Regulation"', 0.66, 6.48, 11.9, 0.34, size=11, color=WHITE, bold=True, align=PP_ALIGN.CENTER)
+            add_picture_contain(slide, icons[i], x + 2.16, 5.70, 0.38, 0.38)
+        add_text(slide, str(i + 1), x + 0.14, 5.78, 0.35, 0.28, size=12, color=CYAN, bold=True, font=MONO)
+    add_text(slide, 'The Four Hard Requirements for Embodied AI Robots under the "Machinery Regulation"', 0.66, 6.43, 11.9, 0.38, size=12.0, color=WHITE, bold=True, align=PP_ALIGN.CENTER)
     return slide
 
 
@@ -522,21 +623,20 @@ def build_portfolio(prs, texts, assets):
     body = clean_footer_items(text_without(texts, ["Products", "FMC³ Brain+ODM"]))
     footnote = body[-1]
     brain = assets[8]
-    rect(slide, 4.75, 2.42, 3.85, 1.52, PANEL_2, CYAN)
-    add_picture_contain(slide, brain, 5.10, 2.55, 3.15, 0.95)
-    add_text(slide, "FMC³ Brain + FMC³ Data Acquisition Suit", 4.92, 3.55, 3.50, 0.26, size=9.4, color=CYAN, bold=True, align=PP_ALIGN.CENTER)
+    rect(slide, 0.62, 1.28, 12.06, 1.10, PANEL_2, CYAN)
+    add_picture_contain(slide, brain, 4.42, 1.39, 2.35, 0.68)
+    add_text(slide, "FMC³ Brain + FMC³ Data Acquisition Suit", 6.90, 1.66, 4.55, 0.30, size=12.0, color=CYAN, bold=True, align=PP_ALIGN.CENTER)
     product_assets = [assets[10], assets[3], assets[5], assets[4], assets[12], assets[11], assets[6]]
     label_groups = [
         ["Robo dog"], ["Commercial & Industrial Cleaning"], ["Workbot"], ["Cobot"],
         ["Industrial", "Service Robot"], ["Humanoid Home Service Robot"], ["GreetingBot"],
     ]
-    positions = [(0.55, 1.55), (2.25, 1.55), (9.25, 1.55), (10.95, 1.55), (0.55, 4.32), (2.25, 4.32), (9.75, 4.32)]
+    positions = [(0.62, 2.68), (3.65, 2.68), (6.68, 2.68), (9.71, 2.68), (2.13, 4.55), (5.16, 4.55), (8.19, 4.55)]
     for labels, image, (x, y) in zip(label_groups, product_assets, positions):
-        rect(slide, x, y, 1.55, 1.78, PANEL, GRID)
-        add_picture_contain(slide, image, x + 0.12, y + 0.10, 1.31, 1.12)
-        add_text(slide, labels, x + 0.08, y + 1.27, 1.39, 0.43, size=7.8, color=WHITE, bold=True, align=PP_ALIGN.CENTER)
-        line(slide, x + 0.78, y + (1.78 if y < 3 else 0), 6.67, 3.18, GRID, 0.6)
-    add_text(slide, footnote, 3.10, 6.25, 7.15, 0.48, size=8.4, color=MUTED, align=PP_ALIGN.CENTER)
+        rect(slide, x, y, 2.72, 1.62, PANEL, GRID)
+        add_picture_contain(slide, image, x + 0.18, y + 0.10, 2.36, 0.98)
+        add_text(slide, labels, x + 0.14, y + 1.15, 2.44, 0.34, size=10.5, color=WHITE, bold=True, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
+    add_text(slide, footnote, 1.32, 6.43, 10.70, 0.36, size=9.4, color=MUTED, align=PP_ALIGN.CENTER)
     return slide
 
 
@@ -544,21 +644,21 @@ def build_brain_suite(prs, texts, assets):
     slide = prs.slides.add_slide(prs.slide_layouts[6]); add_background(slide, 9, texts, section="BRAIN + DATA")
     add_title(slide, "FMC³ Brain+Data Acquisition Suit", eyebrow="Products")
     body = clean_footer_items(text_without(texts, ["Products", "FMC³ Brain+Data Acquisition Suit"]))
-    add_picture_contain(slide, assets[5], 0.72, 1.55, 3.05, 1.65)
+    add_picture_contain(slide, assets[5], 0.72, 1.48, 3.05, 1.58)
     metrics = body[13:21]
     for i, (label, value) in enumerate(pairs(metrics)):
-        y = 3.30 + i * 0.62
-        rect(slide, 0.62, y, 3.15, 0.51, PANEL if i % 2 == 0 else BG_2, GRID)
-        add_text(slide, label, 0.76, y + 0.09, 1.48, 0.22, size=7.5, color=CYAN, bold=True, font=MONO)
-        add_text(slide, value, 2.30, y + 0.08, 1.30, 0.24, size=9.0, color=WHITE, bold=True, align=PP_ALIGN.RIGHT)
-    add_picture_contain(slide, assets[13], 4.18, 1.55, 3.25, 2.0)
-    add_text(slide, body[21:], 4.22, 3.62, 3.18, 2.35, size=9.2, color=TEXT, bullet=True)
+        y = 3.22 + i * 0.72
+        rect(slide, 0.62, y, 3.15, 0.60, PANEL if i % 2 == 0 else BG_2, GRID)
+        add_text(slide, label, 0.76, y + 0.10, 1.50, 0.30, size=9.4, color=CYAN, bold=True, font=MONO, valign=MSO_ANCHOR.MIDDLE)
+        add_text(slide, value, 2.24, y + 0.10, 1.36, 0.30, size=10.6, color=WHITE, bold=True, align=PP_ALIGN.RIGHT, valign=MSO_ANCHOR.MIDDLE)
+    add_picture_contain(slide, assets[13], 4.12, 1.48, 3.30, 2.05)
+    add_list_grid_card(slide, "FMC³ Brain", body[21:], 4.08, 3.74, 3.42, 2.44, columns=1, body_size=10.6)
     headings = ["Realtime Teleoperation & Emergency Takeover", "FullLink Data Toolchain", "Core Data Set"]
     sections = split_sections(body[:13], headings)
     for i, (heading, content) in enumerate(sections):
-        y = [1.55, 3.18, 4.81][i]
-        height = 1.40 if i < 2 else 1.62
-        add_card(slide, heading, content, 7.82, y, 4.80, height, accent=CYAN if i == 0 else BLUE, body_size=8.4 if i < 2 else 7.8)
+        y = [1.48, 3.12, 4.82][i]
+        height = 1.52 if i < 2 else 1.68
+        add_card(slide, heading, content, 7.78, y, 4.86, height, accent=CYAN if i == 0 else BLUE, body_size=10.3 if i < 2 else 9.9, title_size=11.5)
     return slide
 
 
@@ -572,18 +672,18 @@ def build_omnigrab(prs, texts, assets):
     hardware = sections[:3]
     hardware_images = [assets[2], assets[3], assets[4]]
     for i, ((heading, content), image) in enumerate(zip(hardware, hardware_images)):
-        x = 0.60 + i * 2.18
-        rect(slide, x, 1.35, 1.95, 5.30, PANEL, GRID)
-        add_picture_contain(slide, image, x + 0.16, 1.48, 1.63, 0.95)
-        add_text(slide, heading, x + 0.14, 2.45, 1.67, 0.42, size=9.2, color=CYAN, bold=True)
-        add_text(slide, content, x + 0.14, 2.92, 1.67, 3.45, size=7.8, color=TEXT)
+        y = 1.55 + i * 1.72
+        rect(slide, 0.60, y, 4.52, 1.52, PANEL, GRID)
+        add_picture_contain(slide, image, 0.76, y + 0.18, 1.14, 1.08)
+        add_text(slide, heading, 2.08, y + 0.18, 2.82, 0.34, size=11.5, color=CYAN, bold=True)
+        add_text(slide, content, 2.08, y + 0.60, 2.82, 0.74, size=10.2, color=TEXT, spacing=0.93)
     pipeline_items = []
     for _, content in sections[3:]:
         pipeline_items.extend(content)
     step_heads = [item for item in pipeline_items if item.startswith("STEP ")]
     descriptions = [item for item in pipeline_items if not item.startswith("STEP ")]
-    add_section_label(slide, "End-to-End Automated Processing Pipeline", 7.20, 1.05, 5.45)
-    add_section_label(slide, "DATA REFINERY PIPELINE", 7.20, 1.34, 5.45)
+    add_section_label(slide, "End-to-End Automated Processing Pipeline", 5.48, 1.18, 7.16)
+    add_section_label(slide, "DATA REFINERY PIPELINE", 5.48, 1.50, 7.16)
     step_titles = [
         "High-Precision Synchronized Capture:", "Automatic Scene Segmentation & Slicing:",
         "Smart Cleaning & Multi-Dimensional QA:", "Auto-Annotation & Programmatic Augmentation:",
@@ -595,11 +695,11 @@ def build_omnigrab(prs, texts, assets):
         if heading in descriptions:
             idx = descriptions.index(heading)
             if idx + 1 < len(descriptions): desc = [descriptions[idx + 1]]
-        y = 1.72 + i * 0.98
-        add_text(slide, step_heads[i] if i < len(step_heads) else f"STEP {i+1}", 7.20, y, 0.72, 0.25, size=8, color=CYAN, bold=True, font=MONO)
-        add_text(slide, heading, 8.0, y, 4.55, 0.25, size=9, color=WHITE, bold=True)
-        add_text(slide, desc, 8.0, y + 0.29, 4.55, 0.48, size=7.8, color=TEXT)
-        line(slide, 7.55, y + 0.28, 7.55, y + 0.92, GRID, 0.8)
+        y = 1.92 + i * 0.96
+        rect(slide, 5.48, y, 7.16, 0.82, PANEL if i % 2 == 0 else BG_2, GRID)
+        add_text(slide, step_heads[i] if i < len(step_heads) else f"STEP {i+1}", 5.64, y + 0.12, 0.72, 0.28, size=9.5, color=CYAN, bold=True, font=MONO)
+        add_text(slide, heading, 6.48, y + 0.10, 5.95, 0.28, size=10.8, color=WHITE, bold=True)
+        add_text(slide, desc, 6.48, y + 0.42, 5.95, 0.30, size=9.8, color=TEXT)
         cursor += 1
     return slide
 
@@ -736,31 +836,53 @@ def build_product_page(prs, page, texts, assets, cleaning_asset=None):
     count = len(sections)
     if page == 12:
         lookup = {heading: content for heading, content in sections}
-        add_card(slide, "Functions", lookup["Functions"], 4.08, 1.40, 4.12, 1.45, body_size=9.2)
-        add_card(slide, "Performance Parameters", lookup["Performance Parameters"], 4.08, 3.03, 4.12, 1.55, body_size=8.8)
-        add_card(slide, "Robot Joint Parameters", lookup["Robot Joint Parameters"], 4.08, 4.76, 4.12, 1.88, body_size=8.8)
-        add_card(slide, "Parameters", lookup["Parameters"], 8.46, 1.40, 4.17, 2.35, accent=BLUE, body_size=8.2)
-        add_card(slide, "Sensing Unit", lookup["Sensing Unit"], 8.46, 3.93, 4.17, 2.71, accent=BLUE, body_size=7.8)
+        add_card(slide, "Functions", lookup["Functions"], 4.08, 1.40, 4.12, 1.66, body_size=10.5)
+        add_list_grid_card(slide, "Performance Parameters", lookup["Performance Parameters"], 4.08, 3.25, 4.12, 1.48, columns=1, body_size=10.2)
+        add_list_grid_card(slide, "Robot Joint Parameters", lookup["Robot Joint Parameters"], 4.08, 4.92, 4.12, 1.72, columns=1, body_size=10.2)
+        add_list_grid_card(slide, "Parameters", lookup["Parameters"], 8.46, 1.40, 4.17, 2.60, columns=1, accent=BLUE, body_size=9.9)
+        add_list_grid_card(slide, "Sensing Unit", lookup["Sensing Unit"], 8.46, 4.19, 4.17, 2.45, columns=1, accent=BLUE, body_size=9.7)
+    elif page == 14:
+        lookup = {heading: content for heading, content in sections}
+        add_list_grid_card(slide, "Basic Information", lookup["Basic Information"], 4.08, 1.40, 4.12, 3.02, columns=1, body_size=9.9)
+        add_list_grid_card(slide, "Performance Parameters", lookup["Performance Parameters"], 4.08, 4.60, 4.12, 2.04, columns=1, body_size=9.8)
+        add_list_grid_card(slide, "Robot Joint Parameters", lookup["Robot Joint Parameters"], 8.46, 1.40, 4.17, 1.68, columns=1, accent=BLUE, body_size=10.2)
+        add_list_grid_card(slide, "Sensing Unit", lookup["Sensing Unit"], 8.46, 3.27, 4.17, 3.37, columns=1, accent=BLUE, body_size=9.7)
     elif page == 15:
         lookup = {heading: content for heading, content in sections}
-        add_card(slide, "Highlights", lookup["Highlights"], 4.08, 1.40, 4.12, 5.24, body_size=8.4)
-        add_card(slide, "Robot Joint Parameters", lookup["Robot Joint Parameters"], 8.46, 1.40, 4.17, 1.54, accent=BLUE, body_size=8.8)
-        add_card(slide, "Sensors", lookup["Sensors"], 8.46, 3.12, 4.17, 1.54, accent=BLUE, body_size=8.5)
-        add_card(slide, "Performance Parameters", lookup["Performance Parameters"], 8.46, 4.84, 4.17, 1.80, accent=BLUE, body_size=8.5)
+        add_card(slide, "Highlights", lookup["Highlights"], 4.08, 1.40, 4.12, 5.24, body_size=10.3)
+        add_list_grid_card(slide, "Robot Joint Parameters", lookup["Robot Joint Parameters"], 8.46, 1.40, 4.17, 1.54, columns=1, accent=BLUE, body_size=10.2)
+        add_list_grid_card(slide, "Sensors", lookup["Sensors"], 8.46, 3.12, 4.17, 1.54, columns=1, accent=BLUE, body_size=10.0)
+        add_list_grid_card(slide, "Performance Parameters", lookup["Performance Parameters"], 8.46, 4.84, 4.17, 1.80, columns=1, accent=BLUE, body_size=9.9)
+    elif page == 16:
+        lookup = {heading: content for heading, content in sections}
+        add_card(slide, "Robo dog D1 Pro", lookup["Robo dog D1 Pro"], 4.08, 1.40, 8.55, 1.48, body_size=10.8)
+        add_list_grid_card(slide, "Highlights", lookup["Highlights"], 4.08, 3.08, 8.55, 3.56, columns=2, body_size=10.4)
     elif page in {17, 18, 20, 25, 26, 27, 28, 29}:
         parameter = next((section for section in sections if section[0] == "Parameters"), None)
         support = [section for section in sections if section[0] != "Parameters"]
-        support_h = 5.42 / max(1, len(support))
+        dense_support = page in {20, 28, 29}
+        support_h = 2.12 if page == 26 else 1.95 if page == 27 else 2.34 if dense_support else 2.02
         for i, (heading, content) in enumerate(support):
-            add_card(slide, heading, content, content_x, 1.40 + i * support_h, 4.12, support_h - 0.18, body_size=9.0 if len(content) < 10 else 8.2)
+            card_w = 8.55 if len(support) == 1 else 4.12
+            x = content_x if i == 0 else 8.46
+            body_size = 10.2 if page in {26, 27} else 10.6
+            add_list_grid_card(slide, heading, content, x, 1.40, card_w, support_h, columns=2 if len(content) >= 6 else 1, body_size=body_size)
         if parameter:
-            param_size = 7.4 if len(parameter[1]) > 25 else 8.0 if len(parameter[1]) > 18 else 8.7
-            add_card(slide, parameter[0], parameter[1], 8.46, 1.40, 4.17, 5.24, accent=BLUE, body_size=param_size)
+            rows = math.ceil(len(parameter[1]) / 2)
+            value_size = 10.0 if rows > 14 else 10.4
+            parameter_y = 1.40 + support_h + 0.18
+            parameter_h = 6.64 - parameter_y
+            if page in {26, 27}:
+                columns = 4 if page == 26 else 3
+                add_spec_grid_card(slide, parameter[0], parameter[1], 4.08, parameter_y, 8.55, parameter_h, columns=columns, accent=BLUE)
+            else:
+                label_ratio = 0.58 if page == 18 else 0.43
+                add_kv_card(slide, parameter[0], parameter[1], 4.08, parameter_y, 8.55, parameter_h, columns=2, accent=BLUE, label_size=9.6, value_size=value_size, label_ratio=label_ratio)
     elif count <= 2:
         heights = [2.52, 2.52]
         positions = [(content_x, 1.40), (content_x, 4.10)]
         for i, (heading, content) in enumerate(sections):
-            add_card(slide, heading or name, content, positions[i][0], positions[i][1], content_w, heights[i], body_size=10.2)
+            add_card(slide, heading or name, content, positions[i][0], positions[i][1], content_w, heights[i], body_size=10.8)
     else:
         cols = 2
         rows = math.ceil(count / cols)
@@ -768,7 +890,7 @@ def build_product_page(prs, page, texts, assets, cleaning_asset=None):
         for i, (heading, content) in enumerate(sections):
             col, row = i % cols, i // cols
             x = content_x + col * 4.38; y = 1.40 + row * card_h
-            add_card(slide, heading or name, content, x, y, 4.14, card_h - 0.18, accent=CYAN if col == 0 else BLUE, body_size=8.7 if len(content) > 8 else 9.5)
+            add_card(slide, heading or name, content, x, y, 4.14, card_h - 0.18, accent=CYAN if col == 0 else BLUE, body_size=10.2 if len(content) > 8 else 10.8)
     return slide
 
 
@@ -780,27 +902,34 @@ def build_greeting_star(prs, texts, assets):
     add_picture_contain(slide, assets[0], 0.85, 1.52, 2.72, 3.78)
     add_picture_contain(slide, assets[3], 0.78, 5.45, 1.40, 0.82)
     add_picture_contain(slide, assets[4], 2.22, 5.45, 1.40, 0.82)
-    rows = pairs(body)
-    for i, (label, value) in enumerate(rows):
-        y = 1.35 + i * 0.44
-        rect(slide, 4.08, y, 8.50, 0.35, PANEL if i % 2 == 0 else BG_2, GRID)
-        add_text(slide, label, 4.22, y + 0.06, 2.12, 0.20, size=8.6, color=CYAN, bold=True)
-        add_text(slide, value, 6.45, y + 0.06, 5.95, 0.20, size=8.6, color=WHITE if i < 4 else TEXT, bold=i < 4)
+    grouped = [
+        (body[0], body[1:2]), (body[2], body[3:4]), (body[4], body[5:6]),
+        (body[6], body[7:8]), (body[8], body[9:10]), (body[10], body[11:12]),
+        (body[12], body[13:15]), (body[15], body[16:18]), (body[18], body[19:20]),
+        (body[20], body[21:22]), (body[22], body[23:25]), (body[25], body[26:27]),
+    ]
+    rows_per_col = 6
+    for i, (label, values) in enumerate(grouped):
+        col, row = i // rows_per_col, i % rows_per_col
+        x, y = 4.08 + col * 4.37, 1.38 + row * 0.88
+        rect(slide, x, y, 4.12, 0.72, PANEL if row % 2 == 0 else BG_2, GRID)
+        add_text(slide, label, x + 0.14, y + 0.10, 1.28, 0.46, size=9.5, color=CYAN, bold=True, valign=MSO_ANCHOR.MIDDLE)
+        add_text(slide, values, x + 1.48, y + 0.09, 2.48, 0.52, size=10.1, color=WHITE if row < 2 else TEXT, valign=MSO_ANCHOR.MIDDLE, spacing=0.90)
     return slide
 
 
 def build_humanoid_platform(prs, texts, assets):
     slide = prs.slides.add_slide(prs.slide_layouts[6]); add_background(slide, 21, texts, section="HUMANOID PLATFORM")
-    add_title(slide, "FMC³ Brain+ODM", eyebrow="Products", subtitle="Full-body embodied intelligence platform")
+    add_title(slide, "FMC³ Brain+ODM", eyebrow="Products")
     body = clean_footer_items(text_without(texts, ["Products", "FMC³ Brain+ODM"]))
     heads = ["Seven-degree-of-freedom bionic arm", "Omnidirectional Mobile Chassis", "Power management system", "Embodied Intelligence", "Quick-change End Effector", "Full-body Motion Control System", "Navigation system"]
     sections = split_sections(body, heads)
-    add_picture_contain(slide, assets[1], 5.22, 1.45, 2.85, 4.95)
+    add_picture_contain(slide, assets[1], 5.17, 1.42, 2.95, 5.10)
     left_sections, right_sections = sections[:3], sections[3:]
     for i, (head, content) in enumerate(left_sections):
-        add_card(slide, head, content, 0.62, 1.46 + i * 1.72, 4.10, 1.48, body_size=9.0)
+        add_card(slide, head, content, 0.62, 1.46 + i * 1.72, 4.10, 1.48, body_size=10.5, title_size=11.5)
     for i, (head, content) in enumerate(right_sections):
-        add_card(slide, head, content, 8.53, 1.46 + i * 1.30, 4.10, 1.10, accent=BLUE, body_size=8.5, title_size=9.2)
+        add_card(slide, head, content, 8.53, 1.46 + i * 1.30, 4.10, 1.10, accent=BLUE, body_size=10.0, title_size=10.7)
     return slide
 
 
@@ -824,20 +953,23 @@ def build_upper_limb(prs, texts, assets):
     title = "Humanoid upper limb, compliant control, safe human-robot collaboration"
     add_title(slide, title, compact=True)
     body = clean_footer_items(text_without(texts, [title]))
-    add_picture_contain(slide, assets[3], 0.62, 1.35, 4.5, 2.25)
+    add_picture_contain(slide, assets[3], 0.62, 1.42, 4.5, 2.18)
     add_metric(slide, "3.5 kg / 3.5 kg", "Rated / Max. load", 0.70, 3.72, 2.15)
     add_metric(slide, "7.5 kg", "Weight", 2.98, 3.72, 2.15, accent=BLUE)
     image_cards = [(assets[0], body[4]), (assets[1], body[5]), (assets[2], body[3])]
     for i, (image, description) in enumerate(image_cards):
         x = 0.68 + i * 1.48
-        add_picture_contain(slide, image, x, 4.72, 1.34, 0.90)
-        add_text(slide, description, x, 5.66, 1.34, 0.78, size=7.3, color=TEXT)
+        add_picture_contain(slide, image, x, 4.72, 1.34, 0.82)
+        if i != 1:
+            add_text(slide, description, x, 5.60, 1.34, 0.42, size=9.5, color=TEXT, spacing=0.90)
+    rect(slide, 0.68, 6.00, 4.30, 0.78, PANEL, GRID)
+    add_text(slide, body[5], 0.82, 6.07, 4.02, 0.64, size=9.4, color=TEXT, spacing=0.86, valign=MSO_ANCHOR.MIDDLE)
     features = body[:3] + body[6:]
     for i, item in enumerate(features):
-        y = 1.38 + i * 0.83
-        rect(slide, 5.48, y, 7.12, 0.67, PANEL if i % 2 == 0 else BG_2, GRID)
-        add_text(slide, f"0{i+1}", 5.65, y + 0.17, 0.42, 0.22, size=8.2, color=CYAN, bold=True, font=MONO)
-        add_text(slide, item, 6.18, y + 0.10, 6.20, 0.44, size=8.7, color=WHITE if i < 3 else TEXT, bold=i < 3)
+        y = 1.42 + i * 0.86
+        rect(slide, 5.48, y, 7.12, 0.72, PANEL if i % 2 == 0 else BG_2, GRID)
+        add_text(slide, f"0{i+1}", 5.65, y + 0.18, 0.42, 0.24, size=9.5, color=CYAN, bold=True, font=MONO)
+        add_text(slide, item, 6.18, y + 0.10, 6.20, 0.52, size=10.2, color=WHITE if i < 3 else TEXT, bold=i < 3, valign=MSO_ANCHOR.MIDDLE)
     return slide
 
 
@@ -846,28 +978,27 @@ def build_architecture(prs, texts, assets):
     title = "Refined and User-Friendly Infrastructure – Customer focus is on AI model deployment and research"
     add_title(slide, title, compact=True)
     body = clean_footer_items(text_without(texts, [title]))
-    # Core flow
     nodes = ["Vision System Data", "High Computational Power – NVIDIA Thor", "Embodied AI Model", "Interface Invocation", "Motion Control System", "Full-body Motion Control"]
-    positions = [(0.65, 1.55), (3.05, 1.55), (5.45, 1.55), (2.0, 3.0), (4.4, 3.0), (6.8, 3.0)]
+    positions = [(0.65, 1.55), (3.15, 1.55), (5.65, 1.55), (0.65, 3.02), (3.15, 3.02), (5.65, 3.02)]
+    for a, b in [(positions[0], positions[1]), (positions[1], positions[2]), (positions[2], positions[3]), (positions[3], positions[4]), (positions[4], positions[5])]:
+        line(slide, a[0] + 2.20, a[1] + 0.40, b[0], b[1] + 0.40, CYAN, 1.0)
     for i, (node, (x, y)) in enumerate(zip(nodes, positions)):
-        rect(slide, x, y, 2.05, 0.72, PANEL_2 if i in (1, 2) else PANEL, CYAN if i < 3 else BLUE)
-        add_text(slide, node, x + 0.10, y + 0.14, 1.85, 0.38, size=8.6, color=WHITE, bold=True, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
-    for a, b in [(positions[0], positions[1]), (positions[1], positions[2]), (positions[1], positions[3]), (positions[3], positions[4]), (positions[4], positions[5])]:
-        line(slide, a[0] + 2.05, a[1] + 0.36, b[0], b[1] + 0.36, CYAN, 1.0)
-    add_picture_contain(slide, assets[2], 3.58, 2.34, 1.0, 0.60)
-    add_picture_contain(slide, assets[3], 0.70, 2.42, 1.08, 0.60)
-    add_picture_contain(slide, assets[4], 7.35, 2.35, 1.15, 0.52)
-    add_picture_contain(slide, assets[1], 2.78, 3.84, 0.86, 0.72)
-    add_text(slide, ["Ethernet interface", "（Motion Control Message Interface)"], 2.02, 3.78, 2.25, 0.58, size=7.7, color=TEXT, align=PP_ALIGN.CENTER)
-    # Robot branches
+        rect(slide, x, y, 2.20, 0.80, PANEL_2 if i in (1, 2) else PANEL, CYAN if i < 3 else BLUE)
+        add_text(slide, node, x + 0.12, y + 0.13, 1.96, 0.50, size=10.1, color=WHITE, bold=True, align=PP_ALIGN.CENTER, valign=MSO_ANCHOR.MIDDLE)
+    add_picture_contain(slide, assets[2], 3.74, 2.40, 0.88, 0.52)
+    add_picture_contain(slide, assets[3], 1.32, 2.40, 0.88, 0.52)
+    add_picture_contain(slide, assets[4], 6.24, 2.40, 0.88, 0.52)
+    add_text(slide, ["Ethernet interface", "（Motion Control Message Interface)"], 0.82, 4.02, 2.05, 0.62, size=9.5, color=TEXT, align=PP_ALIGN.CENTER)
     branch_nodes = ["Seven-Axis Bionic Arm", "Folding Mechanism", "Omni-directional Chassis", "Motion Optimization and Coordinated Movement"]
+    for i in range(4):
+        y = 1.55 + i * 0.96
+        line(slide, 7.85, 3.42, 9.25, y + 0.38, BLUE, 0.8)
     for i, node in enumerate(branch_nodes):
-        y = 1.55 + i * 1.05
-        rect(slide, 9.45, y, 3.05, 0.72, PANEL, GRID)
-        add_text(slide, node, 9.60, y + 0.15, 2.75, 0.38, size=8.7, color=WHITE, bold=True)
-        line(slide, 8.85, 3.36, 9.45, y + 0.36, BLUE, 0.8)
+        y = 1.55 + i * 0.96
+        rect(slide, 9.25, y, 3.25, 0.76, PANEL, GRID)
+        add_text(slide, node, 9.42, y + 0.13, 2.91, 0.48, size=10.2, color=WHITE, bold=True, valign=MSO_ANCHOR.MIDDLE)
     detail = [item for item in body if item not in nodes + branch_nodes and item not in {"Ethernet interface", "（Motion Control Message Interface)"}]
-    add_text(slide, detail, 0.72, 5.33, 11.70, 1.28, size=8.2, color=TEXT, bullet=True)
+    add_list_grid_card(slide, "Deployment Interface", detail, 0.65, 5.08, 11.85, 1.55, columns=2, body_size=10.2)
     return slide
 
 
