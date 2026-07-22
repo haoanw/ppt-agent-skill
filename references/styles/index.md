@@ -1,4 +1,4 @@
-# 风格系统索引（26 风格 / 5 板块）
+# 风格系统索引（27 风格 / 5 板块）
 
 > 本目录下每个 `<quadrant>.md` 文件包含一个板块的所有风格定义。
 >
@@ -8,7 +8,7 @@
 
 ---
 
-## 1. 26 风格全景表
+## 1. 27 风格全景表
 
 | # | style_id | 板块 | 灵感 | 适用场景 | 板块文件 |
 |---|----------|------|------|---------|---------|
@@ -19,25 +19,26 @@
 | 5 | `cyberpunk_neon` | 暗色专业 | Cyberpunk 2077 | 电竞 / 游戏 / Web3 | [dark.md](dark.md) |
 | 6 | `chrome_y2k` | 暗色专业 | Y2K / Vaporwave | Web3 / 千禧年复古 | [dark.md](dark.md) |
 | 7 | `noir_film` | 暗色专业 | 黑白电影 | 纪录片 / 影像艺术 | [dark.md](dark.md) |
-| 8 | `blue_white` | 浅色高级 | Apple 企业页面 | 企业 SaaS / 培训 | [light.md](light.md) |
-| 9 | `fresh_green` | 浅色高级 | Aesop | 护肤 / 养生 / 食品 | [light.md](light.md) |
-| 10 | `minimal_gray` | 浅色高级 | NYT Magazine | 学术 / 法务 / 咨询 | [light.md](light.md) |
-| 11 | `mocha_editorial` | 浅色高级 | Anthropic / Pantone 2025 | AI 安全研究 / 出版 | [light.md](light.md) |
-| 12 | `medical_pulse` | 浅色高级 | 医疗白蓝 + ECG | 医疗 / 医药 / 保险 | [light.md](light.md) |
-| 13 | `earth_concrete` | 浅色高级 | Suisse Int'l | 建筑 / 工业 / 咖啡 | [light.md](light.md) |
-| 14 | `champagne_gold` | 浅色高级 | 香槟金 | 婚庆 / 宴会 / 庆典 | [light.md](light.md) |
-| 15 | `liquid_glass` | 浅色高级 | iOS 26 / visionOS | XR / AR / 苹果生态 | [light.md](light.md) |
-| 16 | `vibrant_rainbow` | 活力鲜明 | Stripe Sessions | 营销 / 创作者 | [vibrant.md](vibrant.md) |
-| 17 | `kindergarten_pop` | 活力鲜明 | Quicksand 童趣 | 儿童教育 / 启蒙 | [vibrant.md](vibrant.md) |
-| 18 | `bauhaus_block` | 活力鲜明 | Bauhaus / Swiss | 教育 / 创意品牌 | [vibrant.md](vibrant.md) |
-| 19 | `candy_pastel` | 活力鲜明 | 马卡龙糖果 | 甜品 / 烘焙 / 零食 | [vibrant.md](vibrant.md) |
-| 20 | `royal_red` | 东方文化 | 北京冬奥开幕式 | 中国风 / 政务 / 文化 | [cultural.md](cultural.md) |
-| 21 | `sakura_wabi` | 东方文化 | 日本侘寂 | 日系 / 茶道 / 酒店 | [cultural.md](cultural.md) |
-| 22 | `ink_jade` | 东方文化 | 墨色+浅米+朱红 | 国潮 / 茶饮 / 古风 | [cultural.md](cultural.md) |
-| 23 | `botanic_forest` | 自然/复古 | 深绿森林秘境 | 户外 / 可持续 / 林产 | [natural.md](natural.md) |
-| 24 | `safari_savanna` | 自然/复古 | 萨凡纳暖橙 | 旅行 / 探险 / 纪录片 | [natural.md](natural.md) |
-| 25 | `retro_70s` | 自然/复古 | 70 年代复古 | 独立咖啡 / 唱片 / 复古 | [natural.md](natural.md) |
-| 26 | `gov_authority` | 自然/复古 | 国徽 / 国宴 | 党政 / 重大会议 / 严肃 | [natural.md](natural.md) |
+| 8 | `m7` | 暗色专业 | ROBOTERA M7 Datasheet | 机器人 / 工业硬件 / 产品规格 | [dark.md](dark.md) |
+| 9 | `blue_white` | 浅色高级 | Apple 企业页面 | 企业 SaaS / 培训 | [light.md](light.md) |
+| 10 | `fresh_green` | 浅色高级 | Aesop | 护肤 / 养生 / 食品 | [light.md](light.md) |
+| 11 | `minimal_gray` | 浅色高级 | NYT Magazine | 学术 / 法务 / 咨询 | [light.md](light.md) |
+| 12 | `mocha_editorial` | 浅色高级 | Anthropic / Pantone 2025 | AI 安全研究 / 出版 | [light.md](light.md) |
+| 13 | `medical_pulse` | 浅色高级 | 医疗白蓝 + ECG | 医疗 / 医药 / 保险 | [light.md](light.md) |
+| 14 | `earth_concrete` | 浅色高级 | Suisse Int'l | 建筑 / 工业 / 咖啡 | [light.md](light.md) |
+| 15 | `champagne_gold` | 浅色高级 | 香槟金 | 婚庆 / 宴会 / 庆典 | [light.md](light.md) |
+| 16 | `liquid_glass` | 浅色高级 | iOS 26 / visionOS | XR / AR / 苹果生态 | [light.md](light.md) |
+| 17 | `vibrant_rainbow` | 活力鲜明 | Stripe Sessions | 营销 / 创作者 | [vibrant.md](vibrant.md) |
+| 18 | `kindergarten_pop` | 活力鲜明 | Quicksand 童趣 | 儿童教育 / 启蒙 | [vibrant.md](vibrant.md) |
+| 19 | `bauhaus_block` | 活力鲜明 | Bauhaus / Swiss | 教育 / 创意品牌 | [vibrant.md](vibrant.md) |
+| 20 | `candy_pastel` | 活力鲜明 | 马卡龙糖果 | 甜品 / 烘焙 / 零食 | [vibrant.md](vibrant.md) |
+| 21 | `royal_red` | 东方文化 | 北京冬奥开幕式 | 中国风 / 政务 / 文化 | [cultural.md](cultural.md) |
+| 22 | `sakura_wabi` | 东方文化 | 日本侘寂 | 日系 / 茶道 / 酒店 | [cultural.md](cultural.md) |
+| 23 | `ink_jade` | 东方文化 | 墨色+浅米+朱红 | 国潮 / 茶饮 / 古风 | [cultural.md](cultural.md) |
+| 24 | `botanic_forest` | 自然/复古 | 深绿森林秘境 | 户外 / 可持续 / 林产 | [natural.md](natural.md) |
+| 25 | `safari_savanna` | 自然/复古 | 萨凡纳暖橙 | 旅行 / 探险 / 纪录片 | [natural.md](natural.md) |
+| 26 | `retro_70s` | 自然/复古 | 70 年代复古 | 独立咖啡 / 唱片 / 复古 | [natural.md](natural.md) |
+| 27 | `gov_authority` | 自然/复古 | 国徽 / 国宴 | 党政 / 重大会议 / 严肃 | [natural.md](natural.md) |
 
 ---
 
@@ -49,6 +50,7 @@
 |-----------|---------|---------|
 | AI / SaaS / 开发者 / 大模型 / 数据 | 暗色专业 | `dark_tech` |
 | 硬件 / 手机 / IoT / 汽车 / 智能家居 | 暗色专业 | `xiaomi_orange` |
+| 机器人 / 工业设备 / 产品规格 / Datasheet | 暗色专业 | `m7` |
 | 奢侈品 / 时尚 / 高端品牌 | 暗色专业 | `luxury_purple` 或 `noir_film` |
 | 游戏 / 电竞 / Web3 | 暗色专业 | `cyberpunk_neon` 或 `chrome_y2k` |
 | 企业 / 培训 / 商务 / 金融 | 浅色高级 | `blue_white` |
@@ -183,7 +185,7 @@
 ## 4. 兼容性
 
 - 8 个原 `style_id`（`dark_tech` / `xiaomi_orange` / `blue_white` / `royal_red` / `fresh_green` / `luxury_purple` / `minimal_gray` / `vibrant_rainbow`）保留不变，但视觉按世界级标杆重做。
-- 18 个新风格使用诗意新名。
+- 19 个新增风格使用稳定的语义化 ID；`m7` 保留参考海报的产品型号显示名。
 - 旧的 `references/style-system.md` 改为引导文件，redirect 到本目录。
 - Prompt #4 中所有原字段保持兼容；新字段（`mood_keywords` / `design_soul` / `decoration_dna` / `typography` / `decorations`）为可选注入。
 

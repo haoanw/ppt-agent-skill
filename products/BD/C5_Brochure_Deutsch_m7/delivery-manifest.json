@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-07-22T20:57:38.720796+00:00",
+  "source": "products/BD/C5_Brochure_Deutsch.pdf",
+  "style_id": "m7",
+  "pages": 2,
+  "canvas": {
+    "width": 1024,
+    "height": 1536
+  },
+  "deliverables": [
+    "C5_Brochure_Deutsch_m7.pdf",
+    "C5_Brochure_Deutsch_m7.pptx",
+    "C5_Brochure_Deutsch_m7.html",
+    "preview.html",
+    "style.json",
+    "content-audit.json",
+    "source-brief.md",
+    "runtime/validation-report.json"
+  ],
+  "slide_html": [
+    "slides/page-1.html",
+    "slides/page-2.html"
+  ],
+  "page_png": [
+    "png/page-1.png",
+    "png/page-2.png"
+  ]
+}

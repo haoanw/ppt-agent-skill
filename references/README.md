@@ -11,7 +11,7 @@ references/
   layouts/            -- 版式资源（10 种）
   blocks/             -- 区域展示组件（8 种 + card-styles）
   charts/             -- 聚合图表系统（18 种：basic/advanced/complex + index）
-  styles/             -- 聚合风格系统（26 种：5 个板块文件 + index）
+  styles/             -- 聚合风格系统（27 种：5 个板块文件 + index）
   principles/         -- 设计原则（7 种 + runtime-failure-modes）
   page-templates/     -- 页面结构模板（cover/toc/section/end）
   design-runtime/     -- 数据类型映射 + 设计规格 + CSS 武器库
@@ -29,7 +29,7 @@ references/
 7. `playbooks/step4/page-planning-playbook.md` -- Step 4A 页面规划执行细则
 8. `playbooks/step4/page-html-playbook.md` -- Step 4B HTML 落地执行细则
 9. `playbooks/step4/page-review-playbook.md` -- Step 4C 图审修复执行细则
-10. `styles/index.md` -- Step 3.5 的 26 风格索引、决策矩阵与 JSON Schema
+10. `styles/index.md` -- Step 3.5 的 27 风格索引、决策矩阵与 JSON Schema
 11. `styles/{dark,light,vibrant,cultural,natural}.md` -- 选定风格所在板块的完整定义
 
 ## Prompt 模板
@@ -109,12 +109,12 @@ P2A/P2B/P3/P3.5/P4 均采用渐进式上下文注入：每个节点有 orchestra
 
 ## Style Runtime
 
-风格目录采用 26 风格 / 5 板块聚合结构：
+风格目录采用 27 风格 / 5 板块聚合结构：
 
 - Step 3.5 直接注入 `styles/index.md`，先用决策矩阵确定候选 `style_id`
 - style subagent 再按索引读取 `dark.md` / `light.md` / `vibrant.md` / `cultural.md` / `natural.md` 中对应的板块文件
 - `style.json` 的运行时字段合同由 `playbooks/style-phase1-playbook.md` 定义，并由 phase2 playbook 自审
-- `resource_loader.py menu` 会把五个板块文件展开为 26 个逻辑 style ID
+- `resource_loader.py menu` 会把五个板块文件展开为 27 个逻辑 style ID
 
 ## 单一真源与自检
 

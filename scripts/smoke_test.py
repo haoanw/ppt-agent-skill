@@ -231,7 +231,7 @@ def phase1_tests(style_filter: str = None) -> dict:
 
     # 收集所有风格 JSON
     md_files = sorted(STYLES_DIR.glob("*.md"))
-    md_files = [f for f in md_files if f.name != "index.md"]
+    md_files = [f for f in md_files if f.name.lower() not in {"index.md", "readme.md"}]
     all_styles = []
     for md in md_files:
         all_styles.extend(extract_style_jsons(md))

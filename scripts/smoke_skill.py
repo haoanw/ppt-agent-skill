@@ -1569,7 +1569,7 @@ def run_smoke() -> SmokeResult:
                         label,
                         rendered,
                         [
-                            "# 风格系统索引（26 风格 / 5 板块）",
+                            "# 风格系统索引（27 风格 / 5 板块）",
                             "# Style Phase 1 Playbook -- 风格合同的定义与输出",
                         ],
                         result,

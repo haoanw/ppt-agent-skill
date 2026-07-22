@@ -1,0 +1,23 @@
+{
+  "style_id": "m7",
+  "style_name": "M7 industrial product poster",
+  "category": "dark_professional",
+  "source_reference": "references/design-reference/M7 datasheet En.pdf",
+  "colors": {
+    "background": "#000000",
+    "text": "#FCFDFD",
+    "metal": "#C8C1B8",
+    "secondary": "#C2B9AE",
+    "charcoal": "#212121",
+    "gray": "#6F6F6F"
+  },
+  "typography": {
+    "font_family": "Source Han Sans SC / Noto Sans CJK SC",
+    "font_feature_settings": "tnum, kern"
+  },
+  "geometry": {
+    "border_radius": 0,
+    "line_weight": "1px",
+    "page": "1024x1536"
+  }
+}

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280, initial-scale=1.0">
+<title>M7 Industrial Poster</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+  :root {
+    --bg: #000000;
+    --panel: #050505;
+    --white: #fcfdfd;
+    --secondary: rgba(252,253,253,0.68);
+    --metal: #c8c1b8;
+    --mid: #6f6f6f;
+    --dark: #212121;
+    --line: rgba(252,253,253,0.52);
+    --font: 'Source Han Sans SC', 'Noto Sans SC', Arial, sans-serif;
+    --mono: 'JetBrains Mono', 'Roboto Mono', 'Courier New', monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    width: 1280px;
+    height: 720px;
+    margin: 0;
+    overflow: hidden;
+    background: var(--bg);
+    color: var(--white);
+    font-family: var(--font);
+    letter-spacing: 0;
+    font-feature-settings: 'kern', 'liga', 'tnum';
+  }
+
+  body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse at 34% 48%, rgba(255,255,255,0.035), transparent 37%),
+      linear-gradient(180deg, #000 0%, #020202 100%);
+  }
+
+  .canvas {
+    position: relative;
+    width: 1280px;
+    height: 720px;
+    padding: 24px 30px 28px;
+  }
+
+  .masthead {
+    height: 38px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: start;
+    border-bottom: 1px solid rgba(252,253,253,0.30);
+    font-family: var(--mono);
+    font-size: 10px;
+    line-height: 1;
+    color: var(--secondary);
+  }
+  .masthead strong { color: var(--white); font-weight: 600; }
+  .masthead .center { color: var(--metal); }
+  .masthead .right { text-align: right; }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 510px 1fr;
+    gap: 18px;
+    height: 630px;
+    padding-top: 14px;
+  }
+
+  .product-stage {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: #000;
+  }
+  .stage-kicker {
+    position: absolute;
+    z-index: 4;
+    top: 20px;
+    left: 22px;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--secondary);
+  }
+  .stage-model {
+    position: absolute;
+    z-index: 4;
+    top: 40px;
+    left: 20px;
+    font-size: 66px;
+    line-height: 0.94;
+    font-weight: 700;
+    color: var(--metal);
+  }
+  .trajectory {
+    position: absolute;
+    z-index: 1;
+    width: 434px;
+    height: 218px;
+    left: 37px;
+    top: 112px;
+    border: 1px solid rgba(200,193,184,0.52);
+    border-bottom: 0;
+    border-radius: 218px 218px 0 0;
+  }
+  .product-image {
+    position: absolute;
+    z-index: 2;
+    left: 12px;
+    top: 100px;
+    width: 486px;
+    height: 486px;
+    object-fit: contain;
+    display: block;
+  }
+  .axis {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 118px;
+    width: 1px;
+    height: 426px;
+    background: linear-gradient(180deg, transparent, rgba(252,253,253,0.30), transparent);
+  }
+  .stage-meta {
+    position: absolute;
+    z-index: 5;
+    left: 18px;
+    right: 18px;
+    bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .pill {
+    min-width: 142px;
+    padding: 7px 14px 8px;
+    border-radius: 18px;
+    background: var(--metal);
+    color: #090909;
+    font-size: 11px;
+    line-height: 1;
+    text-align: center;
+    font-weight: 500;
+  }
+  .transfer {
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+    color: var(--secondary);
+  }
+  .transfer b { color: var(--white); font-weight: 500; }
+
+  .right-column {
+    display: grid;
+    grid-template-rows: 86px 80px 1fr 66px;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .title-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 4px 6px;
+    border-bottom: 1px solid var(--line);
+  }
+  .title-row h1 {
+    margin: 0;
+    font-size: 78px;
+    line-height: 0.82;
+    font-weight: 700;
+    color: var(--metal);
+  }
+  .title-copy {
+    max-width: 360px;
+    padding-bottom: 3px;
+    text-align: right;
+  }
+  .title-copy strong {
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .title-copy span {
+    display: block;
+    margin-top: 5px;
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--secondary);
+  }
+
+  .spec-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: linear-gradient(90deg, rgba(231,231,231,0.22) 0%, rgba(111,111,111,0.28) 48%, rgba(33,33,33,0.38) 100%);
+    border-top: 1px solid rgba(252,253,253,0.18);
+    border-bottom: 1px solid rgba(252,253,253,0.18);
+  }
+  .spec {
+    min-width: 0;
+    padding: 13px 16px 11px;
+    border-right: 1px solid rgba(252,253,253,0.20);
+  }
+  .spec:last-child { border-right: 0; }
+  .spec span {
+    display: block;
+    font-size: 9px;
+    color: var(--secondary);
+  }
+  .spec strong {
+    display: block;
+    margin-top: 5px;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: 1.08fr 0.92fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    min-height: 0;
+  }
+  .feature {
+    position: relative;
+    overflow: hidden;
+    min-width: 0;
+    padding: 20px 20px 16px;
+    border: 1px solid var(--line);
+    background: linear-gradient(145deg, rgba(255,255,255,0.018), transparent 66%);
+  }
+  .feature .lead {
+    font-size: 43px;
+    line-height: 0.9;
+    font-weight: 300;
+    font-variant-numeric: tabular-nums;
+  }
+  .feature .unit {
+    margin-left: 3px;
+    font-size: 17px;
+    font-weight: 400;
+  }
+  .feature h2 {
+    margin: 8px 0 0;
+    max-width: 92%;
+    font-size: 18px;
+    line-height: 1.16;
+    font-weight: 400;
+  }
+  .feature p {
+    margin: 8px 0 0;
+    max-width: 92%;
+    font-size: 10px;
+    line-height: 1.34;
+    color: var(--secondary);
+  }
+  .feature .index {
+    position: absolute;
+    right: 14px;
+    bottom: 11px;
+    font-family: var(--mono);
+    font-size: 9px;
+    color: rgba(252,253,253,0.34);
+  }
+  .feature.hand::after {
+    content: '';
+    position: absolute;
+    right: -24px;
+    bottom: -34px;
+    width: 130px;
+    height: 130px;
+    border: 1px solid rgba(252,253,253,0.30);
+    border-radius: 50%;
+  }
+  .feature.vision::before,
+  .feature.vision::after {
+    content: '';
+    position: absolute;
+    right: 18px;
+    bottom: 20px;
+    width: 96px;
+    height: 30px;
+    border: 1px solid rgba(200,193,184,0.34);
+    border-radius: 50%;
+  }
+  .feature.vision::after { width: 66px; right: 33px; bottom: 27px; }
+
+  .application-bar {
+    position: relative;
+    display: grid;
+    grid-template-columns: 182px 1fr;
+    border: 1px solid rgba(252,253,253,0.28);
+    overflow: hidden;
+  }
+  .application-title {
+    padding: 14px 17px;
+    background: linear-gradient(90deg, #d7d7d7 0%, #878787 60%, #5b5b5b 100%);
+    color: #080808;
+  }
+  .application-title span {
+    display: block;
+    font-family: var(--mono);
+    font-size: 8px;
+  }
+  .application-title strong {
+    display: block;
+    margin-top: 3px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .application-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+  .application-list span {
+    padding: 0 15px;
+    border-right: 1px solid rgba(252,253,253,0.18);
+    font-size: 11px;
+    color: var(--secondary);
+    white-space: nowrap;
+  }
+  .application-list span:last-child { border-right: 0; }
+</style>
+</head>
+<body>
+<main class="canvas">
+  <header class="masthead slide-header">
+    <div><strong>ROBOTERA M7</strong> / PRODUCT SYSTEM</div>
+    <div class="center">MODULAR HUMANOID PLATFORM</div>
+    <div class="right">DATASHEET / 01</div>
+  </header>
+
+  <section class="layout">
+    <div class="product-stage">
+      <div class="stage-kicker">ZERO-SAMPLE TRANSFER PLATFORM</div>
+      <div class="stage-model">M7</div>
+      <div class="trajectory"></div>
+      <div class="axis"></div>
+      <img class="product-image" src="m7-product-motion.jpg" alt="M7 humanoid robotic torso with motion sequence">
+      <div class="stage-meta">
+        <div class="pill">UPPER BODY TORSO</div>
+        <div class="transfer">••• &nbsp;<b>UPGRADE</b>&nbsp; •••›</div>
+      </div>
+    </div>
+
+    <div class="right-column">
+      <div class="title-row">
+        <h1>M7</h1>
+        <div class="title-copy">
+          <strong>Wide-range robotic manipulation</strong>
+          <span>PRECISE / MODULAR / TELEOPERATED</span>
+        </div>
+      </div>
+
+      <div class="spec-strip">
+        <div class="spec"><span>WORKING SPACE</span><strong>2.1 m</strong></div>
+        <div class="spec"><span>FIELD OF VIEW</span><strong>360°</strong></div>
+        <div class="spec"><span>TOTAL DOF</span><strong>43</strong></div>
+        <div class="spec"><span>WINGSPAN</span><strong>1660 mm</strong></div>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature">
+          <div><span class="lead">2.1</span><span class="unit">m</span></div>
+          <h2>Diameter Working Space</h2>
+          <p>Wide-range operation with a human-scale motion envelope.</p>
+          <span class="index">01 / RANGE</span>
+        </article>
+
+        <article class="feature vision">
+          <div><span class="lead">360°</span></div>
+          <h2>Full-domain Perception</h2>
+          <p>Binocular vision and 3D LiDAR support complex environments.</p>
+          <span class="index">02 / VISION</span>
+        </article>
+
+        <article class="feature">
+          <div><span class="lead">7</span><span class="unit">-DoF</span></div>
+          <h2>Humanoid Robotic Arm</h2>
+          <p>Replicates human reach, wrist motion and manipulation patterns.</p>
+          <span class="index">03 / ARM</span>
+        </article>
+
+        <article class="feature hand">
+          <div><span class="lead">12</span><span class="unit">-DoF</span></div>
+          <h2>Dextrous Hand</h2>
+          <p>Fully direct drive with anthropomorphic control and tactile sensing.</p>
+          <span class="index">04 / HAND</span>
+        </article>
+      </div>
+
+      <footer class="application-bar slide-footer">
+        <div class="application-title">
+          <span>APPLICATION MATRIX</span>
+          <strong>DEPLOYMENT</strong>
+        </div>
+        <div class="application-list">
+          <span>Intelligent Sorting</span>
+          <span>Intelligent Assembly</span>
+          <span>Foundation Model Training</span>
+        </div>
+      </footer>
+    </div>
+  </section>
+</main>
+</body>
+</html>

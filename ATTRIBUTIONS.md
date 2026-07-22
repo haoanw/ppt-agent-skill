@@ -58,10 +58,10 @@
 
 | 维度 | sunbigfly | 我们 |
 |------|-----------|------|
-| **预置风格** | 8 | **26** (升级 8 + 新增 18) |
+| **预置风格** | 8 | **27** (升级 8 + 新增 19) |
 | **风格分类** | 单一列表 | **5 板块**（暗色专业 / 浅色高级 / 活力鲜明 / 东方文化 / 自然复古）|
-| **风格 Mock** | 无 | **26 张 1280×720 标杆 mock HTML**（对标 Linear / Anthropic / Stripe / Apple / NYT 等）|
-| **PNG 截图** | 无 | **26 张 PNG**（puppeteer 高清渲染）|
+| **风格 Mock** | 无 | **27 张 1280×720 标杆 mock HTML**（对标 Linear / Anthropic / Stripe / Apple / NYT / ROBOTERA M7 等）|
+| **PNG 截图** | 无 | **27 张 PNG**（高清渲染）|
 | **图表分级** | 13 种平铺 | **18 种分 3 层级**（基础 8 + 进阶 6 + ECharts 级 4）|
 | **ECharts 级图表** | 无 | 世界地图 choropleth / 关系网络 / 桑基图 / 热力日历 |
 | **排版铁律** | 弱 | [`typography.md`](references/typography.md) 14 条（字距 / tabular-nums / OpenType / serif italic 混排 / 字体栈三层降级）|

@@ -1,0 +1,150 @@
+{
+  "source": "products/BD/C5_Brochure_Deutsch.pdf",
+  "source_sha256": "d5480f4acf61402d8bdfb7283d8d104864a2afba0643ed2cc7c04df5d6302766",
+  "source_pages": 2,
+  "source_condition": "Raster-only PDF; content manually transcribed and cross-checked against C5 source assets.",
+  "page_1": {
+    "title": "C5 · Experte für Reinigung mittlerer und großer Flächen",
+    "features": [
+      {
+        "title": "Doppelwalzenbürsten",
+        "text": "Kehren und Schrubben in einem; hoher Wasserdurchsatz und Anpressdruck entfernen schweren Schmutz."
+      },
+      {
+        "title": "Zwei-Kammer-Saugfuß",
+        "text": "Weniger Restwasser in Fugen und eine gründlichere Wasseraufnahme."
+      },
+      {
+        "title": "Sichere Lokalisierung",
+        "text": "Laser- und visuelle Lokalisierung für starke Anpassung an verschiedene Szenen."
+      },
+      {
+        "title": "Einfache Wartung",
+        "text": "Selbstreinigender Schmutzwassertank; der tägliche Aufwand wird halbiert."
+      },
+      {
+        "title": "Autonomer Betrieb",
+        "text": "Laden, Frisch- und Schmutzwasser-Management, Tankreinigung sowie Tür- und Aufzugsanbindung."
+      },
+      {
+        "title": "Konsequente Kantenreinigung",
+        "text": "Die Randbürste reinigt dicht an Kanten; Nachreinigung im geschlossenen Reinigungskreislauf."
+      },
+      {
+        "title": "Hohe Flächenleistung",
+        "text": "550 mm Schrubbreite und eine theoretische Flächenleistung von bis zu 1.980 m²/h."
+      },
+      {
+        "title": "Langlebige Komponenten",
+        "text": "10.000 h Gebläselebensdauer und niedrige Lebenszykluskosten."
+      }
+    ]
+  },
+  "page_2": {
+    "c5_specs": [
+      [
+        "95 %",
+        "Schmutzaufnahme"
+      ],
+      [
+        "170 kg",
+        "Gesamtgewicht"
+      ],
+      [
+        "4 min",
+        "Tank-Selbstreinigung"
+      ],
+      [
+        "24 V / 80 Ah",
+        "Batterie"
+      ],
+      [
+        "1.980 m²/h",
+        "Max. Effizienz"
+      ],
+      [
+        "<68 dB(A)",
+        "Geräuschpegel"
+      ],
+      [
+        "10.000 h",
+        "Gebläselebensdauer"
+      ],
+      [
+        "90 L",
+        "Großer Wassertank"
+      ],
+      [
+        "3 h",
+        "Reinigungsdauer"
+      ],
+      [
+        "25 kg",
+        "Bodendruck"
+      ],
+      [
+        "550 mm",
+        "Schrubbreite"
+      ]
+    ],
+    "station_specs": [
+      [
+        "8 L",
+        "Tankvolumen"
+      ],
+      [
+        "7–10 L/min",
+        "Frischwasser-Zufuhr"
+      ],
+      [
+        "10–15 L/min",
+        "Schmutzwasser-Ablass"
+      ],
+      [
+        "1.800 W",
+        "Max. Leistung"
+      ],
+      [
+        "200–240 V",
+        "Nenneingangsspannung"
+      ]
+    ],
+    "scenarios": [
+      "Große Supermärkte",
+      "Bürogebäude",
+      "Verkehrsknoten",
+      "Fabriken",
+      "Gewerbekomplexe",
+      "Krankenhäuser"
+    ],
+    "floors": [
+      "Zementboden",
+      "Marmor",
+      "Epoxidboden",
+      "PVC",
+      "Korundboden"
+    ],
+    "services": [
+      [
+        "Schulungsunterstützung",
+        "Individuelle Video-Schulungen"
+      ],
+      [
+        "Reaktionszeit",
+        "Express-Reaktion innerhalb von 0,5 Stunden"
+      ],
+      [
+        "Mehrwertservices",
+        "Regelmäßige Inspektionen, Garantieverlängerung, Verbrauchsmaterial sowie Komplett- und Individualpakete"
+      ],
+      [
+        "Servicenetz",
+        "Abdeckung in 150+ Städten im Inland; globale Märkte werden bedient"
+      ],
+      [
+        "Erstwartung",
+        "Erste Wartung kostenlos"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,481 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8">
+<title>C5 Brochure · M7</title><style>
+@page { size: 10.666667in 16in; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #000; }
+body {
+  font-family: "Source Han Sans SC", "Noto Sans CJK SC", "Noto Sans", Arial, sans-serif;
+  color: #fcfdfd;
+  font-feature-settings: "tnum" 1, "kern" 1;
+  letter-spacing: 0;
+}
+.page {
+  position: relative;
+  width: 1024px;
+  height: 1536px;
+  overflow: hidden;
+  background: #000;
+  break-after: page;
+}
+.page:last-child { break-after: auto; }
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .12;
+  background-image:
+    linear-gradient(rgba(252,253,253,.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(252,253,253,.08) 1px, transparent 1px);
+  background-size: 64px 64px;
+  pointer-events: none;
+}
+.page::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid rgba(252,253,253,.34);
+  pointer-events: none;
+}
+.slide-header {
+  position: absolute;
+  left: 48px;
+  right: 48px;
+  top: 35px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+}
+.eyebrow {
+  color: #c8c1b8;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.brand-logo { width: 154px; height: 48px; object-fit: contain; }
+.slide-footer {
+  position: absolute;
+  left: 48px;
+  right: 48px;
+  bottom: 30px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #8d8d8d;
+  font-size: 12px;
+  line-height: 1;
+  text-transform: uppercase;
+  z-index: 20;
+}
+.slide-footer > span:first-child,
+.slide-footer > span:last-child { white-space: nowrap; }
+.slide-footer .rule {
+  flex: 1;
+  height: 1px;
+  margin: 0 18px;
+  background: rgba(252,253,253,.3);
+}
+.display-no {
+  position: absolute;
+  color: rgba(200,193,184,.12);
+  font-size: 224px;
+  line-height: .72;
+  font-weight: 300;
+  z-index: 0;
+}
+.metal-bar {
+  height: 28px;
+  background: linear-gradient(90deg, #252525 0%, #8b8b8b 48%, #252525 100%);
+  border: 1px solid rgba(252,253,253,.28);
+  color: #fcfdfd;
+  font-size: 13px;
+  line-height: 26px;
+  font-weight: 700;
+  padding: 0 14px;
+  text-transform: uppercase;
+}
+.hairline { height: 1px; background: rgba(252,253,253,.42); }
+.tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 4px 11px;
+  border: 1px solid rgba(252,253,253,.42);
+  border-radius: 999px;
+  color: #c8c1b8;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Page 1 */
+.page-one .display-no { left: 34px; top: 112px; }
+.cover-copy { position: absolute; left: 56px; top: 118px; width: 880px; z-index: 3; }
+.cover-copy h1 {
+  margin: 0;
+  color: #c8c1b8;
+  font-size: 118px;
+  line-height: .88;
+  font-weight: 300;
+}
+.cover-copy h2 {
+  margin: 20px 0 0;
+  width: 690px;
+  font-size: 34px;
+  line-height: 1.12;
+  font-weight: 600;
+}
+.cover-copy p {
+  margin: 13px 0 0;
+  color: #bcbcbc;
+  font-size: 20px;
+  line-height: 1.35;
+}
+.hero-zone {
+  position: absolute;
+  left: 48px;
+  top: 360px;
+  width: 928px;
+  height: 390px;
+  border-top: 1px solid rgba(252,253,253,.44);
+  border-bottom: 1px solid rgba(252,253,253,.44);
+  overflow: hidden;
+}
+.hero-photo-frame {
+  position: absolute;
+  right: 39px;
+  top: 16px;
+  width: 460px;
+  height: 358px;
+  overflow: hidden;
+  border: 1px solid rgba(252,253,253,.55);
+  border-radius: 14px;
+  background: #10121a;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.45), 0 18px 34px rgba(0,0,0,.38);
+  z-index: 4;
+}
+.hero-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  margin: 0 auto;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.52) 16%, #000 42%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.52) 16%, #000 42%);
+}
+.hero-metrics {
+  position: absolute;
+  left: 0;
+  top: 34px;
+  width: 390px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 22px;
+  z-index: 6;
+}
+.metric {
+  min-height: 116px;
+  padding: 16px 0 12px;
+  border-top: 1px solid rgba(252,253,253,.48);
+}
+.metric strong {
+  display: block;
+  color: #c8c1b8;
+  font-size: 35px;
+  line-height: 1;
+  font-weight: 400;
+}
+.metric span {
+  display: block;
+  margin-top: 10px;
+  color: #a9a9a9;
+  font-size: 14px;
+  line-height: 1.25;
+}
+.feature-title { position: absolute; left: 48px; right: 48px; top: 784px; }
+.feature-grid {
+  position: absolute;
+  left: 48px;
+  right: 48px;
+  top: 826px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 16px;
+}
+.feature {
+  position: relative;
+  min-height: 142px;
+  padding: 20px 18px 16px 80px;
+  border: 1px solid rgba(252,253,253,.28);
+  background: rgba(18,18,18,.8);
+}
+.feature .number {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  width: 43px;
+  height: 43px;
+  border: 1px solid #c8c1b8;
+  border-radius: 50%;
+  color: #c8c1b8;
+  font-size: 19px;
+  line-height: 41px;
+  text-align: center;
+}
+.feature h3 { margin: 0; font-size: 19px; line-height: 1.2; font-weight: 700; }
+.feature p { margin: 8px 0 0; color: #b8b8b8; font-size: 16px; line-height: 1.36; }
+
+/* Page 2 */
+.page-two .display-no { right: 42px; top: 112px; }
+.page-title { position: absolute; left: 48px; top: 110px; z-index: 3; }
+.page-title h1 {
+  margin: 0;
+  color: #c8c1b8;
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 300;
+}
+.page-title p { margin: 12px 0 0; color: #a9a9a9; font-size: 16px; }
+.product-block {
+  position: absolute;
+  left: 48px;
+  top: 220px;
+  width: 390px;
+  height: 412px;
+  border: 1px solid rgba(252,253,253,.32);
+  overflow: hidden;
+}
+.product-block img {
+  position: absolute;
+  left: 22px;
+  top: 23px;
+  width: 346px;
+  height: 320px;
+  object-fit: contain;
+  filter: drop-shadow(0 22px 26px rgba(0,0,0,.8));
+}
+.dimension-line {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #c8c1b8;
+  font-size: 13px;
+  line-height: 1.25;
+}
+.c5-specs {
+  position: absolute;
+  left: 460px;
+  top: 220px;
+  width: 516px;
+  height: 412px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 62px;
+  gap: 8px 12px;
+}
+.spec {
+  position: relative;
+  padding: 10px 12px 8px;
+  border-top: 1px solid rgba(252,253,253,.38);
+  background: rgba(20,20,20,.72);
+}
+.spec strong { display: block; color: #fcfdfd; font-size: 20px; line-height: 1; font-weight: 650; }
+.spec span { display: block; margin-top: 7px; color: #a6a6a6; font-size: 13px; line-height: 1.1; }
+.station-wrap { position: absolute; left: 48px; top: 652px; width: 928px; }
+.station-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 9px;
+}
+.station-spec {
+  min-height: 83px;
+  padding: 13px 12px;
+  border: 1px solid rgba(252,253,253,.28);
+  background: #151515;
+}
+.station-spec strong { display: block; color: #c8c1b8; font-size: 18px; line-height: 1.05; }
+.station-spec span { display: block; margin-top: 8px; color: #a6a6a6; font-size: 12px; line-height: 1.2; }
+.use-wrap {
+  position: absolute;
+  left: 48px;
+  top: 806px;
+  width: 928px;
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  gap: 18px;
+}
+.use-panel { min-height: 220px; }
+.label-grid { margin-top: 10px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; }
+.label-box {
+  position: relative;
+  min-height: 70px;
+  padding: 32px 12px 10px;
+  border: 1px solid rgba(252,253,253,.3);
+  background: #151515;
+  color: #fcfdfd;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 650;
+}
+.label-box::before {
+  content: attr(data-no);
+  position: absolute;
+  left: 12px;
+  top: 9px;
+  color: #6f6f6f;
+  font-size: 11px;
+}
+.floor-grid { grid-template-columns: repeat(2, 1fr); }
+.floor-grid .label-box:last-child { grid-column: 1 / -1; }
+.service-wrap { position: absolute; left: 48px; top: 1092px; width: 928px; }
+.service-grid { margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 9px 12px; }
+.service {
+  position: relative;
+  min-height: 96px;
+  padding: 15px 16px 13px 66px;
+  border: 1px solid rgba(252,253,253,.28);
+  background: #141414;
+}
+.service:last-child { grid-column: 1 / -1; min-height: 70px; }
+.service .service-no {
+  position: absolute;
+  left: 16px;
+  top: 17px;
+  color: #c8c1b8;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 300;
+}
+.service h3 { margin: 0; font-size: 17px; line-height: 1.15; }
+.service p { margin: 7px 0 0; color: #aeaeae; font-size: 14px; line-height: 1.28; }
+</style></head><body>
+<main class="page page-one">
+<header class="slide-header">
+  <div class="eyebrow">Autonomer Reinigungsroboter · C5</div>
+  <img class="brand-logo" src="assets/fmc3-logo-white.png" alt="FMC3 Robotics">
+</header>
+<div class="display-no">01</div>
+<section class="cover-copy">
+  <h1>C5</h1>
+  <h2>Experte für Reinigung mittlerer und großer Flächen</h2>
+  <p>Intelligenter gewerblicher Reinigungsroboter</p>
+</section>
+<section class="hero-zone">
+  <div class="hero-metrics"><div class="metric"><strong>1.980 m²/h</strong><span>Theoretische Flächenleistung</span></div><div class="metric"><strong>550 mm</strong><span>Schrubbreite</span></div><div class="metric"><strong>95 %</strong><span>Schmutzaufnahme</span></div><div class="metric"><strong>&lt;68 dB(A)</strong><span>Geräuschpegel</span></div></div>
+  <div class="hero-photo-frame">
+    <img class="hero-photo" src="assets/c5-hero-stage.jpg" alt="C5 Reinigungsroboter">
+  </div>
+</section>
+<div class="feature-title metal-bar">Acht Systeme · Ein sauberer Prozess</div>
+<section class="feature-grid"><article class="feature">
+  <span class="number">01</span>
+  <h3>Doppelwalzenbürsten</h3>
+  <p>Kehren und Schrubben in einem; hoher Wasserdurchsatz und Anpressdruck entfernen schweren Schmutz.</p>
+</article><article class="feature">
+  <span class="number">02</span>
+  <h3>Zwei-Kammer-Saugfuß</h3>
+  <p>Weniger Restwasser in Fugen und eine gründlichere Wasseraufnahme.</p>
+</article><article class="feature">
+  <span class="number">03</span>
+  <h3>Sichere Lokalisierung</h3>
+  <p>Laser- und visuelle Lokalisierung für starke Anpassung an verschiedene Szenen.</p>
+</article><article class="feature">
+  <span class="number">04</span>
+  <h3>Einfache Wartung</h3>
+  <p>Selbstreinigender Schmutzwassertank; der tägliche Aufwand wird halbiert.</p>
+</article><article class="feature">
+  <span class="number">05</span>
+  <h3>Autonomer Betrieb</h3>
+  <p>Laden, Frisch- und Schmutzwasser-Management, Tankreinigung sowie Tür- und Aufzugsanbindung.</p>
+</article><article class="feature">
+  <span class="number">06</span>
+  <h3>Konsequente Kantenreinigung</h3>
+  <p>Die Randbürste reinigt dicht an Kanten; Nachreinigung im geschlossenen Reinigungskreislauf.</p>
+</article><article class="feature">
+  <span class="number">07</span>
+  <h3>Hohe Flächenleistung</h3>
+  <p>550 mm Schrubbreite und eine theoretische Flächenleistung von bis zu 1.980 m²/h.</p>
+</article><article class="feature">
+  <span class="number">08</span>
+  <h3>Langlebige Komponenten</h3>
+  <p>10.000 h Gebläselebensdauer und niedrige Lebenszykluskosten.</p>
+</article></section>
+<footer class="slide-footer">
+  <span>FMC3 Robotics · Commercial Cleaning Robot</span>
+  <span class="rule"></span>
+  <span>01 / 02</span>
+</footer>
+</main>
+<main class="page page-two">
+<header class="slide-header">
+  <div class="eyebrow">C5 · Produktparameter</div>
+  <img class="brand-logo" src="assets/fmc3-logo-white.png" alt="FMC3 Robotics">
+</header>
+<div class="display-no">02</div>
+<section class="page-title">
+  <h1>Produktparameter</h1>
+  <p>Leistung, Einsatzbereiche und Service im Überblick.</p>
+</section>
+<section class="product-block">
+  <img src="assets/c5-station.png" alt="C5 mit Arbeitsstation">
+  <div class="dimension-line">
+    <span>C5: 680 × 820 × 1.085 mm</span>
+    <span>Arbeitsstation: 520 × 310 × 1.105 mm</span>
+  </div>
+</section>
+<section class="c5-specs"><div class="spec"><strong>95 %</strong><span>Schmutzaufnahme</span></div><div class="spec"><strong>170 kg</strong><span>Gesamtgewicht</span></div><div class="spec"><strong>4 min</strong><span>Tank-Selbstreinigung</span></div><div class="spec"><strong>24 V / 80 Ah</strong><span>Batterie</span></div><div class="spec"><strong>1.980 m²/h</strong><span>Max. Effizienz</span></div><div class="spec"><strong>&lt;68 dB(A)</strong><span>Geräuschpegel</span></div><div class="spec"><strong>10.000 h</strong><span>Gebläselebensdauer</span></div><div class="spec"><strong>90 L</strong><span>Großer Wassertank</span></div><div class="spec"><strong>3 h</strong><span>Reinigungsdauer</span></div><div class="spec"><strong>25 kg</strong><span>Bodendruck</span></div><div class="spec"><strong>550 mm</strong><span>Schrubbreite</span></div></section>
+<section class="station-wrap">
+  <div class="metal-bar">Arbeitsstation</div>
+  <div class="station-grid"><div class="station-spec"><strong>8 L</strong><span>Tankvolumen</span></div><div class="station-spec"><strong>7–10 L/min</strong><span>Frischwasser-Zufuhr</span></div><div class="station-spec"><strong>10–15 L/min</strong><span>Schmutzwasser-Ablass</span></div><div class="station-spec"><strong>1.800 W</strong><span>Max. Leistung</span></div><div class="station-spec"><strong>200–240 V</strong><span>Nenneingangsspannung</span></div></div>
+</section>
+<section class="use-wrap">
+  <div class="use-panel">
+    <div class="metal-bar">Anwendungsszenarien</div>
+    <div class="label-grid"><div class="label-box" data-no="01">Große Supermärkte</div><div class="label-box" data-no="02">Bürogebäude</div><div class="label-box" data-no="03">Verkehrsknoten</div><div class="label-box" data-no="04">Fabriken</div><div class="label-box" data-no="05">Gewerbekomplexe</div><div class="label-box" data-no="06">Krankenhäuser</div></div>
+  </div>
+  <div class="use-panel">
+    <div class="metal-bar">Geeignete Bodenbeläge</div>
+    <div class="label-grid floor-grid"><div class="label-box" data-no="01">Zementboden</div><div class="label-box" data-no="02">Marmor</div><div class="label-box" data-no="03">Epoxidboden</div><div class="label-box" data-no="04">PVC</div><div class="label-box" data-no="05">Korundboden</div></div>
+  </div>
+</section>
+<section class="service-wrap">
+  <div class="metal-bar">Service- und Supportsystem</div>
+  <div class="service-grid"><article class="service">
+  <span class="service-no">01</span>
+  <h3>Schulungsunterstützung</h3>
+  <p>Individuelle Video-Schulungen</p>
+</article><article class="service">
+  <span class="service-no">02</span>
+  <h3>Reaktionszeit</h3>
+  <p>Express-Reaktion innerhalb von 0,5 Stunden</p>
+</article><article class="service">
+  <span class="service-no">03</span>
+  <h3>Mehrwertservices</h3>
+  <p>Regelmäßige Inspektionen, Garantieverlängerung, Verbrauchsmaterial sowie Komplett- und Individualpakete</p>
+</article><article class="service">
+  <span class="service-no">04</span>
+  <h3>Servicenetz</h3>
+  <p>Abdeckung in 150+ Städten im Inland; globale Märkte werden bedient</p>
+</article><article class="service">
+  <span class="service-no">05</span>
+  <h3>Erstwartung</h3>
+  <p>Erste Wartung kostenlos</p>
+</article></div>
+</section>
+<footer class="slide-footer">
+  <span>FMC3 Robotics · Commercial Cleaning Robot</span>
+  <span class="rule"></span>
+  <span>02 / 02</span>
+</footer>
+</main>
+</body></html>

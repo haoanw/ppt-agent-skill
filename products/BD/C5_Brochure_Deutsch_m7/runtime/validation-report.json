@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "checks": {
+    "content_phrases": {
+      "required": 70,
+      "missing": [],
+      "passed": true
+    },
+    "rendered_pages": [
+      {
+        "file": "png/page-1.png",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "dimensions_ok": true,
+        "nonblank_variance": 1988.91,
+        "nonblank_ok": true
+      },
+      {
+        "file": "png/page-2.png",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "dimensions_ok": true,
+        "nonblank_variance": 2764.71,
+        "nonblank_ok": true
+      }
+    ],
+    "pptx": {
+      "slides": 2,
+      "passed": true
+    },
+    "pdf": {
+      "pages": 2,
+      "page_size_points": [
+        768,
+        1152
+      ],
+      "embedded_image_objects": 9,
+      "images_passed": true,
+      "passed": true
+    },
+    "manual_visual_review": {
+      "passed": true,
+      "scope": "alignment, overlap, clipping, product visibility, text legibility"
+    }
+  },
+  "tooling_note": "scripts/visual_qa.py DIM-01 is restricted to 16:9 slides and is not applicable to this source-matched 2:3 portrait brochure. All other visual_qa assertions passed."
+}

@@ -1,4 +1,4 @@
-# 暗色专业板块（7 风格）
+# 暗色专业板块（8 风格）
 
 > 板块定位：深色背景 + 高对比 + 精密科技/奢华情绪。适用于产品发布会、SaaS 平台、技术文档、奢侈品、电竞、Web3 等场景。
 >
@@ -17,6 +17,7 @@
 | 5 | `cyberpunk_neon` | Cyberpunk 2077 | 紫青霓虹 + 扫描线，2077 未来街景 |
 | 6 | `chrome_y2k` | Y2K / Vaporwave | 千禧年银色铬感 + 网格透视 |
 | 7 | `noir_film` | 黑白电影 | 高反差黑白 + 胶片颗粒，纪录片质感 |
+| 8 | `m7` | ROBOTERA M7 Datasheet | 纯黑工业舞台 + 暖灰金属字 + 发丝框线的机器人产品规格感 |
 
 ---
 
@@ -403,3 +404,131 @@ Mock: [`ppt-output/style-gallery/chrome_y2k.html`](../../ppt-output/style-galler
 ```
 
 Mock: [`ppt-output/style-gallery/noir_film.html`](../../ppt-output/style-gallery/noir_film.html)
+
+---
+
+## 8. m7 — M7 工业产品海报
+
+```json
+{
+  "style_id": "m7",
+  "style_name": "M7 工业产品海报 (M7 Industrial Poster)",
+  "category": "dark_professional",
+  "inspiration": "ROBOTERA M7 Datasheet / industrial robotics product poster",
+  "mood_keywords": ["纯黑工业舞台", "暖灰金属", "发丝框线", "运动残影", "规格数据"],
+  "design_soul": "机器人站在无影棚般的纯黑舞台中央，暖灰金属标题与极细白线建立精密秩序；运动残影、半圆轨迹和超大数字把机械能力转译成克制而直接的产品证据。",
+  "variation_strategy": "封面以中央产品抠图、半圆轨迹和大号型号形成单一强焦点；规格页采用横向银灰渐变条与严格对齐的双列参数；能力页使用无圆角发丝框线的非对称 Bento 模块，并以 2.1 / 360° / 7-DoF / 12-DoF 等大数字开头；应用页用黑底实景图、顶部金属分区条和底部半透明标签组织场景。",
+
+  "decoration_dna": {
+    "signature_move": "纯黑背景 + 暖灰金属大标题 + 1px 白色发丝框 + 产品运动残影 + 半圆能力轨迹 + 银灰渐变分区条",
+    "forbidden": [
+      "青色、紫色、橙色等高饱和彩色 accent",
+      "玻璃拟态、霓虹辉光和大面积模糊光晕",
+      "圆角卡片（信息模块保持 0px；仅短标签允许胶囊）",
+      "装饰性 serif 字体和斜体关键词",
+      "网格点阵、波浪线、插画和卡通图标"
+    ],
+    "recommended_combos": [
+      "中央产品抠图 + 低透明度运动残影 + 半圆轨迹 + 型号巨字",
+      "大数字前缀 + 两级无衬线标题 + 发丝框能力模块",
+      "银灰渐变分区条 + 黑底实景图 + 底部半透明场景标签",
+      "双列参数表 + 粗体字段名 + tabular-nums 参数值"
+    ]
+  },
+
+  "background": {
+    "primary": "#000000",
+    "gradient_to": "#101010",
+    "gradient_direction": "linear 180deg",
+    "texture": { "type": "subtle_vignette", "opacity": 0.08 },
+    "glow": []
+  },
+
+  "card": {
+    "gradient_from": "#050505",
+    "gradient_to": "#000000",
+    "border": "rgba(252,253,253,0.52)",
+    "border_radius": 0,
+    "backdrop_blur": 0
+  },
+
+  "text": {
+    "primary": "#FCFDFD",
+    "secondary": "rgba(252,253,253,0.68)",
+    "title_size": 34,
+    "body_size": 14,
+    "card_title_size": 21
+  },
+
+  "accent": {
+    "primary": ["#C8C1B8", "#FFFFFF"],
+    "secondary": ["#6F6F6F", "#212121"]
+  },
+
+  "typography": {
+    "display_font": "'Source Han Sans SC', 'Noto Sans SC', 'Arial', sans-serif",
+    "body_font": "'Source Han Sans SC', 'Noto Sans SC', 'Arial', sans-serif",
+    "serif_italic_font": "'Source Han Sans SC', 'Noto Sans SC', 'Arial', sans-serif",
+    "mono_font": "'JetBrains Mono', 'Roboto Mono', 'Courier New', monospace",
+    "display_letter_spacing": "0",
+    "headline_letter_spacing": "0",
+    "body_letter_spacing": "0",
+    "label_letter_spacing": "0",
+    "feature_settings": "'kern', 'liga', 'tnum'",
+    "tabular_nums": true
+  },
+
+  "decorations": {
+    "label_anchor": "metal_bar",
+    "title_serif_italic": false,
+    "corner_lines": false,
+    "vertical_divider": true,
+    "drop_cap": false,
+    "masthead": true,
+    "hairline_frames": true,
+    "motion_trails": true,
+    "semicircle_trajectory": true,
+    "metal_section_bars": true,
+    "numeric_lead": true,
+    "monochrome_only": true
+  },
+
+  "font_imports": [
+    "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+  ]
+}
+```
+
+### CSS Variables
+
+```css
+:root {
+  --bg-primary: #000000;
+  --bg-secondary: #101010;
+  --card-bg-from: #050505;
+  --card-bg-to: #000000;
+  --card-border: rgba(252,253,253,0.52);
+  --card-radius: 0px;
+  --text-primary: #FCFDFD;
+  --text-secondary: rgba(252,253,253,0.68);
+  --accent-1: #C8C1B8;
+  --accent-2: #FFFFFF;
+  --accent-3: #6F6F6F;
+  --accent-4: #212121;
+  --metal-bar: linear-gradient(90deg, #E7E7E7 0%, #9A9A9A 36%, #6F6F6F 70%, #212121 100%);
+  --hairline: rgba(252,253,253,0.52);
+  --display-font: 'Source Han Sans SC', 'Noto Sans SC', 'Arial', sans-serif;
+  --body-font: 'Source Han Sans SC', 'Noto Sans SC', 'Arial', sans-serif;
+  --mono-font: 'JetBrains Mono', 'Roboto Mono', 'Courier New', monospace;
+}
+```
+
+### 应用约束
+
+- 产品图必须使用真实产品抠图或黑底实拍，主体完整、轮廓清晰，不使用抽象科技背景替代产品。
+- 数字能力标题采用“超大数字 + 紧凑说明”的两级结构；数字与正文共用无衬线字体，不做彩色强调。
+- 内容模块以 1px 发丝框和留白分隔，默认 0px 圆角；只有状态、场景名等短标签可使用浅灰胶囊。
+- 页面必须在“单一大产品舞台”和“高密度规格矩阵”之间交替，避免所有页面都堆成等尺寸卡片墙。
+- 参考源：[`references/design-reference/M7 datasheet En.pdf`](../design-reference/M7%20datasheet%20En.pdf)。
+
+Mock: [`ppt-output/style-gallery/m7.html`](../../ppt-output/style-gallery/m7.html)

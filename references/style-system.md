@@ -1,6 +1,6 @@
 # 风格系统（引导文件）
 
-> ⚠️ 本文件已被新结构取代。从 v2.0 起，风格系统从 8 种扩展到 **26 种**，按 5 板块分目录管理。
+> ⚠️ 本文件已被新结构取代。当前风格系统包含 **27 种**预置风格，按 5 板块聚合管理。
 
 ## 新位置
 
@@ -8,8 +8,8 @@
 
 | 用途 | 新位置 |
 |------|-------|
-| **26 风格索引 + 决策矩阵 + JSON Schema** | [`references/styles/index.md`](styles/index.md) |
-| **暗色专业（7 风格）** | [`references/styles/dark.md`](styles/dark.md) |
+| **27 风格索引 + 决策矩阵 + JSON Schema** | [`references/styles/index.md`](styles/index.md) |
+| **暗色专业（8 风格）** | [`references/styles/dark.md`](styles/dark.md) |
 | **浅色高级（8 风格）** | [`references/styles/light.md`](styles/light.md) |
 | **活力鲜明（4 风格）** | [`references/styles/vibrant.md`](styles/vibrant.md) |
 | **东方文化（3 风格）** | [`references/styles/cultural.md`](styles/cultural.md) |
@@ -26,7 +26,7 @@
 
 新风格系统相对原 8 风格的关键改进：
 
-1. **数量**：8 → 26（覆盖更多场景）
+1. **数量**：8 → 27（覆盖更多场景，并新增 M7 工业产品海报体系）
 2. **每个风格新增字段**：
    - `mood_keywords` 情绪标签
    - `design_soul` 一句话设计灵魂

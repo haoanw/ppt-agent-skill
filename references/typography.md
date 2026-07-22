@@ -1,6 +1,6 @@
 # 世界级排版铁律 (Typography Bible)
 
-> 本文件汇总所有 26 风格共享的排版规则。**每张 HTML 设计稿生成前必读**。
+> 本文件汇总所有 27 风格共享的排版规则。**每张 HTML 设计稿生成前必读**。
 >
 > 灵感来源：Linear / Anthropic / Stripe / Apple / Vercel / NYT Magazine / Tom Ford / Pitch / Mercury / Arc / Notion 等品牌的实际排版做法。
 
